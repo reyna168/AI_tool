@@ -1,0 +1,7 @@
+1、使用 NotebookLM 會議記錄  
+2、產生會議記錄列出
+3、產生會議記錄後，使用Ai產生Q&A
+4、Steamlit系統Q&A
+
+
+https://github.com/HKUDS/RAG-Anything

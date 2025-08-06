@@ -1,0 +1,10 @@
+[主題輸入（Google Sheet）]
+          ↓
+[ChatGPT 生成腳本]
+          ↓
+[ElevenLabs 語音 TTS]
+          ↓
+[背景音樂混音 + 音檔儲存]
+          ↓
+[自動發佈到 Anchor / Firstory]
+
