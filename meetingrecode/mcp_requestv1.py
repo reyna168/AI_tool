@@ -19,7 +19,7 @@ def call_nl_sql_api(query_text: str):
 # Example query
 query_string = "請列出 2025-08-05 當天的會議標題與時間與描述，最多 10 筆"
 result = call_nl_sql_api(query_string)
-
+print(result)
 if result:
     print("Generated SQL:")
     print(result.get("sql"))
