@@ -5,3 +5,7 @@
 
 
 https://github.com/HKUDS/RAG-Anything
+
+
+1、使用MCP MYsql Server與Gemini LLM連結，Gemini LLM自行組查詢語句。
+2、MCP clinet 調用此API。
