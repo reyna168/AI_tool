@@ -9,3 +9,11 @@ https://github.com/HKUDS/RAG-Anything
 
 1、使用MCP MYsql Server與Gemini LLM連結，Gemini LLM自行組查詢語句。
 2、MCP clinet 調用此API。
+
+
+
+3、app = FastAPI()
+啟動程式
+uvicorn 程式名:app --host 0.0.0.0 --port 8000
+
+
