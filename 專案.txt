@@ -6,3 +6,6 @@
 6、PM2 tool → PM2 工具在 Node.js 進程管理中的應用
 7、N8N 流程測試 → N8N 工作流程的測試與優化實務
 8、使用gemini模型，自然語言查詢找尋資料庫，自動生成SQL，查詢資料庫 → 利用 Gemini 模型實現自然語言查詢資料庫：自動生成 SQL 並執行資料檢索 C:\Users\USER\Documents\GitHub\AI_tool\meetingrecode
+
+
+nodejs、pm2、
