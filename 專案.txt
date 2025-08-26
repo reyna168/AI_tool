@@ -1,11 +1,11 @@
 1、Flowise 自動化流程 → Flowise 自動化工作流程設計與實作
-2、sql_graph的應用 → SQL Graph 在資料查詢與視覺化中的應用
-3、gemini_graph_agent 實作gemini_agent → Gemini Graph Agent 的實作與 Gemini Agent 的開發指南
-4、RAG文件查詢應用 → 基於 RAG 的文件查詢應用系統建置
-5、Gemini OCR整合應用 → Gemini 模型與 OCR 技術的整合應用案例 C:\Users\USER\Documents\GitHub\businessCard
-6、PM2 tool → PM2 工具在 Node.js 進程管理中的應用
-7、N8N 流程測試 → N8N 工作流程的測試與優化實務
-8、使用gemini模型，自然語言查詢找尋資料庫，自動生成SQL，查詢資料庫 → 利用 Gemini 模型實現自然語言查詢資料庫：自動生成 SQL 並執行資料檢索 C:\Users\USER\Documents\GitHub\AI_tool\meetingrecode
+2、基於langgraph.graph, 實作gemini_agent → 詢問Gemini模型最近時事
+3、RAG文件查詢應用 → 基於 RAG 的文件查詢應用系統建置
+4、Gemini OCR整合應用 → Gemini 模型與 OCR 技術的整合應用案例 C:\Users\USER\Documents\GitHub\businessCard
+5、N8N 流程測試 → RAG流程上傳文件PDF，詢問文件的問題
+6、利用 Gemini 模型實現自然語言查詢資料庫：自動生成 SQL 並執行資料檢索 C:\Users\USER\Documents\GitHub\AI_tool\meetingrecode
 
 
-nodejs、pm2、
+PM2 tool → PM2 工具在 Node.js 部署程式
+
+Semi_structured_and_multi_modal_RAG.ipynb
