@@ -1,0 +1,421 @@
+{
+  "name": "ChatGPT TG Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "a4b0003c-9bf7-48da-aeef-460487e9902d",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        -1440,
+        700
+      ],
+      "webhookId": "69486792-2e9a-4ef4-8e10-6c3bfe1892d5",
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "1",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"message\"][\"text\"] }}",
+              "operation": "startsWith",
+              "value2": "/gpt"
+            },
+            {
+              "value1": "={{ $json.message.text.replace(/^\\/gpt\\s?/,'') }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "7f349abc-0fa1-4670-93d0-38f3170c6b85",
+      "name": "IF /gpt",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -1220,
+        700
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "resource": "chat",
+        "prompt": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "=用繁體中文回答問題"
+            },
+            {
+              "content": "={{ $node[\"IF /gpt\"].json.message.text.replace(/^\\/gpt\\s?/, '') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "78e3c221-db17-4c52-b47c-aee8b9216638",
+      "name": "OpenAI",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        -260,
+        820
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "openAiApi": {
+          "id": "3",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{ $json.context.length }}",
+              "operation": "larger"
+            }
+          ]
+        }
+      },
+      "id": "4e10b202-7ab7-463f-b582-8102d8433372",
+      "name": "IF",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -520,
+        680
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "=context",
+        "key": "=context-{{ $json.message.chat.id }}-{{ $json.message.from.username }}",
+        "keyType": "string",
+        "options": {}
+      },
+      "id": "5aa78379-3142-48a8-b276-1a44a2e87f90",
+      "name": "Redis Get Context",
+      "type": "n8n-nodes-base.redis",
+      "position": [
+        -980,
+        680
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "redis": {
+          "id": "6",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and add a new field\n// called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  if (!item.json.context) {\n    item.json.context = []\n    continue\n  }\n  item.json.context = JSON.parse(item.json.context);\n}\n\nreturn $input.all();"
+      },
+      "id": "5cac0e0c-5d18-4b01-964e-e2e0cb1603e5",
+      "name": "Code Parse Context JSON String",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -740,
+        680
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  item.json.context.push(\n    {\n      \"role\": \"user\",\n      \"content\": $('IF /gpt').first().json.message.text.replace(/^\\/gpt\\s?/, '')\n    })\n}\nreturn $input.all();"
+      },
+      "id": "e2262011-3b63-49a3-885c-7bf81c461a9c",
+      "name": "Code Push User Input to Context",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -260,
+        540
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/chat/completions",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "openAiApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"model\": \"gpt-3.5-turbo\",\n    \"messages\": {{ JSON.stringify($json.context) }}\n}",
+        "options": {}
+      },
+      "id": "1d69695c-b170-4033-8194-5ea733ccec2e",
+      "name": "HTTP Request OpenAI API",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -40,
+        540
+      ],
+      "typeVersion": 3,
+      "credentials": {
+        "openAiApi": {
+          "id": "3",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "for (const item of $input.all()) {\n  item.json.context = $('Code Push User Input to Context').first().json.context\n  item.json.context.push(\n    {\n      \"role\": \"assistant\",\n      \"content\": item.json.choices[0].message.content\n    }\n  )\n}\nreturn $input.all();"
+      },
+      "id": "1f84d662-0ccc-43ac-accd-97a5e5c0a161",
+      "name": "Code Push API Response to Context",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        180,
+        540
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "operation": "set",
+        "key": "=context-{{ $node[\"IF /gpt\"].json.message.chat.id }}-{{ $node[\"IF /gpt\"].json.message.from.username }}",
+        "value": "={{ JSON.stringify($json.context) }}",
+        "keyType": "string",
+        "expire": true,
+        "ttl": 3600
+      },
+      "id": "d32abbd4-b530-4507-b4df-5087d196a229",
+      "name": "Redis Set Context",
+      "type": "n8n-nodes-base.redis",
+      "position": [
+        420,
+        540
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "redis": {
+          "id": "6",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "set",
+        "key": "=context-{{ $node[\"IF /gpt\"].json.message.chat.id }}-{{ $node[\"IF /gpt\"].json.message.from.username }}",
+        "value": "=[\n    {\n        \"role\": \"system\",\n        \"content\": \"用繁體中文回答問題\"\n    },\n    {\n        \"role\": \"user\",\n        \"content\": {{ JSON.stringify($node[\"IF /gpt\"].json.message.text.replace(/^\\/gpt\\s?/, '')) }}\n    },\n    {\n        \"role\": \"assistant\",\n        \"content\": {{ JSON.stringify($node[\"OpenAI\"].json.message.content) }}\n    }\n]",
+        "keyType": "string",
+        "expire": true,
+        "ttl": 3600
+      },
+      "id": "9e833cec-91a4-4ed6-864d-451e71488d53",
+      "name": "Redis Set Initial Context",
+      "type": "n8n-nodes-base.redis",
+      "position": [
+        -20,
+        820
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "redis": {
+          "id": "6",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $node[\"Telegram Trigger\"].json.message.chat.id }}",
+        "text": "={{ $json.message.content }}",
+        "additionalFields": {}
+      },
+      "id": "fe9bdc21-0a05-464f-a997-b1fe0a7bcd44",
+      "name": "Telegram Initial Response",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        240,
+        820
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "1",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $node[\"Telegram Trigger\"].json.message.chat.id }}",
+        "text": "={{ $json.context[$json.context.length - 1].content }}",
+        "additionalFields": {}
+      },
+      "id": "5df0dc2a-cbdc-4632-81fb-8ee35753f2ec",
+      "name": "Telegram Response",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        660,
+        540
+      ],
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "1",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Code Push User Input to Context",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Redis Set Initial Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF /gpt": {
+      "main": [
+        [
+          {
+            "node": "Redis Get Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "IF /gpt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis Get Context": {
+      "main": [
+        [
+          {
+            "node": "Code Parse Context JSON String",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis Set Context": {
+      "main": [
+        [
+          {
+            "node": "Telegram Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request OpenAI API": {
+      "main": [
+        [
+          {
+            "node": "Code Push API Response to Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis Set Initial Context": {
+      "main": [
+        [
+          {
+            "node": "Telegram Initial Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code Parse Context JSON String": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code Push User Input to Context": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request OpenAI API",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code Push API Response to Context": {
+      "main": [
+        [
+          {
+            "node": "Redis Set Context",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {},
+  "versionId": "489cb319-d7a5-4ba0-97e8-737d44c1a666",
+  "id": "5",
+  "meta": {
+    "instanceId": "449e4ff89a0b7b575ff0527b5938bc2fc5094988d49fa1435d150b838c110636"
+  },
+  "tags": []
+}
