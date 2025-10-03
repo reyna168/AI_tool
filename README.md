@@ -12,3 +12,10 @@ https://supervision.roboflow.com/latest/how_to/detect_small_objects/#small-objec
 整個程式流程（RTSP → YOLO → ByteTrack → LineZone → 輸出）
 https://supervision.roboflow.com/latest/how_to/save_detections/
 
+
+
+## Agent
+
+李宏毅生成式ai agent
+https://speech.ee.ntu.edu.tw/~hylee/GenAI-ML/2025-fall.php
+
