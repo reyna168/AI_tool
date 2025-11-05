@@ -28,3 +28,7 @@ https://blog.csdn.net/weixin_58753619/article/details/147401415?utm_medium=distr
 
 https://edu.csdn.net/learn/40723/675929?spm=3001.4143
 
+## AI 發展史
+
+https://d.aigclink.ai/?v=8f252a54730e49f4b8caf897b7ae49f6
+
