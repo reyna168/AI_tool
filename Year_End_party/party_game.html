@@ -1,0 +1,528 @@
+import React, { useState, useEffect } from 'react';
+import { Dices, Users, Trophy, Sparkles, Timer, Zap } from 'lucide-react';
+
+const PartyGames = () => {
+  const [currentGame, setCurrentGame] = useState('menu');
+  
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-purple-600 via-pink-500 to-red-500 p-4">
+      <div className="max-w-4xl mx-auto">
+        {currentGame === 'menu' && <GameMenu setCurrentGame={setCurrentGame} />}
+        {currentGame === 'lucky-draw' && <LuckyDraw setCurrentGame={setCurrentGame} />}
+        {currentGame === 'reaction' && <ReactionGame setCurrentGame={setCurrentGame} />}
+        {currentGame === 'number-bomb' && <NumberBomb setCurrentGame={setCurrentGame} />}
+        {currentGame === 'spin-wheel' && <SpinWheel setCurrentGame={setCurrentGame} />}
+      </div>
+    </div>
+  );
+};
+
+const GameMenu = ({ setCurrentGame }) => {
+  const games = [
+    { id: 'lucky-draw', name: '抽獎轉盤', icon: Sparkles, desc: '隨機抽出幸運兒' },
+    { id: 'reaction', name: '反應力測試', icon: Zap, desc: '看誰手速最快' },
+    { id: 'number-bomb', name: '數字炸彈', icon: Dices, desc: '刺激的數字遊戲' },
+    { id: 'spin-wheel', name: '命運轉盤', icon: Trophy, desc: '轉出你的獎品' }
+  ];
+
+  return (
+    <div className="text-center">
+      <h1 className="text-5xl font-bold text-white mb-4 drop-shadow-lg">🎉 尾牙遊戲</h1>
+      <p className="text-xl text-white mb-12 drop-shadow">選擇一個遊戲開始</p>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {games.map(game => (
+          <button
+            key={game.id}
+            onClick={() => setCurrentGame(game.id)}
+            className="bg-white rounded-2xl p-8 shadow-2xl hover:scale-105 transform transition-all duration-300 hover:shadow-purple-500/50"
+          >
+            <game.icon className="w-16 h-16 mx-auto mb-4 text-purple-600" />
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">{game.name}</h3>
+            <p className="text-gray-600">{game.desc}</p>
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const LuckyDraw = ({ setCurrentGame }) => {
+  const [names, setNames] = useState('');
+  const [participants, setParticipants] = useState([]);
+  const [isSpinning, setIsSpinning] = useState(false);
+  const [winner, setWinner] = useState('');
+  const [currentName, setCurrentName] = useState('');
+
+  const startDraw = () => {
+    const nameList = names.split('\n').filter(n => n.trim());
+    if (nameList.length === 0) return;
+    
+    setParticipants(nameList);
+    setIsSpinning(true);
+    setWinner('');
+    
+    let count = 0;
+    const interval = setInterval(() => {
+      setCurrentName(nameList[Math.floor(Math.random() * nameList.length)]);
+      count++;
+      
+      if (count > 30) {
+        clearInterval(interval);
+        const finalWinner = nameList[Math.floor(Math.random() * nameList.length)];
+        setWinner(finalWinner);
+        setIsSpinning(false);
+      }
+    }, 100);
+  };
+
+  return (
+    <div className="bg-white rounded-3xl p-8 shadow-2xl">
+      <button onClick={() => setCurrentGame('menu')} className="mb-4 text-purple-600 hover:text-purple-800">
+        ← 返回選單
+      </button>
+      
+      <h2 className="text-4xl font-bold text-center mb-8 text-purple-600">🎯 抽獎轉盤</h2>
+      
+      {!participants.length ? (
+        <div>
+          <textarea
+            value={names}
+            onChange={(e) => setNames(e.target.value)}
+            placeholder="輸入參加者名字（每行一個）&#10;例如：&#10;張三&#10;李四&#10;王五"
+            className="w-full h-48 p-4 border-2 border-purple-300 rounded-xl mb-4 text-lg"
+          />
+          <button
+            onClick={startDraw}
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-2xl font-bold py-4 rounded-xl hover:scale-105 transform transition-all"
+          >
+            開始抽獎 🎲
+          </button>
+        </div>
+      ) : (
+        <div className="text-center">
+          <div className="bg-gradient-to-br from-yellow-400 to-orange-500 rounded-3xl p-16 mb-8 min-h-64 flex items-center justify-center">
+            {isSpinning ? (
+              <div className="text-6xl font-bold text-white animate-pulse">{currentName}</div>
+            ) : winner ? (
+              <div>
+                <div className="text-7xl font-bold text-white mb-4 animate-bounce">🎊 {winner} 🎊</div>
+                <div className="text-3xl text-white">恭喜中獎！</div>
+              </div>
+            ) : (
+              <div className="text-4xl text-white">準備開始...</div>
+            )}
+          </div>
+          
+          {!isSpinning && (
+            <div className="space-y-4">
+              <button
+                onClick={startDraw}
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-2xl font-bold py-4 rounded-xl hover:scale-105 transform transition-all"
+              >
+                再抽一次 🎲
+              </button>
+              <button
+                onClick={() => {
+                  setParticipants([]);
+                  setNames('');
+                  setWinner('');
+                }}
+                className="w-full bg-gray-500 text-white text-xl font-bold py-3 rounded-xl hover:bg-gray-600"
+              >
+                重新設定
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const ReactionGame = ({ setCurrentGame }) => {
+  const [gameState, setGameState] = useState('ready');
+  const [startTime, setStartTime] = useState(0);
+  const [reactionTime, setReactionTime] = useState(0);
+  const [bestTime, setBestTime] = useState(null);
+
+  const startGame = () => {
+    setGameState('waiting');
+    setReactionTime(0);
+    
+    const delay = Math.random() * 3000 + 2000;
+    setTimeout(() => {
+      setGameState('click');
+      setStartTime(Date.now());
+    }, delay);
+  };
+
+  const handleClick = () => {
+    if (gameState === 'waiting') {
+      setGameState('tooearly');
+      return;
+    }
+    
+    if (gameState === 'click') {
+      const time = Date.now() - startTime;
+      setReactionTime(time);
+      setGameState('result');
+      
+      if (!bestTime || time < bestTime) {
+        setBestTime(time);
+      }
+    }
+  };
+
+  return (
+    <div className="bg-white rounded-3xl p-8 shadow-2xl">
+      <button onClick={() => setCurrentGame('menu')} className="mb-4 text-purple-600 hover:text-purple-800">
+        ← 返回選單
+      </button>
+      
+      <h2 className="text-4xl font-bold text-center mb-8 text-purple-600">⚡ 反應力測試</h2>
+      
+      {bestTime && (
+        <div className="text-center mb-4 text-xl text-purple-600">
+          最佳紀錄: <span className="font-bold">{bestTime}ms</span>
+        </div>
+      )}
+      
+      <div
+        onClick={handleClick}
+        className={`min-h-96 rounded-3xl flex items-center justify-center cursor-pointer transition-all ${
+          gameState === 'ready' ? 'bg-blue-500' :
+          gameState === 'waiting' ? 'bg-red-500' :
+          gameState === 'click' ? 'bg-green-500' :
+          gameState === 'tooearly' ? 'bg-yellow-500' :
+          'bg-purple-500'
+        }`}
+      >
+        <div className="text-center text-white p-8">
+          {gameState === 'ready' && (
+            <div>
+              <div className="text-5xl font-bold mb-4">準備好了嗎？</div>
+              <div className="text-2xl">點擊開始</div>
+            </div>
+          )}
+          {gameState === 'waiting' && (
+            <div className="text-4xl font-bold animate-pulse">等待綠燈...</div>
+          )}
+          {gameState === 'click' && (
+            <div className="text-6xl font-bold animate-pulse">點擊！</div>
+          )}
+          {gameState === 'tooearly' && (
+            <div>
+              <div className="text-5xl font-bold mb-4">太早了！</div>
+              <div className="text-2xl">等綠燈再點</div>
+            </div>
+          )}
+          {gameState === 'result' && (
+            <div>
+              <div className="text-6xl font-bold mb-4">{reactionTime}ms</div>
+              <div className="text-3xl mb-4">
+                {reactionTime < 200 ? '🚀 超快！' :
+                 reactionTime < 300 ? '⚡ 很快！' :
+                 reactionTime < 400 ? '👍 不錯！' :
+                 '🐢 再加油！'}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+      
+      {(gameState === 'result' || gameState === 'tooearly') && (
+        <button
+          onClick={startGame}
+          className="w-full mt-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-2xl font-bold py-4 rounded-xl hover:scale-105 transform transition-all"
+        >
+          再玩一次
+        </button>
+      )}
+    </div>
+  );
+};
+
+const NumberBomb = ({ setCurrentGame }) => {
+  const [minNum, setMinNum] = useState(1);
+  const [maxNum, setMaxNum] = useState(99);
+  const [bombNum, setBombNum] = useState(0);
+  const [gameStarted, setGameStarted] = useState(false);
+  const [inputNum, setInputNum] = useState('');
+  const [message, setMessage] = useState('');
+  const [history, setHistory] = useState([]);
+
+  const startGame = () => {
+    const bomb = Math.floor(Math.random() * 99) + 1;
+    setBombNum(bomb);
+    setMinNum(1);
+    setMaxNum(99);
+    setGameStarted(true);
+    setMessage('');
+    setHistory([]);
+    setInputNum('');
+  };
+
+  const guess = () => {
+    const num = parseInt(inputNum);
+    
+    if (isNaN(num) || num < minNum || num > maxNum) {
+      setMessage(`請輸入 ${minNum} 到 ${maxNum} 之間的數字`);
+      return;
+    }
+
+    if (num === bombNum) {
+      setMessage('💣 爆炸了！你踩到炸彈了！');
+      setHistory([...history, { num, result: 'bomb' }]);
+      setGameStarted(false);
+    } else {
+      if (num < bombNum) {
+        setMinNum(num + 1);
+        setMessage(`安全！範圍縮小為 ${num + 1} ~ ${maxNum}`);
+        setHistory([...history, { num, result: 'safe' }]);
+      } else {
+        setMaxNum(num - 1);
+        setMessage(`安全！範圍縮小為 ${minNum} ~ ${num - 1}`);
+        setHistory([...history, { num, result: 'safe' }]);
+      }
+    }
+    
+    setInputNum('');
+  };
+
+  return (
+    <div className="bg-white rounded-3xl p-8 shadow-2xl">
+      <button onClick={() => setCurrentGame('menu')} className="mb-4 text-purple-600 hover:text-purple-800">
+        ← 返回選單
+      </button>
+      
+      <h2 className="text-4xl font-bold text-center mb-8 text-purple-600">💣 數字炸彈</h2>
+      
+      {!gameStarted ? (
+        <div className="text-center">
+          <div className="text-xl mb-8 text-gray-600">
+            遊戲會隨機選一個 1-99 的數字當炸彈<br/>
+            輪流猜數字，範圍會越來越小<br/>
+            猜到炸彈的人就輸了！
+          </div>
+          {message && (
+            <div className="text-4xl font-bold mb-8 text-red-600 animate-bounce">
+              {message}
+            </div>
+          )}
+          <button
+            onClick={startGame}
+            className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-2xl font-bold py-4 px-12 rounded-xl hover:scale-105 transform transition-all"
+          >
+            開始遊戲
+          </button>
+        </div>
+      ) : (
+        <div>
+          <div className="bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl p-8 mb-6 text-center">
+            <div className="text-white text-3xl font-bold mb-2">當前範圍</div>
+            <div className="text-white text-6xl font-bold">{minNum} ~ {maxNum}</div>
+          </div>
+          
+          <div className="flex gap-4 mb-6">
+            <input
+              type="number"
+              value={inputNum}
+              onChange={(e) => setInputNum(e.target.value)}
+              onKeyPress={(e) => e.key === 'Enter' && guess()}
+              placeholder="輸入數字"
+              className="flex-1 text-3xl p-4 border-2 border-purple-300 rounded-xl text-center"
+            />
+            <button
+              onClick={guess}
+              className="bg-purple-600 text-white text-2xl font-bold px-8 rounded-xl hover:bg-purple-700"
+            >
+              猜！
+            </button>
+          </div>
+          
+          {message && (
+            <div className={`text-2xl font-bold text-center p-4 rounded-xl mb-6 ${
+              message.includes('爆炸') ? 'bg-red-100 text-red-600' : 'bg-green-100 text-green-600'
+            }`}>
+              {message}
+            </div>
+          )}
+          
+          {history.length > 0 && (
+            <div className="bg-gray-100 rounded-xl p-4">
+              <div className="text-lg font-bold mb-2 text-gray-700">猜測記錄</div>
+              <div className="flex flex-wrap gap-2">
+                {history.map((h, i) => (
+                  <span key={i} className={`px-4 py-2 rounded-lg font-bold ${
+                    h.result === 'bomb' ? 'bg-red-500 text-white' : 'bg-green-500 text-white'
+                  }`}>
+                    {h.num}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const SpinWheel = ({ setCurrentGame }) => {
+  const [prizes, setPrizes] = useState('');
+  const [prizeList, setPrizeList] = useState([]);
+  const [isSpinning, setIsSpinning] = useState(false);
+  const [rotation, setRotation] = useState(0);
+  const [result, setResult] = useState('');
+
+  const setupWheel = () => {
+    const list = prizes.split('\n').filter(p => p.trim());
+    if (list.length < 2) return;
+    setPrizeList(list);
+  };
+
+  const spin = () => {
+    setIsSpinning(true);
+    setResult('');
+    
+    const spins = 5 + Math.random() * 5;
+    const extraDegrees = Math.random() * 360;
+    const totalRotation = rotation + (spins * 360) + extraDegrees;
+    
+    setRotation(totalRotation);
+    
+    setTimeout(() => {
+      const finalAngle = totalRotation % 360;
+      const segmentAngle = 360 / prizeList.length;
+      const selectedIndex = Math.floor((360 - finalAngle) / segmentAngle) % prizeList.length;
+      setResult(prizeList[selectedIndex]);
+      setIsSpinning(false);
+    }, 4000);
+  };
+
+  const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#FFA07A', '#98D8C8', '#F7DC6F', '#BB8FCE', '#85C1E2'];
+
+  return (
+    <div className="bg-white rounded-3xl p-8 shadow-2xl">
+      <button onClick={() => setCurrentGame('menu')} className="mb-4 text-purple-600 hover:text-purple-800">
+        ← 返回選單
+      </button>
+      
+      <h2 className="text-4xl font-bold text-center mb-8 text-purple-600">🎡 命運轉盤</h2>
+      
+      {prizeList.length === 0 ? (
+        <div>
+          <textarea
+            value={prizes}
+            onChange={(e) => setPrizes(e.target.value)}
+            placeholder="輸入獎品項目（每行一個）&#10;例如：&#10;iPhone 15&#10;Switch&#10;AirPods&#10;星巴克禮券"
+            className="w-full h-48 p-4 border-2 border-purple-300 rounded-xl mb-4 text-lg"
+          />
+          <button
+            onClick={setupWheel}
+            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-2xl font-bold py-4 rounded-xl hover:scale-105 transform transition-all"
+          >
+            建立轉盤
+          </button>
+        </div>
+      ) : (
+        <div className="text-center">
+          <div className="relative w-80 h-80 mx-auto mb-8">
+            {/* 外框裝飾 */}
+            <div className="absolute inset-0 rounded-full border-8 border-yellow-400 shadow-2xl"></div>
+            
+            {/* 轉盤 */}
+            <svg
+              viewBox="0 0 200 200"
+              className="w-full h-full"
+              style={{
+                transform: `rotate(${rotation}deg)`,
+                transition: isSpinning ? 'transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99)' : 'none'
+              }}
+            >
+              {prizeList.map((prize, i) => {
+                const angle = (360 / prizeList.length) * i;
+                const nextAngle = (360 / prizeList.length) * (i + 1);
+                const startRad = (angle - 90) * (Math.PI / 180);
+                const endRad = (nextAngle - 90) * (Math.PI / 180);
+                
+                const x1 = 100 + 90 * Math.cos(startRad);
+                const y1 = 100 + 90 * Math.sin(startRad);
+                const x2 = 100 + 90 * Math.cos(endRad);
+                const y2 = 100 + 90 * Math.sin(endRad);
+                
+                return (
+                  <g key={i}>
+                    <path
+                      d={`M 100 100 L ${x1} ${y1} A 90 90 0 ${prizeList.length <= 2 ? 1 : 0} 1 ${x2} ${y2} Z`}
+                      fill={colors[i % colors.length]}
+                      stroke="white"
+                      strokeWidth="2"
+                    />
+                    <text
+                      x="100"
+                      y="55"
+                      fill="white"
+                      fontSize="10"
+                      fontWeight="bold"
+                      textAnchor="middle"
+                      transform={`rotate(${angle + 360 / prizeList.length / 2} 100 100)`}
+                    >
+                      {prize.length > 8 ? prize.substring(0, 8) + '...' : prize}
+                    </text>
+                  </g>
+                );
+              })}
+              <circle cx="100" cy="100" r="15" fill="gold" stroke="#333" strokeWidth="2"/>
+              <circle cx="100" cy="100" r="8" fill="white"/>
+            </svg>
+            
+            {/* 指針 - 固定在上方 */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10" style={{top: '-8px'}}>
+              <div className="relative">
+                {/* 指針主體 */}
+                <div className="w-0 h-0 border-l-[20px] border-r-[20px] border-t-[40px] border-l-transparent border-r-transparent border-t-red-600 drop-shadow-lg"></div>
+                {/* 指針圓點 */}
+                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 w-6 h-6 bg-red-600 rounded-full border-4 border-white shadow-lg"></div>
+              </div>
+            </div>
+          </div>
+          
+          {result && (
+            <div className="bg-gradient-to-r from-yellow-400 to-orange-500 rounded-2xl p-8 mb-6 animate-bounce">
+              <div className="text-4xl font-bold text-white mb-2">🎉 恭喜獲得 🎉</div>
+              <div className="text-5xl font-bold text-white">{result}</div>
+            </div>
+          )}
+          
+          <button
+            onClick={spin}
+            disabled={isSpinning}
+            className={`w-full text-2xl font-bold py-4 rounded-xl transition-all ${
+              isSpinning 
+                ? 'bg-gray-400 cursor-not-allowed' 
+                : 'bg-gradient-to-r from-purple-600 to-pink-600 hover:scale-105 transform'
+            } text-white`}
+          >
+            {isSpinning ? '轉動中...' : '開始轉！'}
+          </button>
+          
+          <button
+            onClick={() => {
+              setPrizeList([]);
+              setPrizes('');
+              setResult('');
+              setRotation(0);
+            }}
+            className="w-full mt-4 bg-gray-500 text-white text-xl font-bold py-3 rounded-xl hover:bg-gray-600"
+          >
+            重新設定
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default PartyGames;
