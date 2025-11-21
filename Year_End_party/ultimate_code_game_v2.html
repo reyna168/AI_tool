@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 尾牙終極密碼遊戲 - 大螢幕版 🏆</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+        :root {
+            --primary-color: #ff5722; /* 鮮豔橘紅 */
+            --secondary-color: #26a69a; /* 青綠色 */
+            --background-color: #fce4ec; /* 淺粉色背景 */
+            --card-background: #ffffff;
+            --font-color: #333333;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--background-color);
+            text-align: center;
+            padding: 30px;
+            /* 全局字體放大 */
+            font-size: 1.2em; 
+        }
+
+        .container {
+            background: var(--card-background);
+            padding: 40px 60px;
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            width: 90%;
+            max-width: 800px; /* 增加最大寬度 */
+            border: 6px solid var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 3.5em; /* 放大標題 */
+            font-weight: 900;
+            text-shadow: 2px 2px 0 #fff;
+        }
+
+        h2 {
+            color: var(--font-color);
+            font-size: 1.8em; /* 放大副標題 */
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px dashed #eeeeee;
+        }
+
+        #rangeDisplay {
+            font-weight: 900;
+            color: var(--secondary-color);
+            font-size: 2.5em; /* 範圍顯示特別放大 */
+            display: block;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #e0f2f1;
+            border-radius: 12px;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .input-area {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        #guessInput {
+            flex-grow: 1;
+            padding: 18px; /* 放大輸入框 */
+            border: 4px solid #ccc;
+            border-radius: 12px;
+            font-size: 1.5em; /* 放大輸入字體 */
+            text-align: center;
+            font-weight: 700;
+        }
+
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 18px 35px; /* 放大按鈕 */
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.4em; /* 放大按鈕字體 */
+            font-weight: 700;
+            box-shadow: 0 6px 0 #e64a19;
+            white-space: nowrap; /* 防止按鈕文字換行 */
+        }
+
+        button:hover {
+            background-color: #e64a19;
+            box-shadow: 0 3px 0 #d84315;
+            transform: translateY(3px);
+        }
+
+        .message {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            min-height: 25px;
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+
+        .message.hint {
+            background-color: #ffecb3;
+            color: #ff9800;
+            border-left: 6px solid #ff9800;
+        }
+
+        .message.correct {
+            background-color: #c8e6c9;
+            color: #388e3c;
+            border-left: 6px solid #388e3c;
+        }
+        
+        /* 新增：猜測記錄區塊樣式 */
+        #guessesContainer {
+            width: 90%;
+            max-width: 800px;
+            background-color: #f7f7f7;
+            padding: 20px 30px;
+            border-radius: 15px;
+            border: 2px solid #cccccc;
+            margin-top: 20px;
+        }
+        
+        #guessesContainer p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .guesses-display {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .guess-item {
+            background-color: #4db6ac; /* 猜測數字的背景色 */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.3em; /* 猜測數字放大 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* 中獎區塊樣式 */
+        #prizeSection {
+            /* ... (保持原樣或微調) */
+            margin-top: 40px;
+            padding: 40px;
+            background-color: #fffde7;
+            border-radius: 15px;
+            border: 6px dashed var(--primary-color);
+            animation: pulse 1s infinite alternate;
+        }
+
+        #prizeSection h3 {
+            font-size: 2.5em;
+            margin: 15px 0;
+        }
+        
+        #prizeSection p {
+            font-size: 1.5em;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @keyframes pulse {
+            from { transform: scale(1); box-shadow: 0 0 15px rgba(255, 87, 34, 0.5); }
+            to { transform: scale(1.01); box-shadow: 0 0 25px rgba(255, 87, 34, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 終極密碼大挑戰 🎉</h1>
+        <h2>誰能猜中 <span id="currentRangeText">1 到 100</span> 的幸運密碼？</h2>
+        
+        <div id="gameInfo">
+            <span id="rangeDisplay">範圍：1 到 100</span>
+            <p style="margin-top: 15px; font-weight: 700;">請輸入一個範圍內的數字：</p>
+        </div>
+        
+        <div class="input-area">
+            <input type="number" id="guessInput" min="1" max="100" placeholder="輸入您的幸運密碼" required>
+            <button onclick="checkGuess()">猜密碼！</button>
+        </div>
+        
+        <div id="message" class="message"></div>
+        
+        <div id="prizeSection" class="hidden">
+            <p>🏆🏆 **恭喜中獎！** 🏆🏆</p>
+            <h3>🎁 密碼：<span id="finalSecretNumber"></span>！尾牙大獎得主！ 🎁</h3>
+            <button onclick="startGame()" style="margin-top: 30px; padding: 20px 40px;">再玩一次 (重設密碼)</button>
+        </div>
+    </div>
+    
+    <div id="guessesContainer">
+        <div id="guessesList"></div>
+    </div>
+    
+    <p class="note">小提醒：只有在目前的範圍內猜測才有效喔！</p>
+
+    <script>
+        // 遊戲狀態變數
+        let secretNumber;
+        let minRange = 1;
+        let maxRange = 100;
+        let attempts = 0;
+        let guessedNumbers = []; // 新增：猜過的數字列表
+
+        // 取得 DOM 元素
+        const rangeDisplay = document.getElementById('rangeDisplay');
+        const guessInput = document.getElementById('guessInput');
+        const messageElement = document.getElementById('message');
+        const prizeSection = document.getElementById('prizeSection');
+        const finalSecretNumber = document.getElementById('finalSecretNumber');
+        const guessesListElement = document.getElementById('guessesList');
+        const currentRangeText = document.getElementById('currentRangeText');
+
+        /**
+         * 啟動或重置遊戲
+         */
+        function startGame() {
+            secretNumber = Math.floor(Math.random() * 100) + 1; 
+            minRange = 1;
+            maxRange = 100;
+            attempts = 0;
+            guessedNumbers = []; // 重設猜測列表
+
+            updateDisplay();
+            updateGuessesList(); // 清空猜測記錄顯示
+            
+            messageElement.textContent = '遊戲開始！請猜 1 到 100 之間的一個數字！';
+            messageElement.className = 'message hint';
+            guessInput.value = '';
+            guessInput.disabled = false;
+            prizeSection.classList.add('hidden');
+            
+            console.log(`[DEBUG] 尾牙密碼是: ${secretNumber}`);
+        }
+
+        /**
+         * 更新畫面上顯示的猜測範圍
+         */
+        function updateDisplay() {
+            rangeDisplay.textContent = `範圍：${minRange} 到 ${maxRange}`;
+            currentRangeText.textContent = `${minRange} 到 ${maxRange}`;
+            guessInput.setAttribute('min', minRange + 1);
+            guessInput.setAttribute('max', maxRange - 1);
+        }
+        
+        /**
+         * 新增：更新畫面上的猜測記錄列表
+         */
+        function updateGuessesList() {
+            guessesListElement.innerHTML = ''; // 清空列表
+
+            if (guessedNumbers.length === 0) {
+                guessesListElement.innerHTML = '<p>尚無猜測記錄...</p>';
+                return;
+            }
+
+            // 依數字大小排序顯示
+            const sortedGuesses = [...guessedNumbers].sort((a, b) => a - b);
+            
+            // 建立顯示猜測數字的 HTML 結構
+            const guessItemsHtml = sortedGuesses.map(num => 
+                `<span class="guess-item">${num}</span>`
+            ).join('');
+
+            guessesListElement.innerHTML = `
+                <p><strong>🚨 猜測記錄 (${attempts} 次) 🚨</strong></p>
+                <div class="guesses-display">
+                    ${guessItemsHtml}
+                </div>
+            `;
+        }
+
+        /**
+         * 檢查玩家的猜測數字
+         */
+        function checkGuess() {
+            const guess = parseInt(guessInput.value);
+
+            // 1. 檢查輸入是否有效
+            if (isNaN(guess) || guess < 1 || guess > 100) {
+                showMessage('❌ 請輸入一個有效的 1 到 100 之間的數字！', 'hint');
+                guessInput.value = '';
+                return;
+            }
+            
+            // 2. 檢查是否已經猜過 (提高遊戲體驗，避免重複猜測佔用次數)
+            if (guessedNumbers.includes(guess)) {
+                showMessage(`⚠️ 數字 **${guess}** 已經猜過了！請猜別的！`, 'hint');
+                guessInput.value = '';
+                return;
+            }
+
+            // 3. 檢查數字是否在當前範圍內
+            if (guess <= minRange || guess >= maxRange) {
+                showMessage(`😱 **${guess}** 不在當前範圍 **${minRange} 到 ${maxRange}** 之間！請重猜！`, 'hint');
+                guessInput.value = '';
+                return;
+            }
+            
+            // 處理有效的猜測
+            attempts++;
+            guessedNumbers.push(guess); // 加入猜測記錄
+            
+            // 4. 判斷猜測結果
+            if (guess === secretNumber) {
+                // **猜中密碼！**
+                finalSecretNumber.textContent = secretNumber;
+                showMessage(`🎉🎉 恭喜！您在 **${attempts}** 次猜測中找到了密碼 **${secretNumber}**！`, 'correct');
+                guessInput.disabled = true; 
+                prizeSection.classList.remove('hidden'); 
+                
+            } else if (guess < secretNumber) {
+                // 猜太小了，更新最小值
+                minRange = guess;
+                showMessage(`⬇️ **${guess}** 太小了！密碼在 ${minRange} 到 ${maxRange} 之間。`, 'hint');
+                
+            } else { // guess > secretNumber
+                // 猜太大了，更新最大值
+                maxRange = guess;
+                showMessage(`⬆️ **${guess}** 太大了！密碼在 ${minRange} 到 ${maxRange} 之間。`, 'hint');
+            }
+
+            // 5. 更新畫面顯示的範圍和猜測記錄
+            updateDisplay();
+            updateGuessesList();
+            
+            // 清空輸入框並保持焦點
+            guessInput.value = '';
+            guessInput.focus(); 
+        }
+
+        /**
+         * 在畫面上顯示提示訊息
+         */
+        function showMessage(text, type) {
+            messageElement.innerHTML = text;
+            messageElement.className = `message ${type}`;
+        }
+
+        // 在網頁載入完成後，自動啟動遊戲
+        window.onload = startGame;
+
+        // 讓使用者按下 Enter 鍵也能觸發猜測
+        guessInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter' && !guessInput.disabled) {
+                checkGuess();
+            }
+        });
+    </script>
+</body>
+</html>
