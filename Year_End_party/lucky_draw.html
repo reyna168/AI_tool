@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尾牙撲克牌抽獎系統</title>
+    <style>
+        body {
+            font-family: "Microsoft JhengHei", Arial, sans-serif;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 { color: #f1c40f; margin-bottom: 10px; }
+        .status { margin-bottom: 30px; font-size: 1.2em; color: #bdc3c7; }
+        
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+
+        /* Button Colors */
+        .btn-prize3 { background-color: #e67e22; color: white; }
+        .btn-prize3:hover { background-color: #d35400; }
+        
+        .btn-prize2 { background-color: #95a5a6; color: white; }
+        .btn-prize2:hover { background-color: #7f8c8d; }
+
+        .btn-prize1 { background-color: #e74c3c; color: white; transform: scale(1.1); }
+        .btn-prize1:hover { background-color: #c0392b; }
+        
+        button:disabled {
+            background-color: #555;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+
+        /* Result Area */
+        #result-area {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .winner-card {
+            background: white;
+            color: #333;
+            border-radius: 8px;
+            padding: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            animation: popIn 0.5s ease;
+        }
+
+        .winner-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #c0392b;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        .card-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .card {
+            background: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        
+        .card.red { color: #e74c3c; }
+        .card.black { color: #2c3e50; }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 尾牙撲克牌抽獎系統 🎉</h1>
+    <div class="status">
+        目前牌庫剩餘：<span id="remaining-count">104</span> 張
+    </div>
+
+    <div class="controls">
+        <button onclick="drawPrize(3, 10)" class="btn-prize3" id="btn-3">🎁 抽三獎 (10名)</button>
+        <button onclick="drawPrize(2, 3)" class="btn-prize2" id="btn-2">🥈 抽二獎 (3名)</button>
+        <button onclick="drawPrize(1, 1)" class="btn-prize1" id="btn-1">🏆 抽頭獎 (1名)</button>
+    </div>
+
+    <div class="controls">
+        <button onclick="resetGame()" style="background-color: #34495e; font-size: 0.9em;">🔄 重置所有抽獎</button>
+    </div>
+
+    <div id="result-area"></div>
+
+    <script>
+        // 1. 初始化變數
+        const suits = [
+            { symbol: '♠', color: 'black', name: '黑桃' },
+            { symbol: '♥', color: 'red', name: '紅心' },
+            { symbol: '♦', color: 'red', name: '方塊' },
+            { symbol: '♣', color: 'black', name: '梅花' }
+        ];
+        const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+        
+        let deck = [];
+        
+        // 2. 建立兩副牌的函數
+        function initDeck() {
+            deck = [];
+            // 兩副牌: i=1 代表第一副, i=2 代表第二副
+            for (let i = 1; i <= 2; i++) {
+                suits.forEach(suit => {
+                    ranks.forEach(rank => {
+                        deck.push({
+                            deckId: i, // 第幾副牌
+                            suit: suit.symbol,
+                            color: suit.color,
+                            rank: rank,
+                            display: `[第${i}副] ${suit.symbol}${rank}`
+                        });
+                    });
+                });
+            }
+            updateCount();
+            document.getElementById('result-area').innerHTML = '';
+            enableButtons();
+        }
+
+        // 3. 更新剩餘張數顯示
+        function updateCount() {
+            document.getElementById('remaining-count').innerText = deck.length;
+        }
+
+        // 4. 抽獎核心邏輯
+        function drawPrize(prizeLevel, count) {
+            // 檢查牌夠不夠抽
+            if (deck.length < count) {
+                alert("牌庫張數不足，無法繼續抽取！");
+                return;
+            }
+
+            let winners = [];
+            
+            // 隨機抽取 N 張
+            for (let i = 0; i < count; i++) {
+                // 產生隨機索引 (0 到 deck.length - 1)
+                const randomIndex = Math.floor(Math.random() * deck.length);
+                
+                // 取出該張牌並放入得獎名單
+                winners.push(deck[randomIndex]);
+                
+                // **關鍵：從陣列中移除這張牌 (splice)，確保不重複**
+                deck.splice(randomIndex, 1);
+            }
+
+            updateCount();
+            displayWinners(prizeLevel, winners);
+            
+            // 禁用該按鈕避免重複按
+            document.getElementById(`btn-${prizeLevel}`).disabled = true;
+        }
+
+        // 5. 顯示中獎結果
+        function displayWinners(level, winners) {
+            const resultArea = document.getElementById('result-area');
+            const titles = { 1: "🏆 頭獎 (Head Prize)", 2: "🥈 二獎 (2nd Prize)", 3: "🎁 三獎 (3rd Prize)" };
+            
+            let html = `
+                <div class="winner-card">
+                    <div class="winner-title">${titles[level]}</div>
+                    <div class="card-list">
+            `;
+
+            winners.forEach(card => {
+                html += `<div class="card ${card.color}">${card.display}</div>`;
+            });
+
+            html += `</div></div>`;
+            
+            // 將新結果插入到最上方
+            resultArea.insertAdjacentHTML('afterbegin', html);
+        }
+
+        // 6. 重置遊戲
+        function resetGame() {
+            if(confirm("確定要重置所有抽獎紀錄嗎？")) {
+                initDeck();
+            }
+        }
+
+        function enableButtons() {
+            document.getElementById('btn-1').disabled = false;
+            document.getElementById('btn-2').disabled = false;
+            document.getElementById('btn-3').disabled = false;
+        }
+
+        // 頁面載入時初始化
+        initDeck();
+
+    </script>
+</body>
+</html>

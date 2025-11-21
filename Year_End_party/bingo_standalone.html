@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>尾牙賓果連線遊戲</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Microsoft JhengHei', 'PingFang TC', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .header {
+      text-align: center;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .header p {
+      font-size: 20px;
+      opacity: 0.9;
+    }
+
+    .winner-banner {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      display: none;
+    }
+
+    .winner-banner.show {
+      display: block;
+      animation: bounce 1s infinite;
+    }
+
+    .winner-banner h2 {
+      font-size: 42px;
+      margin: 10px 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-10px) scale(1.02); }
+    }
+
+    .game-area {
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 20px;
+    }
+
+    @media (max-width: 968px) {
+      .game-area {
+        grid-template-columns: 1fr;
+      }
+      .header h1 {
+        font-size: 36px;
+      }
+    }
+
+    .control-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .current-number-card {
+      text-align: center;
+    }
+
+    .current-number-card h3 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+
+    .number-display {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      border-radius: 15px;
+      padding: 50px 20px;
+      color: white;
+      min-height: 180px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .big-number {
+      font-size: 80px;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .letter-number {
+      font-size: 32px;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .waiting {
+      font-size: 28px;
+    }
+
+    @keyframes numberPulse {
+      0% { transform: scale(0.8); opacity: 0; }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .number-display.animated .big-number {
+      animation: numberPulse 0.5s;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 18px 30px;
+      border: none;
+      border-radius: 15px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover:not(:disabled) {
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+
+    .btn:active:not(:disabled) {
+      transform: translateY(0) scale(0.98);
+    }
+
+    .btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .btn-draw {
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    }
+
+    .btn-reset {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .stats {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .stat-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px;
+      background: #f8f9fa;
+      border-radius: 12px;
+    }
+
+    .stat-label {
+      color: #555;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    .stat-value {
+      font-size: 32px;
+      font-weight: bold;
+    }
+
+    .bingo-board h3 {
+      text-align: center;
+      color: #333;
+      font-size: 28px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .bingo-letters {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .bingo-letter {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #667eea;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .bingo-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-bottom: 15px;
+    }
+
+    .bingo-cell {
+      aspect-ratio: 1;
+      border: 3px solid transparent;
+      border-radius: 15px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+      background: #f5f5f5;
+      color: #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bingo-cell:hover {
+      background: #e8e8e8;
+      transform: scale(1.08);
+      border-color: #667eea;
+    }
+
+    .bingo-cell.marked {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      transform: scale(1.05);
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.5);
+    }
+
+    .bingo-cell.winning {
+      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7);
+      border-color: #fff;
+    }
+
+    @keyframes winningPulse {
+      0%, 100% { box-shadow: 0 8px 25px rgba(255, 215, 0, 0.7); }
+      50% { box-shadow: 0 8px 35px rgba(255, 215, 0, 0.9); }
+    }
+
+    .bingo-cell.winning {
+      animation: winningPulse 1s infinite;
+    }
+
+    .bingo-cell.free {
+      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+      color: white;
+      font-size: 20px;
+      cursor: default;
+    }
+
+    .bingo-cell.free:hover {
+      transform: scale(1);
+      border-color: transparent;
+    }
+
+    .hint {
+      text-align: center;
+      color: #666;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    .history {
+      margin-top: 20px;
+    }
+
+    .history h4 {
+      color: #333;
+      margin-bottom: 15px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .history-numbers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .history-number {
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 16px;
+      background: #f5f5f5;
+      color: #333;
+      transition: all 0.3s;
+    }
+
+    .history-number.latest {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      color: white;
+      animation: numberPulse 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🎊 尾牙賓果連線遊戲 🎊</h1>
+      <p>BINGO GAME</p>
+    </div>
+
+    <div id="winnerBanner" class="winner-banner">
+      <div style="font-size: 60px;">🏆</div>
+      <h2 id="winnerText"></h2>
+      <p style="font-size: 20px; margin-top: 10px;">恭喜中獎！</p>
+    </div>
+
+    <div class="game-area">
+      <div class="control-panel">
+        <div class="card current-number-card">
+          <h3>目前號碼</h3>
+          <div id="currentNumberDisplay" class="number-display">
+            <div class="waiting">準備開始</div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button id="drawBtn" class="btn btn-draw">🎲 抽號碼</button>
+          <button id="resetBtn" class="btn btn-reset">🔄 重新開始</button>
+        </div>
+
+        <div class="card">
+          <div class="stats">
+            <div class="stat-row">
+              <span class="stat-label">已抽號碼</span>
+              <span id="calledCount" class="stat-value" style="color: #764ba2;">0</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">剩餘號碼</span>
+              <span id="remainingCount" class="stat-value" style="color: #4facfe;">75</span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">連線數</span>
+              <span id="linesCount" class="stat-value" style="color: #f5576c;">0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bingo-board card">
+        <h3>賓果卡</h3>
+        <div class="bingo-letters">
+          <div class="bingo-letter">B</div>
+          <div class="bingo-letter">I</div>
+          <div class="bingo-letter">N</div>
+          <div class="bingo-letter">G</div>
+          <div class="bingo-letter">O</div>
+        </div>
+        <div id="bingoGrid" class="bingo-grid"></div>
+        <p id="hint" class="hint">按「抽號碼」開始遊戲</p>
+
+        <div class="history">
+          <h4>已抽號碼記錄</h4>
+          <div id="historyNumbers" class="history-numbers"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var board = [];
+    var calledNumbers = [];
+    var currentNumber = null;
+    var availableNumbers = [];
+    var winningLines = [];
+    var isWinner = false;
+    var gameStarted = false;
+
+    function initGame() {
+      board = generateBingoBoard();
+      calledNumbers = [];
+      currentNumber = null;
+      availableNumbers = [];
+      for (var i = 1; i <= 75; i++) {
+        availableNumbers.push(i);
+      }
+      winningLines = [];
+      isWinner = false;
+      gameStarted = false;
+      
+      renderBoard();
+      updateUI();
+      document.getElementById('winnerBanner').classList.remove('show');
+    }
+
+    function generateBingoBoard() {
+      var newBoard = [];
+      var ranges = [[1, 15], [16, 30], [31, 45], [46, 60], [61, 75]];
+
+      for (var col = 0; col < 5; col++) {
+        var min = ranges[col][0];
+        var max = ranges[col][1];
+        var columnNumbers = [];
+        var used = {};
+
+        while (columnNumbers.length < 5) {
+          var num = Math.floor(Math.random() * (max - min + 1)) + min;
+          if (!used[num]) {
+            used[num] = true;
+            columnNumbers.push(num);
+          }
+        }
+
+        for (var row = 0; row < 5; row++) {
+          if (!newBoard[row]) newBoard[row] = [];
+          if (row === 2 && col === 2) {
+            newBoard[row][col] = { number: 'FREE', marked: true };
+          } else {
+            newBoard[row][col] = { number: columnNumbers[row], marked: false };
+          }
+        }
+      }
+      return newBoard;
+    }
+
+    function renderBoard() {
+      var grid = document.getElementById('bingoGrid');
+      grid.innerHTML = '';
+
+      for (var rowIndex = 0; rowIndex < board.length; rowIndex++) {
+        for (var colIndex = 0; colIndex < board[rowIndex].length; colIndex++) {
+          var cell = board[rowIndex][colIndex];
+          var button = document.createElement('button');
+          button.className = 'bingo-cell';
+          button.textContent = cell.number;
+          
+          if (cell.number === 'FREE') {
+            button.classList.add('free');
+          }
+          if (cell.marked) {
+            button.classList.add('marked');
+          }
+          if (isInWinningLine(rowIndex, colIndex)) {
+            button.classList.add('winning');
+          }
+          
+          button.setAttribute('data-row', rowIndex);
+          button.setAttribute('data-col', colIndex);
+          button.onclick = function() {
+            toggleMark(parseInt(this.getAttribute('data-row')), parseInt(this.getAttribute('data-col')));
+          };
+          grid.appendChild(button);
+        }
+      }
+    }
+
+    function drawNumber() {
+      if (availableNumbers.length === 0 || isWinner) return;
+
+      gameStarted = true;
+      var randomIndex = Math.floor(Math.random() * availableNumbers.length);
+      var number = availableNumbers[randomIndex];
+
+      currentNumber = number;
+      calledNumbers.push(number);
+      
+      var newAvailable = [];
+      for (var i = 0; i < availableNumbers.length; i++) {
+        if (availableNumbers[i] !== number) newAvailable.push(availableNumbers[i]);
+      }
+      availableNumbers = newAvailable;
+
+      for (var i = 0; i < board.length; i++) {
+        for (var j = 0; j < board[i].length; j++) {
+          if (board[i][j].number === number) board[i][j].marked = true;
+        }
+      }
+
+      updateUI();
+      renderBoard();
+      setTimeout(function() { checkBingo(); renderBoard(); }, 300);
+    }
+
+    function toggleMark(rowIndex, colIndex) {
+      if (!gameStarted) return;
+      var cell = board[rowIndex][colIndex];
+      if (cell.number !== 'FREE') {
+        cell.marked = !cell.marked;
+        renderBoard();
+        setTimeout(function() { checkBingo(); renderBoard(); }, 100);
+      }
+    }
+
+    function checkBingo() {
+      winningLines = [];
+
+      for (var i = 0; i < 5; i++) {
+        var allMarked = true;
+        for (var j = 0; j < 5; j++) {
+          if (!board[i][j].marked) { allMarked = false; break; }
+        }
+        if (allMarked) winningLines.push({ type: 'row', index: i });
+      }
+
+      for (var i = 0; i < 5; i++) {
+        var allMarked = true;
+        for (var j = 0; j < 5; j++) {
+          if (!board[j][i].marked) { allMarked = false; break; }
+        }
+        if (allMarked) winningLines.push({ type: 'col', index: i });
+      }
+
+      var diag1 = true;
+      for (var i = 0; i < 5; i++) {
+        if (!board[i][i].marked) { diag1 = false; break; }
+      }
+      if (diag1) winningLines.push({ type: 'diag', index: 0 });
+
+      var diag2 = true;
+      for (var i = 0; i < 5; i++) {
+        if (!board[i][4 - i].marked) { diag2 = false; break; }
+      }
+      if (diag2) winningLines.push({ type: 'diag', index: 1 });
+
+      if (winningLines.length > 0 && !isWinner) {
+        isWinner = true;
+        showWinner();
+      }
+      updateUI();
+    }
+
+    function isInWinningLine(rowIndex, colIndex) {
+      for (var i = 0; i < winningLines.length; i++) {
+        var line = winningLines[i];
+        if (line.type === 'row' && line.index === rowIndex) return true;
+        if (line.type === 'col' && line.index === colIndex) return true;
+        if (line.type === 'diag' && line.index === 0 && rowIndex === colIndex) return true;
+        if (line.type === 'diag' && line.index === 1 && rowIndex + colIndex === 4) return true;
+      }
+      return false;
+    }
+
+    function showWinner() {
+      var banner = document.getElementById('winnerBanner');
+      var text = document.getElementById('winnerText');
+      text.textContent = '🎉 BINGO！共 ' + winningLines.length + ' 條線！🎉';
+      banner.classList.add('show');
+    }
+
+    function updateUI() {
+      var display = document.getElementById('currentNumberDisplay');
+      if (currentNumber) {
+        var prefix = getNumberPrefix(currentNumber);
+        display.className = 'number-display animated';
+        display.innerHTML = '<div class="big-number">' + currentNumber + '</div><div class="letter-number">' + prefix + '-' + currentNumber + '</div>';
+      } else {
+        display.className = 'number-display';
+        display.innerHTML = '<div class="waiting">準備開始</div>';
+      }
+
+      document.getElementById('calledCount').textContent = calledNumbers.length;
+      document.getElementById('remainingCount').textContent = availableNumbers.length;
+      document.getElementById('linesCount').textContent = winningLines.length;
+
+      var drawBtn = document.getElementById('drawBtn');
+      if (isWinner) {
+        drawBtn.textContent = '🏆 遊戲結束';
+        drawBtn.disabled = true;
+      } else if (availableNumbers.length === 0) {
+        drawBtn.textContent = '號碼已抽完';
+        drawBtn.disabled = true;
+      } else {
+        drawBtn.textContent = '🎲 抽號碼';
+        drawBtn.disabled = false;
+      }
+
+      document.getElementById('hint').textContent = gameStarted ? '點擊格子可手動標記' : '按「抽號碼」開始遊戲';
+
+      var historyDiv = document.getElementById('historyNumbers');
+      historyDiv.innerHTML = '';
+      for (var i = 0; i < calledNumbers.length; i++) {
+        var num = calledNumbers[i];
+        var span = document.createElement('span');
+        span.className = 'history-number';
+        if (i === calledNumbers.length - 1) span.classList.add('latest');
+        span.textContent = getNumberPrefix(num) + num;
+        historyDiv.appendChild(span);
+      }
+    }
+
+    function getNumberPrefix(num) {
+      if (num === 'FREE') return '';
+      if (num <= 15) return 'B';
+      if (num <= 30) return 'I';
+      if (num <= 45) return 'N';
+      if (num <= 60) return 'G';
+      return 'O';
+    }
+
+    document.getElementById('drawBtn').addEventListener('click', drawNumber);
+    document.getElementById('resetBtn').addEventListener('click', initGame);
+
+    initGame();
+  </script>
+</body>
+</html>

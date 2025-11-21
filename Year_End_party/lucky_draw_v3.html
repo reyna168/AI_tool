@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>尾牙動態抽獎系統 (跑馬燈特效版)</title>
+    <style>
+        /* --- 基礎設定 --- */
+        body {
+            font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+            background-color: #1e1e2e;
+            color: #fff;
+            text-align: center;
+            margin: 0;
+            padding-bottom: 50px; /* 底部留白 */
+        }
+
+        h1 { color: #f1c40f; padding: 20px 0; margin: 0; background: #151520; }
+
+        /* --- 按鈕控制區 --- */
+        .controls {
+            position: sticky;
+            top: 0;
+            background: #2c3e50;
+            padding: 15px;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        button {
+            padding: 10px 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 50px;
+            font-weight: bold;
+            color: white;
+            transition: all 0.2s;
+        }
+        button:hover { filter: brightness(1.1); transform: translateY(-2px); }
+        button:disabled { background-color: #555 !important; cursor: not-allowed; transform: none; opacity: 0.5; }
+        
+        .btn-3 { background: linear-gradient(45deg, #e67e22, #d35400); }
+        .btn-2 { background: linear-gradient(45deg, #3498db, #2980b9); }
+        .btn-1 { background: linear-gradient(45deg, #e74c3c, #c0392b); transform: scale(1.1); }
+        .btn-reset { background: #7f8c8d; border-radius: 5px; font-size: 0.9em; }
+
+        /* --- 得獎展示區 (累積顯示) --- */
+        #winners-container {
+            min-height: 100px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column-reverse; /* 新的獎項在最上面 */
+            align-items: center;
+            gap: 20px;
+        }
+
+        .prize-group {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            width: 90%;
+            max-width: 1000px;
+            animation: slideDown 0.5s ease;
+        }
+
+        .prize-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #ffd700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            border-bottom: 1px solid #555;
+            padding-bottom: 5px;
+        }
+
+        .cards-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* --- 大張卡片 (顯示結果用) --- */
+        .big-card {
+            width: 100px;
+            height: 140px;
+            background: white;
+            color: #333;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .big-card.red { color: #e74c3c; }
+        .big-card.black { color: #2c3e50; }
+        
+        /* 牌上的標籤 (第幾副) */
+        .deck-badge {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            font-size: 0.4em;
+            background: #333;
+            color: white;
+            padding: 2px 5px;
+            border-radius: 4px;
+        }
+
+        /* 跳動特效中的模糊感 */
+        .animating {
+            background: #f0f0f0;
+            color: transparent; /* 文字透明，改用 text-shadow 製造模糊 */
+            text-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+
+        /* --- 底部總牌庫 --- */
+        .deck-overview {
+            margin-top: 40px;
+            padding: 20px;
+            background: #151520;
+        }
+        
+        .deck-header { color: #aaa; margin-bottom: 10px; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+            gap: 5px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .mini-card {
+            height: 55px;
+            background: #eee;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9em;
+            font-weight: bold;
+            color: #333;
+            position: relative;
+            transition: opacity 0.5s;
+        }
+        
+        .mini-card.red { color: #c0392b; }
+        .mini-card.black { color: #2c3e50; }
+        
+        /* 第一副與第二副的區隔 (底部線條) */
+        .deck-1-border { border-bottom: 3px solid #3498db; }
+        .deck-2-border { border-bottom: 3px solid #e74c3c; }
+
+        /* 卡片被抽走後的樣式 */
+        .mini-card.taken {
+            opacity: 0.1;
+            filter: grayscale(100%);
+            /* 這裡我們不使用 visibility:hidden，這樣格子會留著但變很淡 */
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 尾牙幸運抽獎 (動態版)</h1>
+
+    <div class="controls">
+        <button onclick="startDraw(3, 10)" class="btn-3" id="btn-3">🎁 抽三獎 (10名)</button>
+        <button onclick="startDraw(2, 3)" class="btn-2" id="btn-2">🥈 抽二獎 (3名)</button>
+        <button onclick="startDraw(1, 1)" class="btn-1" id="btn-1">🏆 抽頭獎 (1名)</button>
+        <div style="width: 20px;"></div> <button onclick="resetGame()" class="btn-reset">🔄 全部重置</button>
+    </div>
+
+    <div id="winners-container"></div>
+
+    <div class="deck-overview">
+        <div class="deck-header">🔻 總牌庫監控 (共 104 張，抽中即變暗) 🔻</div>
+        
+        <h4 style="color:#3498db">第一副牌</h4>
+        <div class="grid-container" id="deck-grid-1"></div>
+        
+        <h4 style="color:#e74c3c; margin-top:20px;">第二副牌</h4>
+        <div class="grid-container" id="deck-grid-2"></div>
+    </div>
+
+    <script>
+        // --- 遊戲資料設定 ---
+        const suits = [
+            { symbol: '♠', color: 'black' },
+            { symbol: '♥', color: 'red' },
+            { symbol: '♦', color: 'red' },
+            { symbol: '♣', color: 'black' }
+        ];
+        const ranks = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+        
+        let deck = [];
+        let isAnimating = false; // 防止重複點擊
+
+        // 初始化
+        function initGame() {
+            deck = [];
+            document.getElementById('winners-container').innerHTML = '';
+            document.getElementById('deck-grid-1').innerHTML = '';
+            document.getElementById('deck-grid-2').innerHTML = '';
+            
+            // 重啟按鈕
+            ['btn-1', 'btn-2', 'btn-3'].forEach(id => {
+                document.getElementById(id).disabled = false;
+            });
+
+            let idCounter = 0;
+
+            // 建立兩副牌
+            for (let d = 1; d <= 2; d++) {
+                const container = document.getElementById(`deck-grid-${d}`);
+                
+                suits.forEach(suit => {
+                    ranks.forEach(rank => {
+                        const card = {
+                            id: idCounter++,
+                            deck: d,
+                            suit: suit.symbol,
+                            rank: rank,
+                            color: suit.color,
+                            drawn: false
+                        };
+                        deck.push(card);
+
+                        // 建立底部的小牌元素
+                        const div = document.createElement('div');
+                        div.className = `mini-card ${card.color} deck-${d}-border`;
+                        div.id = `mini-${card.id}`;
+                        div.innerText = `${suit.symbol}${rank}`;
+                        container.appendChild(div);
+                    });
+                });
+            }
+        }
+
+        // --- 核心抽獎流程 ---
+        function startDraw(prizeLevel, count) {
+            if (isAnimating) return; // 動畫中禁止操作
+
+            // 1. 篩選剩餘的牌
+            const availableDeck = deck.filter(c => !c.drawn);
+            
+            if (availableDeck.length < count) {
+                alert("牌庫數量不足！");
+                return;
+            }
+
+            isAnimating = true;
+            disableButtons(true);
+
+            // 2. 預先選出中獎者 (後端邏輯)
+            const winners = [];
+            for(let i=0; i<count; i++) {
+                const idx = Math.floor(Math.random() * availableDeck.length);
+                const winner = availableDeck[idx];
+                winners.push(winner);
+                
+                // 在邏輯上先移除，避免這次抽獎內部重複 (雖然機率低)
+                availableDeck.splice(idx, 1);
+                
+                // 標記原始 deck 中的狀態
+                const originalCard = deck.find(c => c.id === winner.id);
+                originalCard.drawn = true;
+            }
+
+            // 3. 建立介面並開始動畫
+            createResultGroup(prizeLevel, winners);
+        }
+
+        // 建立該次抽獎的顯示區塊
+        function createResultGroup(level, winners) {
+            const titles = { 1: "🏆 頭獎 (Head Prize)", 2: "🥈 二獎 (2nd Prize)", 3: "🎁 三獎 (3rd Prize)" };
+            const container = document.getElementById('winners-container');
+
+            // 建立外框
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'prize-group';
+            
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'prize-title';
+            titleDiv.innerText = titles[level];
+            groupDiv.appendChild(titleDiv);
+
+            const cardsRow = document.createElement('div');
+            cardsRow.className = 'cards-row';
+
+            // 為每個中獎者建立一個「顯示框」，初始內容是隨機亂跳的
+            const slotElements = [];
+            winners.forEach(winner => {
+                const cardEl = document.createElement('div');
+                cardEl.className = 'big-card animating'; // 加上 animating class
+                cardEl.innerHTML = `<div class="deck-badge">?</div><span>🎲</span>`; 
+                cardsRow.appendChild(cardEl);
+                
+                // 儲存元素與對應的最終結果
+                slotElements.push({
+                    element: cardEl,
+                    finalCard: winner
+                });
+            });
+
+            groupDiv.appendChild(cardsRow);
+            container.appendChild(groupDiv); // 插入到畫面上
+
+            // 4. 執行跑馬燈動畫
+            runSlotAnimation(slotElements, level);
+        }
+
+        // 執行跑馬燈邏輯
+        function runSlotAnimation(slots, level) {
+            // 讓每個卡片框框裡的內容快速變換
+            const intervalId = setInterval(() => {
+                slots.forEach(slotObj => {
+                    // 隨機顯示一個假內容
+                    const randomSuit = suits[Math.floor(Math.random()*4)];
+                    const randomRank = ranks[Math.floor(Math.random()*13)];
+                    slotObj.element.innerHTML = `
+                        <div class="deck-badge">Rolling...</div>
+                        <span style="color:${randomSuit.color}">${randomSuit.symbol}${randomRank}</span>
+                    `;
+                });
+            }, 60); // 每 60ms 換一次，速度快
+
+            // 設定停止時間：模擬緊張感，3秒後停止
+            setTimeout(() => {
+                clearInterval(intervalId);
+                revealWinners(slots);
+                
+                // 動畫結束，解鎖按鈕 (但不解鎖已抽過的獎項)
+                isAnimating = false;
+                disableButtons(false);
+                document.getElementById(`btn-${level}`).disabled = true; // 鎖定剛抽完的按鈕
+                
+            }, 2500); 
+        }
+
+        // 揭曉結果並更新底部牌庫
+        function revealWinners(slots) {
+            slots.forEach((slotObj, index) => {
+                const card = slotObj.finalCard;
+                const el = slotObj.element;
+                
+                // 移除動畫樣式，顯示真值
+                el.classList.remove('animating');
+                el.classList.add(card.color); // 加上紅/黑色
+                el.innerHTML = `
+                    <div class="deck-badge">第 ${card.deck} 副</div>
+                    <div>${card.suit}</div>
+                    <div>${card.rank}</div>
+                `;
+
+                // **關鍵：同時讓底部牌庫的那張牌變暗**
+                const miniCard = document.getElementById(`mini-${card.id}`);
+                if (miniCard) {
+                    miniCard.classList.add('taken');
+                }
+            });
+        }
+
+        function disableButtons(disabled) {
+            const btns = document.querySelectorAll('.controls button:not(.btn-reset)');
+            btns.forEach(b => {
+                // 如果按鈕本來就是 disabled (已經抽過的)，不要把它變回 enabled
+                if (!disabled && b.getAttribute('data-done') === 'true') return;
+                b.disabled = disabled;
+            });
+        }
+
+        function resetGame() {
+            if(confirm("確定要全部重置？歷史紀錄將會清空。")) {
+                initGame();
+            }
+        }
+
+        // 啟動
+        initGame();
+
+    </script>
+</body>
+</html>
