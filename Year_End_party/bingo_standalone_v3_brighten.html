@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🎉 尾牙 5x5 賓果遊戲 - 歡樂明亮版 🎉</title>
+  <style>
+    /* --- 亮色系主題變數 --- */
+    :root{
+      --bg: linear-gradient(135deg, #FFD700 0%, #FF8C00 100%); /* 節慶金橘漸變背景 */
+      --card-bg: #FFFFFF; /* 主體卡片白色 */
+      --accent1: #FF4500; /* 鮮紅色 (抽號按鈕/強調) */
+      --accent2: #1E90FF; /* 藍色 (次要按鈕/線條) */
+      --text-dark: #333333;
+      --text-light: #FFFFFF;
+      --glass: rgba(255, 255, 255, 0.8); /* 亮色系玻璃感 */
+      --marked-bg: #FFAA00; /* 標記亮橘 */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Noto Sans TC', sans-serif, Inter, ui-sans-serif;color:var(--text-dark)}
+    body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
+
+    /* --- App 容器 --- */
+    .app{
+      width:1100px;max-width:100%;
+      background:rgba(255, 255, 255, 0.95); /* 輕微透明白色卡片 */
+      border-radius:20px;
+      padding:25px;
+      box-shadow:0 15px 50px rgba(0, 0, 0, 0.3);
+      border:3px solid var(--accent1); /* 強調邊框 */
+      display:grid;
+      grid-template-columns:450px 1fr;
+      gap:25px;
+      align-items:start;
+    }
+
+    .panel{
+      background:var(--card-bg);
+      padding:20px;
+      border-radius:15px;
+      border:1px solid #eeeeee;
+      box-shadow:0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    h1{margin:8px 0 16px;font-size:24px;letter-spacing:1px;color:var(--accent1);text-shadow:1px 1px 0 #ffe0b2}
+    .subtitle{color:var(--text-dark);font-size:14px;margin-bottom:12px}
+    h3{color:var(--accent1);margin-top:14px;margin-bottom:8px;font-size:16px}
+
+    /* --- 賓果盤樣式 --- */
+    .board-wrap{display:flex;flex-direction:column;align-items:center;gap:15px}
+    .board{
+      width:450px;height:450px;
+      display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);
+      gap:10px;padding:10px;
+      background:linear-gradient(135deg, #f5f5f5, #e0e0e0); /* 淺灰底 */
+      border-radius:15px;
+      box-shadow:inset 0 0 15px rgba(0,0,0,0.1);
+    }
+    .cell{
+      background:#FAFAFA; /* 淺白底 */
+      color:var(--text-dark);
+      display:flex;align-items:center;justify-content:center;
+      font-size:24px;font-weight:900;
+      border-radius:12px;
+      cursor:pointer;user-select:none;
+      position:relative;
+      transition:transform .12s ease, box-shadow .12s ease, background .2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 立體感陰影 */
+      border:2px solid #ccc;
+    }
+    .cell:hover{transform:translateY(-3px);box-shadow: 0 8px 15px rgba(0,0,0,0.15)}
+    .cell.marked{
+      background:var(--marked-bg); /* 亮橘色 */
+      color:var(--text-light);
+      box-shadow:0 0 20px rgba(255,170,0,0.8);
+      border:3px solid #FF8C00;
+      transform:scale(0.98);
+    }
+
+    .cell.free{
+      background:linear-gradient(90deg,var(--accent1),#FF7F50); /* 醒目的 Free */
+      color:var(--text-light);
+      font-size:16px;
+      font-weight:700;
+      cursor:default;
+      border:3px solid var(--accent1);
+    }
+    .cell span{pointer-events:none}
+
+    /* --- 控制項 --- */
+    .controls{display:flex;flex-direction:column;gap:12px}
+    .controls .row{display:flex;gap:10px}
+    button{
+      background:linear-gradient(90deg,var(--accent1),#FF7F50);
+      border:none;color:white;padding:12px 18px;
+      border-radius:12px;font-weight:700;font-size:15px;
+      cursor:pointer;
+      box-shadow:0 6px 0 #cc3700; /* 立體按鈕陰影 */
+      transition:all .1s;
+    }
+    button:active{transform:translateY(2px);box-shadow:0 4px 0 #cc3700;}
+    
+    .btn-ghost{
+      background:#f0f0f0;
+      border:1px solid #ddd;
+      color:var(--text-dark);
+      box-shadow:0 4px 0 #bdbdbd;
+    }
+    .btn-ghost:active{transform:translateY(2px);box-shadow:0 2px 0 #bdbdbd;}
+    
+    #drawBtn{flex:1;font-size:16px}
+    #drawManyBtn{flex:1}
+
+    .draw-num{
+      font-size:52px;font-weight:900;
+      display:flex;align-items:center;justify-content:center;
+      height:96px;border-radius:15px;
+      background:#E0F7FA; /* 淺藍色背景 */
+      color:var(--accent2);
+      border:2px solid var(--accent2);
+      box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* --- 已抽號碼列表 --- */
+    .drawn-list{
+      display:flex;flex-wrap:wrap;gap:8px;padding:10px;
+      background:#f8f8f8;
+      border:1px solid #eee;
+      border-radius:12px;min-height:90px;
+      max-height:200px;overflow-y:auto;
+    }
+    .chip{
+      padding:8px 12px;
+      background:var(--accent2); /* 明亮藍色 */
+      color:var(--text-light);
+      border-radius:10px;
+      font-weight:700;
+      font-size:14px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* --- 右側資訊 --- */
+    .right-top{display:flex;justify-content:space-between;align-items:center}
+    .info{color:var(--text-dark);font-weight:600}
+    #remaining{color:var(--accent1);font-weight:900}
+    .small{font-size:13px;color:#666666}
+
+    /* --- Win 效果 --- */
+    .win-glow{animation:winPulse 1s linear infinite}
+    @keyframes winPulse{0%{filter:drop-shadow(0 0 0 rgba(255,69,0,0.0))}50%{filter:drop-shadow(0 0 20px rgba(255,69,0,1))}100%{filter:drop-shadow(0 0 0 rgba(255,69,0,0.0))}}
+
+    /* --- 彈窗和紙屑 --- */
+    .overlay{position:fixed;inset:0;pointer-events:none}
+    .modal{
+      position:fixed;left:50%;top:15%;
+      transform:translateX(-50%);
+      background:var(--card-bg);
+      padding:25px;border-radius:18px;
+      border:4px solid var(--accent1);
+      box-shadow:0 25px 80px rgba(0, 0, 0, 0.4);
+      min-width:350px;text-align:center;
+    }
+    .modal h2{margin:0 0 10px;color:var(--accent1);font-size:32px}
+    .modal button{
+      background:linear-gradient(90deg,var(--accent2),#5DADE2);
+      box-shadow:0 6px 0 #1565C0;
+    }
+    .modal button:active{box-shadow:0 4px 0 #1565C0;}
+
+    footer{grid-column:1/-1;display:flex;gap:8px;align-items:center;justify-content:center;margin-top:10px;color:#777;font-size:13px}
+
+    /* responsive */
+    @media (max-width:1000px){.app{grid-template-columns:1fr;}.board{width:100%;height:auto;aspect-ratio:1/1;}}
+  </style>
+</head>
+<body>
+  <div class="app" role="application" aria-label="尾牙 5x5 賓果遊戲">
+    <div class="panel">
+      <h1>🎉 尾牙 5×5 賓果盤 🎉</h1>
+      <div class="subtitle">點擊格子標記，或使用右側「抽號」自動標記。</div>
+
+      <div class="board-wrap">
+        <div id="board" class="board" aria-hidden="false"></div>
+
+        <div style="display:flex;gap:10px;width:100%;justify-content:center;margin-top:10px">
+          <button id="resetBtn" class="btn-ghost">重置盤面</button>
+          <button id="shuffleBtn">重新發牌</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="right-top">
+        <div>
+          <h1 style="font-size:20px;margin-bottom:6px;color:var(--accent2)">🎱 抽號與紀錄區</h1>
+          <div class="small">被點過的格子視為標記。BINGO 判定：橫、直、斜線連成一條。</div>
+        </div>
+        <div style="text-align:right">
+          <div class="info">剩餘號碼：<span id="remaining">75</span></div>
+          <div style="height:12px"></div>
+          <button id="autoMarkToggle" class="btn-ghost">自動標記：開</button>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:15px;margin-top:20px;align-items:center">
+        <div class="draw-num" id="lastDraw">—</div>
+        <div style="display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;gap:10px">
+            <button id="drawBtn">抽號</button>
+            <button id="drawManyBtn" class="btn-ghost">連抽 5 號</button>
+          </div>
+          <div style="display:flex;gap:10px">
+            <button id="callAllBtn" class="btn-ghost" style="flex:1">公布所有剩餘號碼</button>
+          </div>
+        </div>
+      </div>
+
+      <h3>🔔 已抽號碼紀錄</h3>
+      <div id="drawnList" class="drawn-list" aria-live="polite"></div>
+
+      <h3>⚙️ 遊戲設定資訊</h3>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div class="chip" style="background:var(--accent1)">數字範圍 1 - 75</div>
+        <div class="chip" style="background:var(--accent1)">5×5 格子</div>
+        <div class="chip" style="background:var(--accent1)">中間 Free Space</div>
+      </div>
+
+      <div style="margin-top:18px">
+        <small class="small">提示：<strong>按空白鍵 (Space)</strong> 也可以快速抽號碼喔！</small>
+      </div>
+    </div>
+
+    <footer>尾牙專用 Bingo v2.0 - 明亮版</footer>
+  </div>
+
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+  <script>
+    // Data structures
+    const BOARD_SIZE = 5;
+    const MAX_NUMBER = 75;
+    let boardNumbers = []; 
+    let marked = []; 
+    let drawn = new Set();
+    let autoMark = true;
+
+    const boardEl = document.getElementById('board');
+    const lastDrawEl = document.getElementById('lastDraw');
+    const drawnListEl = document.getElementById('drawnList');
+    const remainingEl = document.getElementById('remaining');
+    const autoMarkBtn = document.getElementById('autoMarkToggle');
+    const drawBtn = document.getElementById('drawBtn');
+    const drawManyBtn = document.getElementById('drawManyBtn');
+    const callAllBtn = document.getElementById('callAllBtn');
+
+    // helpers
+    function range(n){return [...Array(n).keys()]}
+    function randPick(arr){return arr[Math.floor(Math.random()*arr.length)]}
+
+    function generateNumbers(){
+      const pool = range(MAX_NUMBER).map(i=>i+1);
+      // shuffle
+      for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+      const selected = pool.slice(0,25);
+      // assign to 5x5
+      boardNumbers = [];
+      for(let r=0;r<5;r++){boardNumbers.push(selected.slice(r*5,(r+1)*5))}
+      return boardNumbers;
+    }
+
+    function initMarked(){marked = Array.from({length:5},()=>Array.from({length:5},()=>false));
+      // center free
+      marked[2][2] = true;
+    }
+
+    function renderBoard(){
+      boardEl.innerHTML='';
+      for(let r=0;r<5;r++){
+        for(let c=0;c<5;c++){
+          const num = boardNumbers[r][c];
+          const cell = document.createElement('div');
+          cell.className = 'cell';
+          if(r===2 && c===2){cell.classList.add('free');cell.innerHTML = '<span>FREE</span>'}
+          else{cell.innerHTML = `<span>${num}</span>`}
+          cell.dataset.r = r;cell.dataset.c = c;cell.dataset.num = num;
+          if(marked[r][c]) cell.classList.add('marked');
+          cell.addEventListener('click', onCellClick);
+          boardEl.appendChild(cell);
+        }
+      }
+    }
+
+    function onCellClick(){
+      const r = +this.dataset.r; const c = +this.dataset.c;
+      // center free is always marked, no toggle
+      if(r===2 && c===2) return;
+      
+      // toggle
+      marked[r][c] = !marked[r][c];
+      
+      // If manually marking, check if number was drawn (optional check)
+      if(marked[r][c] && !drawn.has(boardNumbers[r][c])){
+         // This can be used to prevent marking if not drawn, but for party use, 
+         // we allow marking for simplicity, but the host should ensure only drawn numbers are marked.
+      }
+      
+      renderBoard();
+      checkBingo();
+    }
+
+    function resetGame(){
+      drawn = new Set();
+      remainingEl.textContent = MAX_NUMBER - drawn.size;
+      lastDrawEl.textContent = '—';
+      drawManyBtn.disabled = false; drawBtn.disabled = false; callAllBtn.disabled = false;
+      generateNumbers();
+      initMarked();
+      renderBoard();
+      renderDrawnList();
+      clearOverlay();
+    }
+
+    // draw logic
+    function drawNumber(){
+      const pool = range(MAX_NUMBER).map(i=>i+1).filter(n=>!drawn.has(n));
+      if(pool.length===0) return null;
+      const n = randPick(pool);
+      drawn.add(n);
+      remainingEl.textContent = MAX_NUMBER - drawn.size;
+      lastDrawEl.textContent = n;
+      renderDrawnList();
+      if(autoMark) autoMarkBoard(n);
+      checkBingo();
+      return n;
+    }
+
+    function drawMany(n=5){
+      for(let i=0;i<n;i++){
+        const val = drawNumber();
+        if(val===null) break;
+      }
+    }
+
+    function renderDrawnList(){
+      drawnListEl.innerHTML='';
+      [...drawn].sort((a,b)=>a-b).forEach(num=>{
+        const chip = document.createElement('div');chip.className='chip';chip.textContent=num;drawnListEl.appendChild(chip);
+      })
+      drawnListEl.scrollTop = drawnListEl.scrollHeight; // Auto scroll to bottom
+    }
+
+    function autoMarkBoard(num){
+      // mark any cell with this number
+      for(let r=0;r<5;r++)for(let c=0;c<5;c++){
+        if(boardNumbers[r][c]===num){marked[r][c]=true}
+      }
+      renderBoard();
+    }
+
+    // Bingo check
+    function checkBingo(){
+      const winners = [];
+      // rows
+      for(let r=0;r<5;r++){
+        if(marked[r].every(Boolean)) winners.push({type:'row',idx:r});
+      }
+      // cols
+      for(let c=0;c<5;c++){
+        let ok=true;for(let r=0;r<5;r++) if(!marked[r][c]){ok=false;break}
+        if(ok) winners.push({type:'col',idx:c});
+      }
+      // diag TL-BR
+      let ok1=true;for(let i=0;i<5;i++) if(!marked[i][i]) ok1=false; if(ok1) winners.push({type:'diag',dir:1});
+      // diag TR-BL
+      let ok2=true;for(let i=0;i<5;i++) if(!marked[i][4-i]) ok2=false; if(ok2) winners.push({type:'diag',dir:2});
+
+      if(winners.length>0){
+        highlightWinners(winners);
+        announceBingo(winners);
+        return true;
+      } else {
+        clearHighlights();
+        return false;
+      }
+    }
+
+    function clearHighlights(){
+      document.querySelectorAll('.cell').forEach(cell=>cell.classList.remove('win-glow'));
+    }
+
+    function highlightWinners(winners){
+      clearHighlights();
+      winners.forEach(w=>{
+        if(w.type==='row'){
+          for(let c=0;c<5;c++){cellAt(w.idx,c)?.classList.add('win-glow')}
+        } else if(w.type==='col'){
+          for(let r=0;r<5;r++){cellAt(r,w.idx)?.classList.add('win-glow')}
+        } else if(w.type==='diag'){
+          if(w.dir===1){for(let i=0;i<5;i++)cellAt(i,i)?.classList.add('win-glow')}
+          else{for(let i=0;i<5;i++)cellAt(i,4-i)?.classList.add('win-glow')}
+        }
+      })
+    }
+
+    function cellAt(r,c){return document.querySelector(`.cell[data-r='${r}'][data-c='${c}']`)}
+
+    // announce and confetti
+    function announceBingo(winners){
+      // disable further draws
+      drawBtn.disabled = true; drawManyBtn.disabled=true; callAllBtn.disabled=true;
+      // show modal
+      showModal('B I N G O 大獎得主 🎉', `恭喜！成功達成 ${winners.length} 條連線！`);
+      launchConfetti();
+    }
+
+    // overlay + confetti simple
+    let confettiCanvas, confettiCtx, confettiPieces=[];
+    function setupOverlay(){
+      const overlay = document.getElementById('overlay');
+      overlay.innerHTML='';
+      confettiCanvas = document.createElement('canvas');
+      confettiCanvas.style.width='100%';confettiCanvas.style.height='100%';confettiCanvas.width = innerWidth;confettiCanvas.height = innerHeight;
+      confettiCanvas.style.pointerEvents='none';
+      overlay.appendChild(confettiCanvas);
+      confettiCtx = confettiCanvas.getContext('2d');
+    }
+    function launchConfetti(){
+      const overlay = document.getElementById('overlay'); overlay.setAttribute('aria-hidden','false');
+      setupOverlay();
+      confettiPieces = [];
+      const colors = ['#FF4500','#FFD700','#1E90FF','#90EE90','#FF1493'];
+      for(let i=0;i<120;i++){
+        confettiPieces.push({x:Math.random()*confettiCanvas.width,y:Math.random()*-confettiCanvas.height/2, vx:(Math.random()-0.5)*6, vy:Math.random()*4+2, size:Math.random()*8+4, color:colors[i%colors.length], rot:Math.random()*360, vr:Math.random()*8-4});
+      }
+      let t=0; const id = setInterval(()=>{
+        t++; confettiCtx.clearRect(0,0,confettiCanvas.width,confettiCanvas.height);
+        confettiPieces.forEach(p=>{
+          p.x += p.vx; p.y += p.vy; p.vy += 0.08; p.rot += p.vr;
+          confettiCtx.save(); confettiCtx.translate(p.x,p.y); confettiCtx.rotate(p.rot*Math.PI/180);
+          confettiCtx.fillStyle = p.color; confettiCtx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
+          confettiCtx.restore();
+        })
+        if(t>160){clearInterval(id);overlay.innerHTML='';overlay.setAttribute('aria-hidden','true')}
+      },16);
+    }
+
+    function showModal(title, text){
+      const overlay = document.getElementById('overlay');
+      const modal = document.createElement('div');modal.className='modal';
+      modal.innerHTML = `<h2>${title}</h2><div class="small">${text}</div><div style="margin-top:20px"><button id='closeModal'>繼續遊戲 / 領獎</button></div>`;
+      overlay.appendChild(modal);overlay.setAttribute('aria-hidden','false');
+      document.getElementById('closeModal').addEventListener('click',()=>{clearOverlay()});
+    }
+    function clearOverlay(){const overlay=document.getElementById('overlay');overlay.innerHTML='';overlay.setAttribute('aria-hidden','true')}
+
+    // misc
+    document.getElementById('resetBtn').addEventListener('click',()=>{
+      if(confirm('確定要重置遊戲？這會清除所有已抽號碼。')) resetGame();
+    });
+    document.getElementById('shuffleBtn').addEventListener('click',()=>{
+      if(confirm('將隨機重新排列盤面 (不會清除已抽號碼)。')){generateNumbers();initMarked();renderBoard();}
+    });
+    
+    callAllBtn.addEventListener('click',()=>{ // list remaining
+      const pool = range(MAX_NUMBER).map(i=>i+1).filter(n=>!drawn.has(n));
+      if(pool.length===0){alert('已無剩餘號碼');return}
+      alert('剩餘號碼:\n'+pool.join(', '))
+    });
+
+    autoMarkBtn.addEventListener('click',()=>{autoMark = !autoMark; autoMarkBtn.textContent = '自動標記：' + (autoMark? '開':'關')});
+
+    drawBtn.addEventListener('click',()=>{drawNumber()});
+    drawManyBtn.addEventListener('click',()=>{drawMany(5)});
+
+
+    // init
+    generateNumbers(); initMarked(); renderBoard(); renderDrawnList(); remainingEl.textContent = MAX_NUMBER-drawn.size;
+
+    // keyboard: Space = draw
+    window.addEventListener('keydown', (e)=>{ if(e.code==='Space'){e.preventDefault(); drawNumber()} })
+
+    // ensure canvas resizes
+    window.addEventListener('resize', ()=>{ if(confettiCanvas){confettiCanvas.width = innerWidth; confettiCanvas.height = innerHeight}});
+  </script>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 尾牙 5x5 賓果遊戲 🎉</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+        :root {
+            --primary-color: #e94e77; /* 節慶粉紅 */
+            --secondary-color: #55a630; /* 賓果綠 */
+            --background-color: #f7f7f7;
+            --card-background: #ffffff;
+            --marked-color: #ffc300; /* 標記亮黃 */
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: var(--background-color);
+            padding: 20px;
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .container {
+            background: var(--card-background);
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            width: 95%;
+            max-width: 700px;
+            border: 4px solid var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5em;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 0 #fff;
+        }
+
+        /* --- 賓果盤樣式 --- */
+        #bingoBoard {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 5px;
+            width: 100%;
+            aspect-ratio: 1 / 1; /* 保持正方形 */
+            margin: 20px auto;
+            border: 2px solid var(--secondary-color);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .bingo-cell {
+            background-color: #e8f5e9; /* 淺綠底 */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.8em; /* 數字放大 */
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            user-select: none;
+            transition: all 0.2s ease;
+            border: 2px solid var(--secondary-color);
+        }
+
+        .bingo-cell:hover:not(.marked) {
+            background-color: #c8e6c9;
+        }
+
+        .bingo-cell.marked {
+            background-color: var(--marked-color);
+            color: #333;
+            border: 2px solid #ffaa00;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+            transform: scale(0.95);
+        }
+        
+        /* 中間的 Free Space */
+        .bingo-cell:nth-child(13) { 
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 1.2em;
+            font-weight: 900;
+            cursor: default;
+        }
+        
+        /* 叫號區 */
+        #callStatus {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff3e0;
+            border-radius: 10px;
+            border: 2px dashed var(--primary-color);
+        }
+
+        #currentNumber {
+            font-size: 3em;
+            color: var(--primary-color);
+            font-weight: 900;
+            display: block;
+            margin: 5px 0 10px;
+            animation: zoomIn 0.5s ease-out;
+        }
+        
+        #calledNumbersList {
+            font-size: 0.9em;
+            color: #555;
+            max-height: 100px;
+            overflow-y: auto;
+            padding: 5px;
+            border-top: 1px solid #eee;
+            margin-top: 10px;
+        }
+
+        /* 按鈕樣式 */
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: 700;
+            margin: 5px;
+            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 4px 0 #388e3c;
+        }
+
+        button:hover {
+            background-color: #388e3c;
+            transform: translateY(1px);
+            box-shadow: 0 3px 0 #2e7d32;
+        }
+        
+        #nextCallButton {
+             background-color: var(--primary-color);
+             box-shadow: 0 4px 0 #d84315;
+        }
+        #nextCallButton:hover {
+             background-color: #d84315;
+             box-shadow: 0 3px 0 #bf360c;
+        }
+
+        .bingo-win {
+            color: var(--primary-color);
+            font-size: 2em;
+            font-weight: 900;
+            margin-top: 20px;
+            animation: pulse 1s infinite;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        /* 動畫 */
+        @keyframes zoomIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                padding: 20px;
+            }
+            .bingo-cell {
+                font-size: 1.5em;
+            }
+            #currentNumber {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 尾牙 5x5 賓果遊戲 🎉</h1>
+        
+        <div id="callStatus">
+            <h3>目前叫號：<span id="currentNumber">--</span></h3>
+            <p>已叫出數字清單：</p>
+            <div id="calledNumbersList">請點擊開始遊戲並叫號...</div>
+        </div>
+
+        <div id="controls">
+            <button onclick="startGame()">重新開始遊戲</button>
+            <button id="nextCallButton" onclick="callNextNumber()">🎲 叫下一個號碼</button>
+        </div>
+
+        <div id="statusMessage" class="bingo-win hidden"></div>
+    </div>
+    
+    <div class="container" style="max-width: 600px; margin-top: 0;">
+        <h2 style="font-size: 1.5em; color: var(--secondary-color);">你的賓果盤 (1~50)</h2>
+        <div id="bingoBoard">
+            </div>
+        <p style="font-size: 0.9em; color: #777;">點擊您的賓果盤上與叫號相符的數字來標記它。</p>
+    </div>
+
+    <script>
+        // --- 遊戲狀態變數 ---
+        let bingoBoard = []; // 玩家的賓果盤 (5x5 數字)
+        let calledNumbers = []; // 已叫出的數字列表
+        let markedCells = Array(5).fill(0).map(() => Array(5).fill(false)); // 標記狀態 (5x5 布林值)
+        const TOTAL_NUMBERS = 50; // 賓果盤使用的數字範圍 (1~50)
+        let gameActive = false;
+
+        // --- DOM 元素 ---
+        const boardElement = document.getElementById('bingoBoard');
+        const currentNumberElement = document.getElementById('currentNumber');
+        const calledNumbersListElement = document.getElementById('calledNumbersList');
+        const statusMessageElement = document.getElementById('statusMessage');
+        const nextCallButton = document.getElementById('nextCallButton');
+
+        /**
+         * 1. 初始化並生成玩家的 5x5 賓果盤
+         */
+        function generateBoard() {
+            // 產生 25 個不重複的隨機數字 (1 到 50)
+            const allNumbers = Array.from({ length: TOTAL_NUMBERS }, (_, i) => i + 1);
+            allNumbers.sort(() => 0.5 - Math.random()); // 亂序
+            const boardNumbers = allNumbers.slice(0, 25);
+            
+            bingoBoard = [];
+            let k = 0;
+            for (let i = 0; i < 5; i++) {
+                bingoBoard[i] = [];
+                for (let j = 0; j < 5; j++) {
+                    bingoBoard[i][j] = boardNumbers[k++];
+                }
+            }
+            
+            // 設定中心為 Free Space
+            // bingoBoard[2][2] = 'FREE'; 
+        }
+
+        /**
+         * 2. 在網頁上繪製賓果盤
+         */
+        function renderBoard() {
+            boardElement.innerHTML = ''; // 清空舊盤面
+            for (let i = 0; i < 5; i++) {
+                for (let j = 0; j < 5; j++) {
+                    const cell = document.createElement('div');
+                    const number = bingoBoard[i][j];
+                    
+                    cell.textContent = (i === 2 && j === 2) ? 'FREE' : number;
+                    cell.className = 'bingo-cell';
+                    cell.dataset.row = i;
+                    cell.dataset.col = j;
+                    cell.dataset.number = number;
+                    
+                    // 特殊處理中心 Free Space
+                    if (i === 2 && j === 2) {
+                        cell.classList.add('marked'); // 預設標記
+                        markedCells[i][j] = true;
+                    } else {
+                        cell.onclick = () => markCell(i, j, number);
+                        if (markedCells[i][j]) {
+                            cell.classList.add('marked');
+                        }
+                    }
+                    boardElement.appendChild(cell);
+                }
+            }
+        }
+
+        /**
+         * 3. 遊戲啟動/重置
+         */
+        function startGame() {
+            generateBoard();
+            calledNumbers = [];
+            markedCells = Array(5).fill(0).map(() => Array(5).fill(false));
+            markedCells[2][2] = true; // Free Space 預設標記
+            gameActive = true;
+
+            renderBoard();
+            currentNumberElement.textContent = '--';
+            calledNumbersListElement.textContent = '遊戲已重置。請叫號！';
+            statusMessageElement.classList.add('hidden');
+            nextCallButton.disabled = false;
+        }
+
+        /**
+         * 4. 叫下一個隨機號碼
+         */
+        function callNextNumber() {
+            if (!gameActive) {
+                alert('請先點擊 "重新開始遊戲"！');
+                return;
+            }
+
+            if (calledNumbers.length >= TOTAL_NUMBERS) {
+                currentNumberElement.textContent = '遊戲結束！';
+                nextCallButton.disabled = true;
+                return;
+            }
+
+            let nextNumber;
+            // 隨機選一個尚未被叫過的數字
+            do {
+                nextNumber = Math.floor(Math.random() * TOTAL_NUMBERS) + 1;
+            } while (calledNumbers.includes(nextNumber));
+
+            calledNumbers.push(nextNumber);
+            currentNumberElement.textContent = nextNumber;
+            
+            // 更新已叫出數字列表
+            const sortedList = [...calledNumbers].sort((a, b) => a - b);
+            calledNumbersListElement.innerHTML = sortedList.map(num => `<span>${num}</span>`).join(', ');
+            calledNumbersListElement.scrollTop = calledNumbersListElement.scrollHeight; // 自動捲到底部
+        }
+
+        /**
+         * 5. 標記玩家賓果盤上的數字
+         */
+        function markCell(row, col, number) {
+            if (!gameActive) return;
+            
+            // 檢查該數字是否已經被叫出
+            if (!calledNumbers.includes(number)) {
+                showMessage(`⚠️ ${number} 尚未被叫出！`, 'hint');
+                return;
+            }
+            
+            if (markedCells[row][col]) {
+                showMessage(`✅ ${number} 已經標記過了！`, 'hint');
+                return;
+            }
+            
+            // 標記成功
+            markedCells[row][col] = true;
+            const cell = boardElement.querySelector(`[data-row="${row}"][data-col="${col}"]`);
+            cell.classList.add('marked');
+            
+            // 檢查是否賓果
+            if (checkForBingo()) {
+                endGame();
+            } else {
+                showMessage(`👍 成功標記數字 ${number}！繼續！`, 'success');
+            }
+        }
+
+        /**
+         * 6. 檢查賓果獲勝條件
+         */
+        function checkForBingo() {
+            const size = 5;
+            let bingoCount = 0; // 計算有幾條線連線
+            
+            // 檢查橫排和直行
+            for (let i = 0; i < size; i++) {
+                // 檢查橫排
+                if (markedCells[i].every(cell => cell)) {
+                    bingoCount++;
+                }
+                // 檢查直行
+                if (markedCells.every(row => row[i])) {
+                    bingoCount++;
+                }
+            }
+            
+            // 檢查兩條對角線
+            let diag1 = true; // 左上到右下
+            let diag2 = true; // 右上到左下
+            for (let i = 0; i < size; i++) {
+                if (!markedCells[i][i]) diag1 = false;
+                if (!markedCells[i][size - 1 - i]) diag2 = false;
+            }
+            if (diag1) bingoCount++;
+            if (diag2) bingoCount++;
+
+            // 賓果通常是指連成一條線即可，如果需要多條線連線，修改此處即可
+            return bingoCount >= 1; 
+        }
+
+        /**
+         * 7. 遊戲結束
+         */
+        function endGame() {
+            gameActive = false;
+            nextCallButton.disabled = true;
+            statusMessageElement.textContent = '🎉 賓果！恭喜獲勝者！請上台領獎！ 🎉';
+            statusMessageElement.classList.remove('hidden');
+            
+            // 移除所有格子的點擊事件
+            const allCells = boardElement.querySelectorAll('.bingo-cell');
+            allCells.forEach(cell => {
+                cell.onclick = null;
+                cell.style.cursor = 'default';
+            });
+        }
+        
+        /**
+         * 顯示提示訊息 (用於標記時的回饋)
+         */
+        function showMessage(text, type) {
+            // 簡單地將訊息顯示在狀態區
+            console.log(text); 
+            // 如果需要，可以在網頁上特定位置顯示快閃訊息
+        }
+
+        // 頁面載入時自動開始遊戲
+        window.onload = startGame;
+    </script>
+</body>
+</html>

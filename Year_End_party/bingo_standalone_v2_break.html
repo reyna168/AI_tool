@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>尾牙 5x5 賓果遊戲</title>
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#0f172a 0%,#0b1220 100%);
+      --card:#0b1020;
+      --accent1:#7c3aed;
+      --accent2:#06b6d4;
+      --glass: rgba(255,255,255,0.04);
+      --glass-strong: rgba(255,255,255,0.06);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial;color:#e6eef8}
+    body{background:var(--bg);display:flex;align-items:center;justify-content:center;padding:24px}
+
+    .app{
+      width:1100px;max-width:100%;background:linear-gradient(180deg, rgba(255,255,255,0.03), transparent);border-radius:16px;padding:22px;box-shadow:0 10px 30px rgba(2,6,23,0.7);border:1px solid rgba(255,255,255,0.03);display:grid;grid-template-columns:420px 1fr;gap:18px;align-items:start
+    }
+
+    .panel{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
+    }
+
+    h1{margin:6px 0 12px;font-size:20px;letter-spacing:0.6px}
+    .subtitle{color:rgba(230,238,248,0.7);font-size:13px;margin-bottom:10px}
+
+    /* Board */
+    .board-wrap{display:flex;flex-direction:column;align-items:center;gap:12px}
+    .board{width:420px;height:420px;display:grid;grid-template-columns:repeat(5,1fr);grid-template-rows:repeat(5,1fr);gap:8px;padding:8px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px}
+    .cell{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;border-radius:10px;cursor:pointer;user-select:none;position:relative;transition:transform .12s ease, box-shadow .12s ease;
+      box-shadow: 0 4px 14px rgba(2,6,23,0.6) inset;
+    }
+    .cell:hover{transform:translateY(-4px)}
+    .cell.marked{background:linear-gradient(135deg,var(--accent1),var(--accent2));color:white;box-shadow:0 6px 22px rgba(124,58,237,0.28);}
+
+    .cell.free{background:linear-gradient(90deg,#111827,#0b1220);color:#9aa9c7;font-size:12px}
+    .cell span{pointer-events:none}
+
+    /* controls */
+    .controls{display:flex;flex-direction:column;gap:10px}
+    .controls .row{display:flex;gap:8px}
+    button{background:linear-gradient(90deg,var(--accent1),var(--accent2));border:none;color:white;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(6,182,212,0.09)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:rgba(230,238,248,0.9);}
+    .draw-num{font-size:40px;font-weight:900;display:flex;align-items:center;justify-content:center;height:84px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));}
+
+    .drawn-list{display:flex;flex-wrap:wrap;gap:6px;padding:8px;background:var(--glass);border-radius:10px;min-height:80px}
+    .chip{padding:6px 8px;background:rgba(255,255,255,0.03);border-radius:8px;font-weight:700}
+
+    /* right column */
+    .right-top{display:flex;justify-content:space-between;align-items:center}
+    .info{color:rgba(230,238,248,0.8)}
+
+    /* winner animation */
+    .win-glow{animation:winPulse 1s linear infinite}
+    @keyframes winPulse{0%{filter:drop-shadow(0 0 0 rgba(124,58,237,0.0))}50%{filter:drop-shadow(0 0 18px rgba(124,58,237,0.9))}100%{filter:drop-shadow(0 0 0 rgba(124,58,237,0.0))}}
+
+    /* confetti overlay */
+    .overlay{position:fixed;inset:0;pointer-events:none}
+    .modal{position:fixed;left:50%;top:18%;transform:translateX(-50%);background:linear-gradient(90deg,#0b1220,#071226);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.05);box-shadow:0 20px 60px rgba(2,6,23,0.6);min-width:320px;text-align:center}
+    .modal h2{margin:0 0 8px}
+    .small{font-size:13px;color:rgba(230,238,248,0.75)}
+
+    footer{grid-column:1/-1;display:flex;gap:8px;align-items:center;justify-content:center;margin-top:6px;color:rgba(230,238,248,0.6);font-size:13px}
+
+    /* responsive */
+    @media (max-width:1000px){.app{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body>
+  <div class="app" role="application" aria-label="尾牙 5x5 賓果遊戲">
+    <div class="panel">
+      <h1>尾牙 5×5 賓果</h1>
+      <div class="subtitle">純 HTML + CSS + JavaScript — 點擊格子標記，或使用「抽號」自動標記</div>
+
+      <div class="board-wrap">
+        <div id="board" class="board" aria-hidden="false"></div>
+
+        <div style="display:flex;gap:8px;width:100%;justify-content:center;margin-top:8px">
+          <button id="resetBtn" class="btn-ghost">重置盤面</button>
+          <button id="shuffleBtn">重整號碼</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="right-top">
+        <div>
+          <h1 style="font-size:18px;margin-bottom:4px">抽號與紀錄</h1>
+          <div class="small">已抽號碼會顯示在下方；被點過的格子視為標記（BINGO 檢測包含斜線）。</div>
+        </div>
+        <div style="text-align:right">
+          <div class="info">剩餘：<span id="remaining">75</span></div>
+          <div style="height:8px"></div>
+          <button id="autoMarkToggle" class="btn-ghost">自動標記：開</button>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;margin-top:12px;align-items:center">
+        <div class="draw-num" id="lastDraw">—</div>
+        <div style="display:flex;flex-direction:column;gap:8px;flex:1">
+          <div style="display:flex;gap:8px">
+            <button id="drawBtn">抽號</button>
+            <button id="drawManyBtn" class="btn-ghost">連抽 5 號</button>
+            <button id="callAllBtn" class="btn-ghost">公布全部剩餘</button>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <label class="small">中獎條件：</label>
+            <div class="chip">橫/直/斜</div>
+          </div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:14px;margin-bottom:6px">已抽號碼</h3>
+      <div id="drawnList" class="drawn-list" aria-live="polite"></div>
+
+      <h3 style="margin-top:12px;margin-bottom:6px">遊戲設定</h3>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <div class="chip">數字範圍 1 - 75</div>
+        <div class="chip">5×5 格子</div>
+        <div class="chip">中間 Free</div>
+      </div>
+
+      <div style="margin-top:16px">
+        <small class="small">提示：你可以 <strong>點擊格子</strong> 手動標記，也可以在抽到該號時自動標記（右上開關）。</small>
+      </div>
+    </div>
+
+    <footer>製作：尾牙專用 Bingo — 直接複製到 .html 並用瀏覽器開啟</footer>
+  </div>
+
+  <!-- overlay for confetti/modal -->
+  <div id="overlay" class="overlay" aria-hidden="true"></div>
+
+  <script>
+    // Data structures
+    const BOARD_SIZE = 5;
+    const MAX_NUMBER = 75;
+    let boardNumbers = []; // 5x5 array
+    let marked = []; // boolean 5x5
+    let drawn = new Set();
+    let autoMark = true;
+
+    const boardEl = document.getElementById('board');
+    const lastDrawEl = document.getElementById('lastDraw');
+    const drawnListEl = document.getElementById('drawnList');
+    const remainingEl = document.getElementById('remaining');
+    const autoMarkBtn = document.getElementById('autoMarkToggle');
+
+    // helpers
+    function range(n){return [...Array(n).keys()]}
+    function randPick(arr){return arr[Math.floor(Math.random()*arr.length)]}
+
+    function generateNumbers(){
+      // pick 25 unique numbers from 1..75
+      const pool = range(MAX_NUMBER).map(i=>i+1);
+      // shuffle
+      for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+      const selected = pool.slice(0,25);
+      // assign to 5x5
+      boardNumbers = [];
+      for(let r=0;r<5;r++){boardNumbers.push(selected.slice(r*5,(r+1)*5))}
+      // set center to FREE (we'll keep number but mark)
+      return boardNumbers;
+    }
+
+    function initMarked(){marked = Array.from({length:5},()=>Array.from({length:5},()=>false));
+      // center free
+      marked[2][2] = true;
+    }
+
+    function renderBoard(){
+      boardEl.innerHTML='';
+      for(let r=0;r<5;r++){
+        for(let c=0;c<5;c++){
+          const num = boardNumbers[r][c];
+          const cell = document.createElement('div');
+          cell.className = 'cell';
+          if(r===2 && c===2){cell.classList.add('free');cell.innerHTML = '<span>FREE</span>'}
+          else{cell.innerHTML = `<span>${num}</span>`}
+          cell.dataset.r = r;cell.dataset.c = c;cell.dataset.num = num;
+          if(marked[r][c]) cell.classList.add('marked');
+          cell.addEventListener('click', onCellClick);
+          boardEl.appendChild(cell);
+        }
+      }
+    }
+
+    function onCellClick(e){
+      const r = +this.dataset.r; const c = +this.dataset.c;
+      // toggle
+      marked[r][c] = !marked[r][c];
+      renderBoard();
+      checkBingo();
+    }
+
+    function resetGame(){
+      drawn = new Set();
+      remainingEl.textContent = MAX_NUMBER - drawn.size;
+      lastDrawEl.textContent = '—';
+      drawManyBtn.disabled = false; drawBtn.disabled = false;
+      generateNumbers();
+      initMarked();
+      renderBoard();
+      renderDrawnList();
+      clearOverlay();
+    }
+
+    // draw logic
+    function drawNumber(){
+      const pool = range(MAX_NUMBER).map(i=>i+1).filter(n=>!drawn.has(n));
+      if(pool.length===0) return null;
+      const n = randPick(pool);
+      drawn.add(n);
+      remainingEl.textContent = MAX_NUMBER - drawn.size;
+      lastDrawEl.textContent = n;
+      renderDrawnList();
+      if(autoMark) autoMarkBoard(n);
+      checkBingo();
+      return n;
+    }
+
+    function drawMany(n=5){
+      for(let i=0;i<n;i++){
+        const val = drawNumber();
+        if(val===null) break;
+      }
+    }
+
+    function renderDrawnList(){
+      drawnListEl.innerHTML='';
+      [...drawn].sort((a,b)=>a-b).forEach(num=>{
+        const chip = document.createElement('div');chip.className='chip';chip.textContent=num;drawnListEl.appendChild(chip);
+      })
+    }
+
+    function autoMarkBoard(num){
+      // mark any cell with this number
+      for(let r=0;r<5;r++)for(let c=0;c<5;c++){
+        if(boardNumbers[r][c]===num){marked[r][c]=true}
+      }
+      renderBoard();
+    }
+
+    // Bingo check
+    function checkBingo(){
+      const winners = [];
+      // rows
+      for(let r=0;r<5;r++){
+        if(marked[r].every(Boolean)) winners.push({type:'row',idx:r});
+      }
+      // cols
+      for(let c=0;c<5;c++){
+        let ok=true;for(let r=0;r<5;r++) if(!marked[r][c]){ok=false;break}
+        if(ok) winners.push({type:'col',idx:c});
+      }
+      // diag TL-BR
+      let ok1=true;for(let i=0;i<5;i++) if(!marked[i][i]) ok1=false; if(ok1) winners.push({type:'diag',dir:1});
+      // diag TR-BL
+      let ok2=true;for(let i=0;i<5;i++) if(!marked[i][4-i]) ok2=false; if(ok2) winners.push({type:'diag',dir:2});
+
+      if(winners.length>0){
+        // highlight winning lines
+        highlightWinners(winners);
+        announceBingo(winners);
+        return true;
+      } else {
+        // remove any previous glow
+        clearHighlights();
+        return false;
+      }
+    }
+
+    function clearHighlights(){
+      document.querySelectorAll('.cell').forEach(cell=>cell.classList.remove('win-glow'));
+    }
+
+    function highlightWinners(winners){
+      clearHighlights();
+      winners.forEach(w=>{
+        if(w.type==='row'){
+          for(let c=0;c<5;c++){cellAt(w.idx,c)?.classList.add('win-glow')}
+        } else if(w.type==='col'){
+          for(let r=0;r<5;r++){cellAt(r,w.idx)?.classList.add('win-glow')}
+        } else if(w.type==='diag'){
+          if(w.dir===1){for(let i=0;i<5;i++)cellAt(i,i)?.classList.add('win-glow')}
+          else{for(let i=0;i<5;i++)cellAt(i,4-i)?.classList.add('win-glow')}
+        }
+      })
+    }
+
+    function cellAt(r,c){return document.querySelector(`.cell[data-r='${r}'][data-c='${c}']`)}
+
+    // announce and confetti
+    function announceBingo(winners){
+      // disable further draws
+      drawBtn.disabled = true; drawManyBtn.disabled=true;
+      // show modal
+      showModal('B I N G O 🎉', `恭喜！偵測到 ${winners.length} 條連線。`);
+      launchConfetti();
+    }
+
+    // overlay + confetti simple
+    let confettiCanvas, confettiCtx, confettiPieces=[];
+    function setupOverlay(){
+      const overlay = document.getElementById('overlay');
+      overlay.innerHTML='';
+      confettiCanvas = document.createElement('canvas');
+      confettiCanvas.style.width='100%';confettiCanvas.style.height='100%';confettiCanvas.width = innerWidth;confettiCanvas.height = innerHeight;
+      confettiCanvas.style.pointerEvents='none';
+      overlay.appendChild(confettiCanvas);
+      confettiCtx = confettiCanvas.getContext('2d');
+    }
+    function launchConfetti(){
+      const overlay = document.getElementById('overlay'); overlay.setAttribute('aria-hidden','false');
+      setupOverlay();
+      confettiPieces = [];
+      const colors = ['#7c3aed','#06b6d4','#f59e0b','#ef4444','#10b981'];
+      for(let i=0;i<120;i++){
+        confettiPieces.push({x:Math.random()*confettiCanvas.width,y:Math.random()*-confettiCanvas.height/2, vx:(Math.random()-0.5)*6, vy:Math.random()*4+2, size:Math.random()*8+4, color:colors[i%colors.length], rot:Math.random()*360, vr:Math.random()*8-4});
+      }
+      let t=0; const id = setInterval(()=>{
+        t++; confettiCtx.clearRect(0,0,confettiCanvas.width,confettiCanvas.height);
+        confettiPieces.forEach(p=>{
+          p.x += p.vx; p.y += p.vy; p.vy += 0.08; p.rot += p.vr;
+          confettiCtx.save(); confettiCtx.translate(p.x,p.y); confettiCtx.rotate(p.rot*Math.PI/180);
+          confettiCtx.fillStyle = p.color; confettiCtx.fillRect(-p.size/2,-p.size/2,p.size,p.size*0.6);
+          confettiCtx.restore();
+        })
+        if(t>160){clearInterval(id);overlay.innerHTML='';overlay.setAttribute('aria-hidden','true')}
+      },16);
+    }
+
+    function showModal(title, text){
+      const overlay = document.getElementById('overlay');
+      const modal = document.createElement('div');modal.className='modal';
+      modal.innerHTML = `<h2>${title}</h2><div class="small">${text}</div><div style="margin-top:12px"><button id='closeModal'>繼續遊戲</button></div>`;
+      overlay.appendChild(modal);overlay.setAttribute('aria-hidden','false');
+      document.getElementById('closeModal').addEventListener('click',()=>{clearOverlay()});
+    }
+    function clearOverlay(){const overlay=document.getElementById('overlay');overlay.innerHTML='';overlay.setAttribute('aria-hidden','true')}
+
+    // misc
+    document.getElementById('resetBtn').addEventListener('click',()=>{
+      if(confirm('確定要重置遊戲？這會清除所有已抽號碼。')) resetGame();
+    });
+    document.getElementById('shuffleBtn').addEventListener('click',()=>{
+      if(confirm('將隨機重新排列盤面 (不會清除已抽號碼)。')){generateNumbers();initMarked();renderBoard();}
+    });
+    const drawBtn = document.getElementById('drawBtn');
+    const drawManyBtn = document.getElementById('drawManyBtn');
+    const callAllBtn = document.getElementById('callAllBtn');
+
+    drawBtn.addEventListener('click',()=>{drawNumber()});
+    drawManyBtn.addEventListener('click',()=>{drawMany(5)});
+    callAllBtn.addEventListener('click',()=>{ // list remaining
+      const pool = range(MAX_NUMBER).map(i=>i+1).filter(n=>!drawn.has(n));
+      if(pool.length===0){alert('已無剩餘號碼');return}
+      alert('剩餘號碼:\n'+pool.join(', '))
+    });
+
+    autoMarkBtn.addEventListener('click',()=>{autoMark = !autoMark; autoMarkBtn.textContent = '自動標記：' + (autoMark? '開':'關')});
+
+    // init
+    generateNumbers(); initMarked(); renderBoard(); renderDrawnList(); remainingEl.textContent = MAX_NUMBER-drawn.size;
+
+    // keyboard: Space = draw
+    window.addEventListener('keydown', (e)=>{ if(e.code==='Space'){e.preventDefault(); drawNumber()} })
+
+    // ensure canvas resizes
+    window.addEventListener('resize', ()=>{ if(confettiCanvas){confettiCanvas.width = innerWidth; confettiCanvas.height = innerHeight}});
+  </script>
+</body>
+</html>
