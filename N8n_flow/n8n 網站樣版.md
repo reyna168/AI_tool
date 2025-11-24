@@ -4,3 +4,8 @@ https://github.com/enescingoz/awesome-n8n-templates/blob/main/AI_Research_RAG_an
 
 ## n8n 樣版
 https://github.com/qwedsazxc78/ai-automation-n8n
+
+
+## n8n wonderful 樣版
+
+https://www.darrelltw.com/n8n-tutorial-resources/
