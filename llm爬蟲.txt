@@ -1,0 +1,27 @@
+
+## LLM 爬蟲
+
+https://hackmd.io/@flagmaker/SkiGaQNgZx?utm_source=preview-mode&utm_medium=rec
+
+
+## LLM 爬蟲 程式
+
+https://github.com/FlagTech/F5326/blob/e3125eeb609c8a3f4fe72eb1ae0f48c233ba2bf8/ch05/ch5-5-1a.py
+
+
+## LLM 課程 lora 
+
+https://github.com/mlabonne/llm-course
+
+
+## AI視覺環境
+
+
+https://mega.nz/file/7BcQiA7T#RIDXY4X8TJJYKA8ayXriVv0G6QDT185RZk4xfndr70s
+
+
+
+
+
+
+
