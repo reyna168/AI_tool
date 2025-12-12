@@ -20,6 +20,11 @@ https://github.com/mlabonne/llm-course
 https://mega.nz/file/7BcQiA7T#RIDXY4X8TJJYKA8ayXriVv0G6QDT185RZk4xfndr70s
 
 
+##  AI視覺環境
+
+https://github.com/FlagTech/F5386/blob/master/ch08/ch8-2-2.py
+
+
 
 
 
