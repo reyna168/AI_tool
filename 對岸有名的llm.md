@@ -18,3 +18,10 @@ github 程式
 https://github.com/fufankeji
 
 
+
+
+//生成式AI
+
+https://sites.google.com/site/wenyunotify/15-ai%E7%9B%B8%E9%97%9C/40-vibe-coding
+
+
