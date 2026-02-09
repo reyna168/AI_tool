@@ -25,4 +25,10 @@ https://kq4b3vgg5b.feishu.cn/wiki/GKxkw87FLinDj6kYl3Pc5t5qnhH
 //agent git  赋范大模型技术社区
 https://github.com/fufankeji
 
+a
+
+AI_agent
+
+https://github.com/fufankeji/LLMs-Technology-Community-Beyondata
+
 
