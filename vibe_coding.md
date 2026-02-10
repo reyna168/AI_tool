@@ -31,4 +31,8 @@ AI_agent
 
 https://github.com/fufankeji/LLMs-Technology-Community-Beyondata
 
+AI_agent_vibeCoding
+
+https://github.com/fufankeji/VibeCodingCourse_v1/tree/main
+
 
