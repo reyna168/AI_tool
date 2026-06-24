@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TH240 出庫作業標籤列印</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Microsoft JhengHei', '微軟正黑體', sans-serif;
+    background: #f0f2f5;
+    color: #1a1a2e;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  .header {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .header-icon {
+    width: 40px; height: 40px;
+    background: #e94560;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  .header h1 { font-size: 18px; font-weight: 700; letter-spacing: 1px; }
+  .header p { font-size: 12px; color: #aaa; margin-top: 2px; }
+
+  /* Layout */
+  .container { display: flex; gap: 0; min-height: calc(100vh - 72px); }
+
+  /* Left panel */
+  .left-panel {
+    width: 480px;
+    min-width: 480px;
+    background: #fff;
+    padding: 24px;
+    overflow-y: auto;
+    border-right: 1px solid #e8e8e8;
+  }
+
+  /* Right panel */
+  .right-panel {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+    background: #f0f2f5;
+  }
+
+  /* Section */
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #e94560;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e94560;
+  }
+  .section { margin-bottom: 28px; }
+
+  /* Form */
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .form-group { display: flex; flex-direction: column; gap: 4px; }
+  .form-group.full { grid-column: 1 / -1; }
+  label { font-size: 12px; color: #666; font-weight: 600; }
+  input, select {
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 13px;
+    font-family: inherit;
+    color: #1a1a2e;
+    transition: border-color 0.2s;
+    background: #fff;
+  }
+  input:focus, select:focus {
+    outline: none;
+    border-color: #e94560;
+    box-shadow: 0 0 0 3px rgba(233,69,96,0.1);
+  }
+
+  /* Printer config */
+  .printer-row { display: flex; gap: 12px; align-items: flex-end; }
+  .printer-row .form-group { flex: 1; }
+  .status-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  .status-dot.online { background: #52c41a; box-shadow: 0 0 0 3px rgba(82,196,26,0.2); }
+  .status-dot.offline { background: #ff4d4f; }
+  .status-text { font-size: 12px; color: #666; }
+
+  /* Details table */
+  .detail-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .detail-table th {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+  }
+  .detail-table td {
+    padding: 7px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    vertical-align: middle;
+  }
+  .detail-table tr:hover td { background: #fafafa; }
+  .detail-table input {
+    border: 1px solid transparent;
+    background: transparent;
+    padding: 4px 6px;
+    width: 100%;
+    font-size: 13px;
+  }
+  .detail-table input:focus {
+    border-color: #e94560;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px rgba(233,69,96,0.1);
+  }
+  .btn-del {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ff4d4f;
+    font-size: 16px;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: background 0.15s;
+  }
+  .btn-del:hover { background: #fff1f0; }
+
+  /* Buttons */
+  .btn {
+    padding: 9px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn-primary {
+    background: #e94560;
+    color: #fff;
+  }
+  .btn-primary:hover { background: #c73652; transform: translateY(-1px); box-shadow: 0 4px 12px rgba(233,69,96,0.3); }
+  .btn-primary:active { transform: translateY(0); }
+  .btn-secondary {
+    background: #1a1a2e;
+    color: #fff;
+  }
+  .btn-secondary:hover { background: #2d2d4e; }
+  .btn-ghost {
+    background: #f5f5f5;
+    color: #666;
+    border: 1px solid #d9d9d9;
+  }
+  .btn-ghost:hover { background: #e8e8e8; }
+  .btn-success {
+    background: #52c41a;
+    color: #fff;
+    font-size: 15px;
+    padding: 12px 32px;
+    width: 100%;
+    justify-content: center;
+    letter-spacing: 1px;
+  }
+  .btn-success:hover { background: #389e0d; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(82,196,26,0.3); }
+  .btn-success:disabled { background: #b7eb8f; cursor: not-allowed; transform: none; box-shadow: none; }
+
+  .btn-row { display: flex; gap: 8px; margin-top: 8px; flex-wrap: wrap; }
+
+  /* TSPL preview */
+  .tspl-preview {
+    background: #1a1a2e;
+    color: #7ec8e3;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    line-height: 1.6;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+  }
+  .tspl-preview .cmd-keyword { color: #e94560; font-weight: bold; }
+  .tspl-preview .cmd-string { color: #a8ff78; }
+  .tspl-preview .cmd-number { color: #ffd700; }
+
+  /* Label preview */
+  .label-preview-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+  }
+  .label-preview-box h3 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .label-canvas-wrap {
+    display: flex;
+    justify-content: center;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 16px;
+  }
+  canvas#labelCanvas {
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    border-radius: 4px;
+  }
+
+  /* Log */
+  .log-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  .log-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  .log-list li {
+    font-size: 12px;
+    padding: 5px 0;
+    border-bottom: 1px solid #f5f5f5;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .log-time { color: #aaa; white-space: nowrap; }
+  .log-msg.success { color: #52c41a; }
+  .log-msg.error { color: #ff4d4f; }
+  .log-msg.info { color: #1890ff; }
+  .log-msg.warn { color: #faad14; }
+
+  /* Toast */
+  #toast {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: #1a1a2e;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transform: translateY(80px);
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: 999;
+    border-left: 4px solid #e94560;
+  }
+  #toast.show { transform: translateY(0); opacity: 1; }
+  #toast.success { border-color: #52c41a; }
+  #toast.error { border-color: #ff4d4f; }
+
+  .badge {
+    display: inline-block;
+    background: #e94560;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-icon">🖨</div>
+  <div>
+    <h1>TH240 出庫作業標籤列印系統</h1>
+    <p>TSC TH240 · TSPL · MSIH.TTF · UTF-8</p>
+  </div>
+</div>
+
+<div class="container">
+  <!-- LEFT: Form -->
+  <div class="left-panel">
+
+    <!-- Printer config -->
+    <div class="section">
+      <div class="section-title">🖨 印表機設定</div>
+      <div class="printer-row">
+        <div class="form-group">
+          <label>印表機 IP</label>
+          <input type="text" id="printerIp" value="192.168.1.72" placeholder="例：192.168.1.72">
+        </div>
+        <div class="form-group" style="width:90px; min-width:90px;">
+          <label>Port</label>
+          <input type="number" id="printerPort" value="9100">
+        </div>
+        <div style="padding-bottom:9px;">
+          <button class="btn btn-ghost" onclick="pingPrinter()">📡 測試</button>
+        </div>
+      </div>
+      <div style="margin-top:8px;">
+        <span class="status-dot" id="printerDot"></span>
+        <span class="status-text" id="printerStatus">尚未測試連線</span>
+      </div>
+    </div>
+
+    <!-- Master data -->
+    <div class="section">
+      <div class="section-title">📋 出庫單主檔</div>
+      <div class="form-grid">
+        <div class="form-group full">
+          <label>出庫單號</label>
+          <div style="display:flex;gap:8px;">
+            <input type="text" id="code" value="OUT-20260622-001" style="flex:1;">
+            <button class="btn btn-ghost" onclick="genCode()" style="padding:8px 12px;">🔄 產生</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>出庫日期</label>
+          <input type="date" id="outbound_date">
+        </div>
+        <div class="form-group">
+          <label>領用人員</label>
+          <input type="text" id="manager_name" value="王大明">
+        </div>
+        <div class="form-group full">
+          <label>來源對象</label>
+          <input type="text" id="supplier_name" value="台塑集團">
+        </div>
+        <div class="form-group full">
+          <label>案場名稱</label>
+          <input type="text" id="site_name" value="正修科技大學第一校區施工">
+        </div>
+      </div>
+    </div>
+
+    <!-- Details -->
+    <div class="section">
+      <div class="section-title">📦 明細品項 <span class="badge" id="detailCount">4</span></div>
+      <div style="overflow-x:auto; margin-bottom:10px;">
+        <table class="detail-table">
+          <thead>
+            <tr>
+              <th style="width:36px;">#</th>
+              <th>品項名稱</th>
+              <th style="width:60px;">數量</th>
+              <th style="width:50px;">單位</th>
+              <th style="width:80px;">倉庫</th>
+              <th style="width:36px;"></th>
+            </tr>
+          </thead>
+          <tbody id="detailBody"></tbody>
+        </table>
+      </div>
+      <div class="btn-row">
+        <button class="btn btn-ghost" onclick="addDetail()">＋ 新增品項</button>
+        <button class="btn btn-ghost" onclick="clearDetails()">🗑 清空</button>
+      </div>
+    </div>
+
+    <!-- Print button -->
+    <button class="btn btn-success" id="printBtn" onclick="doPrint()">
+      🖨 產生 TSPL 並列印
+    </button>
+
+    <div class="btn-row" style="margin-top:12px;">
+      <button class="btn btn-secondary" onclick="previewTSPL()">👁 預覽 TSPL 指令</button>
+      <button class="btn btn-ghost" onclick="copyTSPL()">📋 複製指令</button>
+    </div>
+
+  </div>
+
+  <!-- RIGHT: Preview -->
+  <div class="right-panel">
+
+    <div class="label-preview-box">
+      <h3>🏷 標籤預覽 <span style="font-size:11px;color:#aaa;font-weight:400;">100mm × 150mm · 203dpi</span></h3>
+      <div class="label-canvas-wrap">
+        <canvas id="labelCanvas" width="400" height="600"></canvas>
+      </div>
+    </div>
+
+    <div class="label-preview-box" id="tsplBox" style="display:none;">
+      <h3>📄 TSPL 指令</h3>
+      <div class="tspl-preview" id="tsplOutput"></div>
+    </div>
+
+    <div class="log-box">
+      <h3 style="font-size:14px;font-weight:700;color:#666;margin-bottom:12px;">📋 操作紀錄</h3>
+      <ul class="log-list" id="logList">
+        <li><span class="log-time">--:--:--</span><span class="log-msg info">系統初始化完成，等待操作...</span></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+// ============================================================
+// Data
+// ============================================================
+let details = [
+  { stock_name: "六角螺栓 M12", qty: 100, unit: "PCS", warehouse_name: "成品A倉" },
+  { stock_name: "高壓墊片", qty: 50, unit: "EA", warehouse_name: "零件B倉" },
+  { stock_name: "不鏽鋼管 2吋", qty: 12, unit: "支", warehouse_name: "成品A倉" },
+  { stock_name: "防水絕緣膠帶", qty: 20, unit: "卷", warehouse_name: "雜料倉" }
+];
+
+// ============================================================
+// Init
+// ============================================================
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('outbound_date').value = today;
+  renderDetails();
+  renderLabelPreview();
+});
+
+// ============================================================
+// Details CRUD
+// ============================================================
+function renderDetails() {
+  const tbody = document.getElementById('detailBody');
+  tbody.innerHTML = '';
+  details.forEach((d, i) => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td style="color:#aaa;text-align:center;">${i + 1}</td>
+      <td><input type="text" value="${d.stock_name}" onchange="details[${i}].stock_name=this.value; renderLabelPreview();" placeholder="品項名稱"></td>
+      <td><input type="number" value="${d.qty}" onchange="details[${i}].qty=+this.value; renderLabelPreview();" style="width:54px;"></td>
+      <td><input type="text" value="${d.unit}" onchange="details[${i}].unit=this.value;" style="width:44px;"></td>
+      <td><input type="text" value="${d.warehouse_name}" onchange="details[${i}].warehouse_name=this.value;" style="width:72px;"></td>
+      <td><button class="btn-del" onclick="removeDetail(${i})">×</button></td>
+    `;
+    tbody.appendChild(tr);
+  });
+  document.getElementById('detailCount').textContent = details.length;
+}
+
+function addDetail() {
+  details.push({ stock_name: "新品項", qty: 1, unit: "PCS", warehouse_name: "A倉" });
+  renderDetails();
+  renderLabelPreview();
+}
+
+function removeDetail(i) {
+  details.splice(i, 1);
+  renderDetails();
+  renderLabelPreview();
+}
+
+function clearDetails() {
+  if (!confirm('確定清空所有明細？')) return;
+  details = [];
+  renderDetails();
+  renderLabelPreview();
+}
+
+// ============================================================
+// Generate Code
+// ============================================================
+function genCode() {
+  const now = new Date();
+  const d = now.toISOString().slice(0,10).replace(/-/g,'');
+  const r = String(Math.floor(Math.random()*999)+1).padStart(3,'0');
+  document.getElementById('code').value = `OUT-${d}-${r}`;
+}
+
+// ============================================================
+// TSPL Generator
+// ============================================================
+function getMaster() {
+  return {
+    code:          document.getElementById('code').value.trim(),
+    outbound_date: document.getElementById('outbound_date').value,
+    supplier_name: document.getElementById('supplier_name').value.trim(),
+    site_name:     document.getElementById('site_name').value.trim(),
+    manager_name:  document.getElementById('manager_name').value.trim(),
+  };
+}
+
+function generateTSPL(master, dets) {
+  const FONT = 'MSIH.TTF';
+  let c = [];
+
+  c.push('SIZE 100 mm, 150 mm');
+  c.push('GAP 3 mm, 0');
+  c.push('DIRECTION 1,0');
+  c.push('REFERENCE 0,0');
+  c.push('OFFSET 0 mm');
+  c.push('SET PEEL OFF');
+  c.push('SET CUTTER OFF');
+  c.push('SET TEAR ON');
+  c.push('CODEPAGE UTF-8');
+  c.push('CLS');
+
+  // Title
+  c.push(`TEXT 400, 40, "${FONT}", 0, 32, 32, "出 庫 作 業 單"`);
+
+  // Barcode
+  c.push(`BARCODE 100, 120, "128", 80, 1, 0, 2, 4, "${master.code}"`);
+  c.push(`TEXT 100, 210, "${FONT}", 0, 24, 24, "單號：${master.code}"`);
+
+  // Info
+  c.push(`TEXT 100, 260, "${FONT}", 0, 24, 24, "出庫日期：${master.outbound_date || '-'}"`);
+  c.push(`TEXT 100, 300, "${FONT}", 0, 24, 24, "來源對象：${master.supplier_name || '-'}"`);
+  c.push(`TEXT 100, 340, "${FONT}", 0, 24, 24, "案場名稱：${master.site_name || '-'}"`);
+  c.push(`TEXT 100, 380, "${FONT}", 0, 24, 24, "領用人員：${master.manager_name || '-'}"`);
+
+  // Divider
+  c.push('BAR 50, 430, 700, 3');
+
+  // Header
+  c.push(`TEXT 60, 448, "${FONT}", 0, 22, 22, "品項名稱"`);
+  c.push(`TEXT 470, 448, "${FONT}", 0, 22, 22, "數量"`);
+  c.push(`TEXT 590, 448, "${FONT}", 0, 22, 22, "倉庫"`);
+  c.push('BAR 50, 480, 700, 2');
+
+  // Details
+  let y = 494;
+  const maxItems = 14;
+  dets.slice(0, maxItems).forEach(item => {
+    const name = item.stock_name.length > 10
+      ? item.stock_name.substring(0, 9) + '..'
+      : item.stock_name;
+    c.push(`TEXT 60, ${y}, "${FONT}", 0, 22, 22, "${name}"`);
+    c.push(`TEXT 470, ${y}, "${FONT}", 0, 22, 22, "${item.qty} ${item.unit || ''}"`);
+    c.push(`TEXT 590, ${y}, "${FONT}", 0, 22, 22, "${item.warehouse_name || '-'}"`);
+    y += 44;
+  });
+
+  // Footer
+  const now = new Date().toLocaleString('zh-TW', {hour12: false});
+  c.push(`BAR 50, 1130, 700, 2`);
+  c.push(`TEXT 60, 1140, "${FONT}", 0, 18, 18, "列印時間：${now}"`);
+
+  c.push('PRINT 1, 1');
+
+  return c.join('\r\n') + '\r\n';
+}
+
+// ============================================================
+// Label Canvas Preview
+// ============================================================
+function renderLabelPreview() {
+  const master = getMaster();
+  const canvas = document.getElementById('labelCanvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width, H = canvas.height;
+
+  ctx.clearRect(0, 0, W, H);
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, W, H);
+
+  // Border
+  ctx.strokeStyle = '#e0e0e0';
+  ctx.lineWidth = 1;
+  ctx.strokeRect(0.5, 0.5, W-1, H-1);
+
+  // Scale: 400px = 800dot (100mm@203dpi=800dot), 600px=1200dot
+  const sx = W / 800, sy = H / 1200;
+  function dot(x,y) { return [x*sx, y*sy]; }
+
+  ctx.textBaseline = 'top';
+
+  // Title
+  ctx.fillStyle = '#1a1a2e';
+  ctx.font = `bold ${28*sx}px 'Microsoft JhengHei', sans-serif`;
+  ctx.textAlign = 'center';
+  ctx.fillText('出 庫 作 業 單', W/2, 40*sy);
+  ctx.textAlign = 'left';
+
+  // Barcode area (simulated)
+  ctx.fillStyle = '#1a1a2e';
+  const bx = 100*sx, by = 120*sy, bw = 500*sx, bh = 80*sy;
+  // Draw simple barcode lines
+  for(let i=0;i<bw;i+=4) {
+    if(Math.sin(i*0.7)>0.2) {
+      ctx.fillRect(bx+i, by, Math.random()>0.5?2:3, bh);
+    }
+  }
+  // Code text
+  ctx.fillStyle = '#333';
+  ctx.font = `${11*sx}px monospace`;
+  ctx.fillText(master.code, 100*sx, 210*sy);
+
+  // Info lines
+  ctx.fillStyle = '#222';
+  ctx.font = `${13*sx}px 'Microsoft JhengHei', sans-serif`;
+  const lines = [
+    `出庫日期：${master.outbound_date || '-'}`,
+    `來源對象：${master.supplier_name || '-'}`,
+    `案場名稱：${(master.site_name||'-').substring(0,16)}`,
+    `領用人員：${master.manager_name || '-'}`,
+  ];
+  lines.forEach((l, i) => ctx.fillText(l, 100*sx, (260 + i*40)*sy));
+
+  // Divider
+  ctx.fillStyle = '#1a1a2e';
+  ctx.fillRect(50*sx, 430*sy, 700*sx, 3*sy);
+
+  // Table header
+  ctx.font = `bold ${12*sx}px 'Microsoft JhengHei', sans-serif`;
+  ctx.fillStyle = '#1a1a2e';
+  ctx.fillText('品項名稱', 60*sx, 448*sy);
+  ctx.fillText('數量', 470*sx, 448*sy);
+  ctx.fillText('倉庫', 590*sx, 448*sy);
+  ctx.fillRect(50*sx, 480*sy, 700*sx, 2*sy);
+
+  // Detail rows
+  ctx.font = `${12*sx}px 'Microsoft JhengHei', sans-serif`;
+  let y = 494;
+  const maxRows = 14;
+  details.slice(0, maxRows).forEach((item, idx) => {
+    ctx.fillStyle = idx%2===0?'#fff':'#f9f9f9';
+    ctx.fillRect(50*sx, y*sy, 700*sx, 42*sy);
+    ctx.fillStyle = '#333';
+    const name = item.stock_name.length>10?item.stock_name.substring(0,9)+'..':item.stock_name;
+    ctx.fillText(name, 60*sx, (y+6)*sy);
+    ctx.fillText(`${item.qty} ${item.unit||''}`, 470*sx, (y+6)*sy);
+    ctx.fillText(item.warehouse_name||'-', 590*sx, (y+6)*sy);
+    y += 44;
+  });
+
+  // Footer
+  ctx.fillStyle = '#1a1a2e';
+  ctx.fillRect(50*sx, 1130*sy, 700*sx, 2*sy);
+  ctx.fillStyle = '#999';
+  ctx.font = `${10*sx}px 'Microsoft JhengHei', sans-serif`;
+  const now = new Date().toLocaleString('zh-TW',{hour12:false});
+  ctx.fillText(`列印時間：${now}`, 60*sx, 1140*sy);
+}
+
+// ============================================================
+// TSPL Preview
+// ============================================================
+function previewTSPL() {
+  const master = getMaster();
+  const tspl = generateTSPL(master, details);
+  const box = document.getElementById('tsplBox');
+  const out = document.getElementById('tsplOutput');
+  box.style.display = 'block';
+
+  // Syntax highlight
+  const highlighted = tspl.replace(/\r\n/g, '\n').split('\n').map(line => {
+    const keyword = line.match(/^([A-Z]+)/)?.[1];
+    const rest = line.slice(keyword?.length || 0);
+    const coloredRest = rest
+      .replace(/"([^"]*)"/g, '<span class="cmd-string">"$1"</span>')
+      .replace(/\b(\d+)\b/g, '<span class="cmd-number">$1</span>');
+    return keyword
+      ? `<span class="cmd-keyword">${keyword}</span>${coloredRest}`
+      : line;
+  }).join('\n');
+
+  out.innerHTML = highlighted;
+  box.scrollIntoView({behavior:'smooth'});
+  addLog('預覽 TSPL 指令已產生', 'info');
+}
+
+function copyTSPL() {
+  const master = getMaster();
+  const tspl = generateTSPL(master, details);
+  navigator.clipboard.writeText(tspl).then(() => {
+    showToast('✅ TSPL 指令已複製到剪貼簿', 'success');
+    addLog('TSPL 指令已複製', 'success');
+  }).catch(() => {
+    showToast('❌ 複製失敗，請手動複製', 'error');
+  });
+}
+
+// ============================================================
+// Ping Printer
+// ============================================================
+function pingPrinter() {
+  const ip = document.getElementById('printerIp').value;
+  const port = document.getElementById('printerPort').value;
+  const dot = document.getElementById('printerDot');
+  const status = document.getElementById('printerStatus');
+
+  dot.className = 'status-dot';
+  status.textContent = '連線測試中...';
+  addLog(`測試連線至 ${ip}:${port}`, 'info');
+
+  // Browser cannot do raw TCP; simulate with fetch to test reachability
+  // In real Node.js environment this would be a net.Socket connect test
+  const testUrl = `http://${ip}/`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 3000);
+
+  fetch(testUrl, { signal: controller.signal, mode: 'no-cors' })
+    .then(() => {
+      clearTimeout(timeout);
+      dot.className = 'status-dot online';
+      status.textContent = `${ip}:${port} — 可連線`;
+      addLog(`印表機 ${ip} 可能可連線（HTTP）`, 'warn');
+      showToast('⚠️ HTTP 可連線（請確認 Port 9100 開放）', '');
+    })
+    .catch(() => {
+      clearTimeout(timeout);
+      dot.className = 'status-dot offline';
+      status.textContent = `${ip}:${port} — 無法連線`;
+      addLog(`印表機 ${ip} 無法連線`, 'error');
+      showToast('❌ 無法連線，請確認印表機 IP 與網路', 'error');
+    });
+}
+
+// ============================================================
+// Print (Node.js backend / Electron / or copy to console)
+// ============================================================
+function doPrint() {
+  const master = getMaster();
+  if (!master.code) { showToast('❌ 請填寫出庫單號', 'error'); return; }
+  if (!details.length) { showToast('❌ 請新增至少一項明細', 'error'); return; }
+
+  const ip   = document.getElementById('printerIp').value.trim();
+  const port = parseInt(document.getElementById('printerPort').value) || 9100;
+  const tspl = generateTSPL(master, details);
+
+  addLog(`準備列印：${master.code}，共 ${details.length} 項`, 'info');
+
+  // 如果是在 Electron / Node.js 環境，呼叫 IPC
+  if (window.electronAPI?.print) {
+    window.electronAPI.print({ ip, port, tspl })
+      .then(() => {
+        addLog(`✅ 列印成功 → ${ip}:${port}`, 'success');
+        showToast('✅ 標籤列印成功！', 'success');
+      })
+      .catch(err => {
+        addLog(`❌ 列印失敗：${err}`, 'error');
+        showToast(`❌ 列印失敗：${err}`, 'error');
+      });
+    return;
+  }
+
+  // 純瀏覽器環境：產生 Node.js 執行腳本並複製
+  const nodeScript = buildNodeScript(ip, port, tspl);
+  navigator.clipboard.writeText(nodeScript).then(() => {
+    showToast('📋 Node.js 執行腳本已複製，貼至終端機執行', 'success');
+    addLog('Node.js 列印腳本已複製到剪貼簿', 'info');
+    previewTSPL();
+  });
+}
+
+// ============================================================
+// Build standalone Node.js script
+// ============================================================
+function buildNodeScript(ip, port, tspl) {
+  const escaped = tspl.replace(/\\/g, '\\\\').replace(/`/g, '\\`');
+  return `// ===================================================
+// TH240 出庫標籤列印腳本 (Node.js)
+// 執行：node print.js
+// 需要：npm install iconv-lite
+// ===================================================
+const net = require('net');
+const iconv = require('iconv-lite');
+
+const PRINTER_IP   = '${ip}';
+const PRINTER_PORT = ${port};
+
+const tsplCommand = \`${escaped}\`;
+
+function sendToPrinter(ip, port, tsplCommand) {
+  return new Promise((resolve, reject) => {
+    const client = new net.Socket();
+    const timeout = setTimeout(() => {
+      client.destroy();
+      reject(new Error('連線逾時（5秒）'));
+    }, 5000);
+
+    console.log(\`[列印] 連線至 \${ip}:\${port} ...\`);
+    client.connect(port, ip, () => {
+      console.log('[列印] 連線成功，發送 TSPL...');
+      clearTimeout(timeout);
+      const buffer = iconv.encode(tsplCommand, 'utf-8');
+      client.write(buffer);
+      client.end();
+    });
+    client.on('close', () => {
+      console.log('[列印] ✅ 列印完成，連線關閉');
+      resolve();
+    });
+    client.on('error', (err) => {
+      clearTimeout(timeout);
+      console.error('[列印] ❌ 錯誤：', err.message);
+      reject(err);
+    });
+  });
+}
+
+sendToPrinter(PRINTER_IP, PRINTER_PORT, tsplCommand)
+  .then(() => process.exit(0))
+  .catch(err => { console.error(err); process.exit(1); });
+`;
+}
+
+// ============================================================
+// Utils
+// ============================================================
+function addLog(msg, type='info') {
+  const list = document.getElementById('logList');
+  const li = document.createElement('li');
+  const now = new Date().toLocaleTimeString('zh-TW',{hour12:false});
+  li.innerHTML = `<span class="log-time">${now}</span><span class="log-msg ${type}">${msg}</span>`;
+  list.prepend(li);
+  while (list.children.length > 30) list.removeChild(list.lastChild);
+}
+
+function showToast(msg, type='') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `show ${type}`;
+  setTimeout(() => { t.className = type; }, 3500);
+}
+
+// Refresh preview on any input change
+document.querySelectorAll('input, select').forEach(el => {
+  el.addEventListener('input', () => renderLabelPreview());
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+# AiSub 视频字幕生成器配置文件
+
+# 转录引擎设置
+transcription_engine:
+  # 默认引擎类型 (whisper, gemini, openai)
+  default_engine: "whisper"
+  
+  # 是否启用引擎自动回退
+  enable_fallback: true
+  
+  # 回退引擎顺序
+  fallback_order: ["whisper", "gemini", "openai"]
+
+# 外部API配置
+external_apis:
+  # Google Gemini API
+  gemini:
+    # API密钥，建议通过环境变量 GEMINI_API_KEY 设置
+    api_key: "AIzaSyBmMzlenFU4CMnJTKaKiywzz-l9Z7McaAI"
+    # 模型名称
+    model: "gemini-2.5-flash"
+    # API基础URL
+    base_url: "https://generativelanguage.googleapis.com"
+    # 请求超时时间(秒)
+    timeout: 300
+    # 每分钟最大请求数
+    rate_limit: 15
+    # 默认输出语言 (zh, zh-tw, en, ja, ko, es, fr, de, ru)
+    # zh: 简体中文, zh-tw: 繁体中文, en: 英语
+    default_language: "zh"
+    # 提示模板
+    prompt_template: "请转录以下音频内容为中文字幕，只输出转录文本，不要添加任何解释或格式：\n\n音频内容：{audio_text}"
+    
+  # OpenAI API
+  openai:
+    # API密钥，建议通过环境变量 OPENAI_API_KEY 设置
+    api_key: ""
+    # 模型名称
+    model: "whisper-1"
+    # API基础URL
+    base_url: "https://api.openai.com/v1"
+    # 请求超时时间(秒)
+    timeout: 300
+    # 每分钟最大请求数
+    rate_limit: 50
+    # 语言设置
+    language: "zh"
+    # 响应格式
+    response_format: "srt"
+    
+  # 自定义API配置
+  custom:
+    # 是否启用自定义API
+    enabled: false
+    # API地址
+    url: ""
+    # 请求方法
+    method: "POST"
+    # 请求头
+    headers:
+      "Content-Type": "application/json"
+    # 请求体模板
+    request_template: |
+      {
+        "audio": "{audio_base64}",
+        "language": "zh",
+        "format": "srt"
+      }
+    # 响应解析路径 (JSON路径)
+    response_path: "data.transcript"
+
+# FFmpeg 设置
+ffmpeg:
+  # FFmpeg 可执行文件路径，留空使用系统 PATH
+  executable_path: ""
+  
+  # 音频提取设置
+  audio_extraction:
+    # 音频格式 (wav, mp3, flac)
+    format: "wav"
+    # 采样率 (推荐 16000 Hz 用于语音识别)
+    sample_rate: 16000
+    # 声道数 (1=单声道, 2=立体声)
+    channels: 1
+    # 是否显示提取进度
+    show_progress: true
+  
+  # 音频预处理设置
+  audio_preprocessing:
+    # 是否启用音频预处理（降噪、人声增强）
+    enabled: false
+    # 降噪强度 (0.01-1.0，数值越高降噪越强，但可能影响人声质量)
+    noise_reduction: 0.15
+    # 是否启用人声增强（突出人声频段，抑制背景音）
+    voice_enhancement: true
+    # 是否显示预处理进度
+    show_progress: true
+    # 高通滤波器频率（Hz）- 去除低频噪音
+    highpass_freq: 85
+    # 低通滤波器频率（Hz）- 去除高频噪音
+    lowpass_freq: 4000
+    # 音量增强倍数
+    volume_boost: 1.5
+
+# Whisper 语音识别设置
+whisper:
+  # 模型大小 (tiny, base, small, medium, large, large-v2, large-v3)
+  # tiny: 最快，精度最低 (~32x 速度)
+  # base: 平衡选择 (~16x 速度)
+  # small: 更高精度 (~6x 速度)
+  # medium: 高精度 (~2x 速度)
+  # large: 最高精度 (~1x 速度)
+  model_size: "base"
+  
+  # 设备配置
+  device_config:
+    # 首选设备类型 (auto, cuda, cpu)
+    # auto: 自动检测最佳设备 (优先级: CUDA > CPU)
+    # cuda: 强制使用NVIDIA CUDA GPU
+    # cpu: 强制使用CPU
+    preferred_device: "auto"
+    
+    # CUDA配置
+    cuda:
+      # 是否启用CUDA
+      enabled: true
+      # 指定CUDA设备ID (默认-1为自动选择)
+      device_id: -1
+      # CUDA内存预分配大小(MB)，0为动态分配
+      memory_fraction: 0
+      # 是否允许内存增长
+      allow_growth: true
+    
+    # CPU配置
+    cpu:
+      # CPU线程数 (0为自动检测)
+      num_threads: 0
+      # 是否启用CPU优化
+      optimize: true
+    
+
+  device: "auto"
+  
+  # 模型下载目录，留空使用默认位置
+  download_root: ""
+  
+  # 转录设置
+  transcription:
+    # 基础模式（本地处理使用最基础的Whisper配置）
+    basic_mode: true
+    
+    # 语言代码 (auto, zh, en, ja, ko, etc.)，auto 为自动检测
+    language: "zh"
+    # 任务类型 (transcribe, translate)
+    task: "transcribe"
+    # 温度参数 (0.0-1.0)，控制随机性，0.0 为最确定
+    temperature: 0.0
+    # 是否包含单词级时间戳
+    word_timestamps: true
+    # 初始提示（基础模式下只保留简单提示）
+    initial_prompt: "以下是一段中文音频的转录。"
+    # 是否显示详细信息
+    verbose: false
+    
+    # === 以下为优化模式参数（基础模式下会被忽略） ===
+    # 是否基于前文进行条件化（启用以提高中文连贯性）
+    condition_on_previous_text: false
+    # 中文优化：精准抑制噪音token
+    suppress_tokens: [-1]
+    # VAD (语音活动检测) 相关设置 - 中文优化
+    no_speech_threshold: 0.6
+    logprob_threshold: -1.0
+    compression_ratio_threshold: 2.4
+    # 中文优化：增加搜索质量参数（基础模式下不使用）
+    beam_size: null
+    best_of: null
+    patience: null
+    # 中文标点符号优化
+    prepend_punctuations: "\"'([{-"
+    append_punctuations: "\"'.。,，!！?？:：)]}、"
+
+# 字幕生成设置
+subtitle:
+  # 每行最大字符数
+  max_line_length: 80
+  # 每个字幕最大行数
+  max_lines_per_subtitle: 2
+  # 最小字幕持续时间（秒）
+  min_subtitle_duration: 1.0
+  # 最大字幕持续时间（秒）
+  max_subtitle_duration: 10.0
+  # 相邻字幕合并阈值（秒）
+  merge_threshold: 0.5
+  # 文件编码
+  encoding: "utf-8"
+
+# 处理设置
+processing:
+  # 是否分割长音频进行处理
+  split_long_audio: true
+  # 音频分割长度（秒）- 外部API使用
+  # 外部 API (Gemini): 600 秒（10分钟，充分利用Gemini 2.5-flash能力）
+  # 外部 API (OpenAI): 300 秒（5分钟）
+  segment_length: 600
+  # 本地Whisper分割长度（秒）- 本地处理可以使用更长的片段
+  # 本地 Whisper: 建议 300-900 秒（5-15分钟）
+  local_segment_length: 1800
+  # 是否在处理完成后清理临时文件
+  cleanup_temp_files: true
+  # 临时文件目录，留空使用系统临时目录
+  temp_dir: ""
+  # 最大并发处理数
+  max_workers: 1
+
+# 输出设置
+output:
+  # 默认输出目录
+  default_output_dir: "./output"
+  # 是否在视频文件同目录输出字幕
+  output_to_video_dir: false
+  # 输出文件名模式 ({video_name} 会被替换为视频文件名)
+  filename_pattern: "{video_name}.srt"
+  # 是否覆盖已存在的文件
+  overwrite_existing: false
+
+# 日志设置
+logging:
+  # 日志级别 (DEBUG, INFO, WARNING, ERROR)
+  level: "INFO"
+  # 是否启用彩色日志
+  colored: true
+  # 日志文件路径，留空不保存到文件
+  log_file: ""
+  # 日志格式
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

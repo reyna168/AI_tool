@@ -1,0 +1,37 @@
+# 视频字幕生成器依赖包
+
+# 语音识别 - Whisper
+openai-whisper>=20250625
+torch>=1.9.0
+torchaudio>=0.9.0
+
+# 音视频处理
+ffmpeg-python==0.2.0
+
+# 进度条和用户界面
+tqdm==4.66.1
+click==8.1.7
+
+# 字幕处理
+pysrt==1.1.2
+
+# 配置文件处理
+pyyaml==6.0.1
+
+# 数据处理
+numpy>=1.21.0
+
+# 日志记录
+colorlog==6.7.0
+
+# 多语言支持
+langdetect==1.0.9
+
+# 类型提示
+typing-extensions>=4.0.0
+
+# 外部API调用
+requests>=2.28.0
+
+# 系统监控
+psutil>=5.9.0
