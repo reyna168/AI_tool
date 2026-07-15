@@ -10,7 +10,7 @@ SOURCE_DIR = r"F:\python專案\faster-whisper-master"
 BACKUP_DIR = r"C:\Users\USER\Documents\GitHub\AI_tool\faster-whisper-master"
 
 # 排除的目錄
-EXCLUDE_DIRS = {".git", "__pycache__", ".venv", "venv", "env", ".idea", ".vscode"}
+EXCLUDE_DIRS = {".git", "__pycache__", ".venv312", "venv312",".venv", "venv", "env", ".idea", ".vscode"}
 
 # 要備份的副檔名
 BACKUP_EXTENSIONS = {".py", ".txt", ".md", ".json", ".yaml", ".yml", ".toml", ".cfg", ".ini"}
