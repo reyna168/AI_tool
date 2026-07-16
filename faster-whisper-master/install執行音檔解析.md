@@ -30,3 +30,8 @@ yt-dlp --list-subs https://www.youtube.com/watch?v=lB7Pl8Dl_Rw
 yt-dlp -x --audio-format mp3 
 
 yt-dlp -x --audio-format mp3  https://www.youtube.com/watch?v=-kIzGOf0bZA
+
+
+yt-dlp -x --audio-format mp3 https://www.youtube.com/watch?v=eKW9ITaltWw
+
+python audio_transcribe_chunked.py
