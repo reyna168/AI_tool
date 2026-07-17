@@ -1,14 +1,383 @@
 1、Flowise 自動化流程 → Flowise 自動化工作流程設計與實作
 2、基於langgraph.graph, 實作gemini_agent → 詢問Gemini模型最近時事(langgraph.graph、langchain_core、pydantic)
 代理的流程是一個循環結構（生成查詢 → 搜索 → 反思 → 決策），直到滿足條件或達到最大循環次數，然後生成最終答案。程式碼使用了 Google 的 Gemini 模型和 LangChain 工具。
-3、RAG文件查詢應用 → 基於 RAG 的文件查詢應用系統建置
-4、Gemini OCR整合應用 → Gemini 模型與 OCR 技術的整合應用案例 C:\Users\USER\Documents\GitHub\businessCard
+3、RAG文件查詢應用 → 基於 RAG 的文件查詢應用系統建置(文檔建置)
+4、Gemini多模型API， OCR整合應用 → Gemini 模型與 OCR 技術的整合應用案例 C:\Users\USER\Documents\GitHub\businessCard
 5、N8N 流程測試 → RAG流程上傳文件PDF，詢問文件的問題
-6、利用 Gemini 模型實現自然語言查詢資料庫：自動生成 SQL 並執行資料檢索， C:\Users\USER\Documents\GitHub\AI_tool\meetingrecode(langchain、fastapi、streamlit)
+6、利用 Gemini 模型實現自然語言查詢資料庫：自動生成 SQL 並執行資料檢索
+
+上傳名片圖片 → Gemini AI 辨識 → JSON 解析 → 表單編輯 → POST 到後端 API
+技能等級總結
+- 前端 — Streamlit (中級)
+- AI 整合 — Google Gemini Vision API (中級)
+- 後端串接 — RESTful API (基級)
+- 物件導向 — Python class 設計 (中級)
+- 部署 — PM2 + venv (基級)
 
 
-PM2 tool → PM2 工具在 Node.js 部署程式
 
-Semi_structured_and_multi_modal_RAG.ipynb
+專案概覽
+項目	內容
+專案名稱	Chengshiu (誠實/成旭) 倉庫管理系統
+技術棧	Node.js, Express 5, MySQL 8, Socket.IO, PM2
+功能	庫存管理、入出庫單、倉庫管理、客戶供應商、案場、標籤列印
+
+
+
+資料庫結構 (17 張表)
+- 倉庫管理: warehouse, stock_inventory, stock_inventory_log
+- 品項管理: stock, category (階層式分類)
+- 訂單管理: inbound_order/detail, outbound_order/detail/usage
+- 客戶供應商: customer_supplier, customer_attribute, project_site
+- 使用者管理: user, role, role_permission, employees
+- 其他: parameter (系統參數), outbound_print_log
+
+
+經過完整搜尋，這個專案是一個倉儲管理系統（WMS）前端，並沒有技能樹（Skill Tree）功能。
+專案使用 Next.js 15 + React 19 + Redux Toolkit + Tailwind CSS 建構，主要功能模組包括：
+模組	說明
+入庫/出庫管理	Inbound / Outbound
+庫存查詢	Stock queries
+客戶/供應商管理	CRM
+倉庫管理	Warehouse management
+人員管理	User/role management
+參數設定	Parameter configuration
+最接近「樹狀結構」的是 pages/parameter.js 中產品類型與規格的父子關係（類型 → 規格），但這是一般 CRU 的關聯資料管理，並非技能樹。
+
+th240 出庫資料列印貼紙
+
+
+這是一個 GIANT（捷安特）金屬件 OCR 視覺辨識系統，使用的技能如下：
+類別	技術
+程式語言	Python
+AI/ML 框架	Ultralytics YOLOv8（物件偵測）
+深度學習	PyTorch（模型格式 .pt）
+電腦視覺	OpenCV（影像處理、視訊 I/O）
+工業相機	Basler pylon SDK
+深度/空間感測	Intel RealSense L515 LiDAR 相機
+物件追蹤	DeepSORT（已規劃但目前停用）
+資料集格式	YOLO 格式（36 類字元偵測：A-Z, 0-9）
+應用領域	自行車金屬零件字元辨識（工業 OCR）
+專案流程： 工業相機拍攝 → YOLO 格式標註 → YOLOv8 模型訓練 → 即時推論辨識金屬件上的字元。
+
+
+這是一個 YOLO 物件偵測資料增強工具，包含以下功能：
+主要功能
+1. 圖片資料增強 (main_object.py)
+對 YOLO 格式的圖片+標註資料進行隨機增強處理：
+- 噪聲 (Noise) - 高斯噪聲
+- 低對比 / 中對比 (Low/Medium Contrast)
+- 灰階 (Greyscale)
+- 飽和度調整 (Saturation)
+- 銳化 (Sharpen)
+- 模糊 (Blur)
+- 高斯模糊 (Gaussian Blur)
+- (已註解) 平移 (Translation)、光照調整 (Illumination)
+每張圖片隨機套用 N 次增強，並同步更新 bounding box 標註。
+2. 資料分離 (data-seperation.py)
+將資料集分割為 train / val 兩部分。
+3. 三段資料分離 (data-seperation_3parts.py)
+將資料集分割為 train / val / test 三部分。
+使用方式
+# 資料增強
+python main_object.py --images <圖片路徑> --labels <標註路徑> --output <輸出路徑> --Augmentation_multiple 10
+
+# 訓練/驗證分割
+python data-seperation.py -i output -r 0.2 --txt
+
+# 訓練/驗證/測試分割
+python data-seperation_3parts.py -i output -v 0.1 -t 0.2 --txt
+依賴
+- OpenCV (cv2)
+- NumPy
+- scikit-image (random_noise)
+- Pillow (PIL)
+
+
+
+# LabelImg 與 YOLO 標註重點
+
+## 1. LabelImg 是什麼
+
+LabelImg 是一個影像標註工具，用來替圖片中的物件建立 Bounding Box（外框），產生物件偵測模型所需的標註資料。
+
+主要用途：
+
+* Object Detection（物件偵測）
+* YOLO
+* Pascal VOC
+* TensorFlow Object Detection
+
+---
+
+## 2. 安裝
+
+```bash
+pip install labelImg
+```
+
+啟動：
+
+```bash
+labelImg
+```
+
+若無法直接啟動：
+
+```bash
+python -m labelImg
+```
+
+---
+
+## 3. LabelImg 操作流程
+
+### (1) Open Dir
+
+選擇圖片資料夾
+
+```
+dataset/
+    images/
+        001.jpg
+        002.jpg
+```
+
+---
+
+### (2) Change Save Dir
+
+設定標註輸出位置
+
+```
+dataset/
+    labels/
+```
+
+---
+
+### (3) 選擇標註格式
+
+右上角可切換
+
+* Pascal VOC（XML）
+* YOLO（TXT）
+
+訓練 YOLO 時請選擇 **YOLO**。
+
+---
+
+### (4) 建立 Bounding Box
+
+快捷鍵：
+
+```
+W
+```
+
+滑鼠拖曳框住物件。
+
+---
+
+### (5) 輸入 Label
+
+例如：
+
+```
+person
+car
+dog
+cat
+helmet
+```
+
+第一次輸入後即可重複使用。
+
+---
+
+### (6) 儲存
+
+快捷鍵：
+
+```
+Ctrl + S
+```
+
+每張圖片都會產生一個 `.txt`。
+
+例如：
+
+```
+001.jpg
+001.txt
+
+002.jpg
+002.txt
+```
+
+---
+
+# 4. YOLO 標註格式
+
+YOLO 每一列代表一個物件：
+
+```
+class x_center y_center width height
+```
+
+例如：
+
+```
+0 0.512 0.438 0.210 0.375
+```
+
+表示：
+
+* class = 0
+* 中心 x = 0.512
+* 中心 y = 0.438
+* 寬 = 0.210
+* 高 = 0.375
+
+注意：
+
+所有座標都是 **正規化（Normalized）**，範圍介於 **0～1**。
+
+---
+
+# 5. YOLO 座標公式
+
+假設圖片：
+
+```
+640 × 480
+```
+
+Bounding Box：
+
+```
+xmin = 100
+ymin = 50
+xmax = 300
+ymax = 250
+```
+
+計算：
+
+```
+x_center = (100 + 300) / 2 = 200
+y_center = (50 + 250) / 2 = 150
+
+width = 300 - 100 = 200
+height = 250 - 50 = 200
+```
+
+正規化：
+
+```
+x = 200 / 640 = 0.3125
+y = 150 / 480 = 0.3125
+w = 200 / 640 = 0.3125
+h = 200 / 480 = 0.4167
+```
+
+YOLO：
+
+```
+0 0.3125 0.3125 0.3125 0.4167
+```
+
+---
+
+# 6. classes.txt
+
+類別依序編號：
+
+```
+person
+car
+cat
+dog
+helmet
+```
+
+YOLO 對應：
+
+```
+0 person
+1 car
+2 cat
+3 dog
+4 helmet
+```
+
+LabelImg 會依類別順序使用索引，因此類別順序應保持一致。
+
+---
+
+# 7. 資料集結構（YOLO）
+
+```
+dataset/
+│
+├── images/
+│   ├── train/
+│   ├── val/
+│   └── test/
+│
+├── labels/
+│   ├── train/
+│   ├── val/
+│   └── test/
+│
+└── data.yaml
+```
+
+其中：
+
+* `images/`：存放圖片
+* `labels/`：存放對應的 YOLO `.txt`
+* `data.yaml`：定義資料集路徑與類別
+
+---
+
+# 8. data.yaml 範例
+
+```yaml
+train: images/train
+val: images/val
+
+nc: 3
+
+names:
+  0: person
+  1: helmet
+  2: vest
+```
+
+---
+
+# 9. 常用快捷鍵
+
+| 快捷鍵         | 功能                 |
+| ----------- | ------------------ |
+| W           | 建立 Bounding Box    |
+| Ctrl + S    | 儲存標註               |
+| D           | 下一張圖片              |
+| A           | 上一張圖片              |
+| Del         | 刪除選取的 Bounding Box |
+| Ctrl + 滑鼠滾輪 | 縮放圖片               |
+
+---
+
+# 10. 標註注意事項
+
+* Bounding Box 應盡量貼合物件邊界，避免過大或過小。
+* 同一類別需使用一致的名稱（例如不要混用 `Car`、`car`、`CAR`）。
+* 每張圖片都應有對應的 `.txt` 標註檔；若圖片沒有任何物件，通常保留一個空白的 `.txt`。
+* 訓練集、驗證集與測試集應使用相同的類別編號與 `data.yaml` 設定。
+* 標註品質直接影響模型訓練效果，因此應檢查標註是否正確且一致。
+
+
 
 ngrok、pm2、
