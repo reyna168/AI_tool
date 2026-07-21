@@ -381,3 +381,68 @@ names:
 
 
 ngrok、pm2、
+=================================================================================================================
+
+
+城旭倉儲管理系統 - 技術栈
+核心框架
+- Next.js 15.3.5 - React 框架 (使用 Pages Router)
+- React 19.0.0 - UI 框架
+狀態管理
+- Redux Toolkit 2.9.0 - 狀態管理
+- React-Redux 9.2.0 - React 綁定
+- Redux-Persist 6.0.0 - 狀態持久化
+樣式與 UI
+- Tailwind CSS 4.1.17 - 原子化 CSS 框架
+- PostCSS 8.5.6 - CSS 處理器
+- Autoprefixer 10.4.22 - CSS 前綴處理
+動畫與圖標
+- Framer Motion 12.24.0 - 動畫庫
+- Lucide React 0.553.0 - 圖標庫
+- React Icons 5.5.0 - 圖標庫
+HTTP 請求
+- Axios 1.11.0 - HTTP 客戶端
+PDF 生成
+- jsPDF 4.2.1 - PDF 生成庫
+提示框
+- SweetAlert2 11.26.3 - 彈出提示框
+- SweetAlert2 React Content 5.1.0 - React 綁定
+開發工具
+- ESLint 9 - 程式碼檢查
+- ESLint Config Next 15.3.5 - Next.js ESLint 配置
+項目結構
+- 使用 Pages Router 架構
+- 包含倉庫管理、進出貨、庫存、客戶供應商等模組
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+這專案有何技能
++ Thought: 16ms
+✓Explore Task — Explore project structure
+↳ 43 toolcalls · 1m 15s
+ctrl+x down view subagents
++ Thought: 232ms
+專案技能總覽：chengshiu-backend（誠修後端）
+這是一個倉儲管理系統 (WMS) 結合 IoT 環境監控平台 的後端，服務兩大業務領域：
+技術棧
+Node.js + Express.js v5 + MySQL + Socket.IO + JWT + PM2
+主要模組能力
+模組	功能
+認證授權	JWT 登入、角色權限（admin/staff/viewer）、OTP 忘記密碼、邀請郵件
+進貨管理	進貨單 CRUD（供應商送貨、客戶送貨、客戶退貨、工地組裝退回）
+出貨管理	出貨單 CRUD（工地領料、銷售出貨、公司退貨、組裝領料）
+庫存管理	品項主檔、即時庫存查詢、庫存異動紀錄（進/出貨前後數量）
+客戶/供應商	客戶/供應商/承包商/物流/原廠 CRUD，多屬性標籤
+工地管理	專案工地資料，連結客戶與地址
+倉庫管理	倉庫主檔 CRUD
+員工管理	員工完整資料（聯絡、銀行、緊急聯絡人、學經歷）
+標籤列印	出貨標籤列印、列印次數追蹤、網路印表機直接輸出
+參數管理	可配置下拉選項（單位、進出貨類型、分類等）
+CarbonClean 監控	即時感測器數據（CO/CO2/H2/C2H4/O2、電壓電流功率、溫度、風量）、歷史圖表、Excel 報表匯出（ZIP 批次下載）、事件/警報紀錄
+架構模式
+Routes → Controllers → Services → Repository → MySQL
+加上 JWT 中間件做權限驗證，Validator 做輸入校驗。
+
+
+
