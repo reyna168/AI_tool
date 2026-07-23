@@ -445,4 +445,4 @@ Routes → Controllers → Services → Repository → MySQL
 加上 JWT 中間件做權限驗證，Validator 做輸入校驗。
 
 
-
+100
