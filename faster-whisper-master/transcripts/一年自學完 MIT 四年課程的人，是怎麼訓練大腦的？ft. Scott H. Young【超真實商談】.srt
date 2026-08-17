@@ -1,0 +1,4264 @@
+1
+00:02:00,000 --> 00:02:30,000
+所以,這集中的這集中文的對話是繁體中文的對話是繁體中文的對話是繁體中文的對話。
+
+2
+00:02:30,000 --> 00:02:35,500
+這集中的1st Questionogle,我們有沒有期派很多新聞聯繫到upply?
+
+3
+00:02:35,500 --> 00:02:38,460
+這集中的1st QuestionmeLEVE
+
+4
+00:02:38,460 --> 00:02:47,740
+我們有很多新聞聯繫到upply?
+
+5
+00:02:47,740 --> 00:02:55,920
+這裡推文文的可言所以我們有很多新聞聯繫的可言所以
+
+6
+00:02:55,920 --> 00:02:57,020
+他又有很多人
+
+7
+00:02:57,020 --> 00:02:58,460
+是他画他们做的
+
+8
+00:02:58,460 --> 00:03:00,080
+这是原本的
+
+9
+00:03:00,100 --> 00:03:01,680
+他们是他就是
+
+10
+00:03:01,700 --> 00:03:02,940
+部分的
+
+11
+00:03:02,940 --> 00:03:05,880
+已经有些什么
+
+12
+00:03:05,880 --> 00:03:07,980
+就是他多忙碌什么
+
+13
+00:03:07,980 --> 00:03:09,440
+但原本的
+
+14
+00:03:09,440 --> 00:03:11,200
+他多有多联合
+
+15
+00:03:11,200 --> 00:03:13,080
+她也有很多
+
+16
+00:03:13,080 --> 00:03:14,920
+也有很多
+
+17
+00:03:14,920 --> 00:03:16,360
+那些有很多
+
+18
+00:03:16,360 --> 00:03:17,400
+因为她多有多么
+
+19
+00:03:17,400 --> 00:03:18,680
+因为她多有多么
+
+20
+00:03:18,680 --> 00:03:19,560
+因为她多有多么
+
+21
+00:03:19,560 --> 00:03:20,840
+因为她多有多么
+
+22
+00:03:20,840 --> 00:03:22,860
+那么她多有多么
+
+23
+00:03:22,860 --> 00:03:24,840
+因为她多有多么
+
+24
+00:03:24,840 --> 00:03:26,640
+After I'd finished school, I was like,
+
+25
+00:03:26,640 --> 00:03:29,159
+OK, I'd like to learn computer science.
+
+26
+00:03:29,159 --> 00:03:30,920
+MIT has all these courses for free.
+
+27
+00:03:30,920 --> 00:03:33,199
+Let's try a little project and try it out.
+
+28
+00:03:33,199 --> 00:03:35,800
+And I wasn't really expecting it to be the thing
+
+29
+00:03:35,800 --> 00:03:37,199
+that I'd still talking about.
+
+30
+00:03:37,199 --> 00:03:40,800
+What is it now, like, 16 years later,
+
+31
+00:03:40,800 --> 00:03:42,840
+more than that amount of time later?
+
+32
+00:03:42,840 --> 00:03:45,680
+But I mean, it's definitely had a resonance with people.
+
+33
+00:03:45,680 --> 00:03:48,719
+And so it was one of the big first projects I did.
+
+34
+00:03:48,719 --> 00:03:50,080
+And then I did a couple other ones
+
+35
+00:03:50,080 --> 00:03:51,960
+and that culminated in ultra learning.
+
+36
+00:03:51,960 --> 00:03:53,800
+And really, I've just been writing about,
+
+37
+00:03:53,800 --> 00:03:55,920
+how do you teach yourself hard skills?
+
+38
+00:03:55,920 --> 00:03:56,760
+How do you focus?
+
+39
+00:03:56,760 --> 00:03:58,439
+How do you actually get to doing this studying?
+
+40
+00:03:58,439 --> 00:04:00,640
+A lot of these things have been major themes in my work.
+
+41
+00:04:00,640 --> 00:04:01,719
+Well, that's amazing.
+
+42
+00:04:01,719 --> 00:04:04,000
+And just a reminder to all of our audience,
+
+43
+00:04:04,000 --> 00:04:07,360
+that was pre-gen AI and pre-authentic people
+
+44
+00:04:07,360 --> 00:04:08,200
+that we get to have this.
+
+45
+00:04:08,200 --> 00:04:09,200
+I know I'm a dinosaur now,
+
+46
+00:04:09,200 --> 00:04:10,760
+where I'll talk to you about, like, it's not AI.
+
+47
+00:04:10,760 --> 00:04:11,800
+It's not AI.
+
+48
+00:04:11,800 --> 00:04:14,960
+Yeah, but I bet that the people will definitely
+
+49
+00:04:14,960 --> 00:04:17,160
+be paying like millions of dollars
+
+50
+00:04:17,160 --> 00:04:19,639
+to actually get the learning materials
+
+51
+00:04:19,639 --> 00:04:20,920
+that you actually structure yourself
+
+52
+00:04:20,920 --> 00:04:22,960
+and also the study plan, for example.
+
+53
+00:04:22,959 --> 00:04:25,479
+That can be really good training, training material
+
+54
+00:04:25,479 --> 00:04:27,680
+for the current AI, definitely, for training.
+
+55
+00:04:27,680 --> 00:04:29,399
+So Scott, you mentioned about,
+
+56
+00:04:29,399 --> 00:04:30,719
+you want to learn about computer science,
+
+57
+00:04:30,719 --> 00:04:32,599
+but I think a lot of the individuals,
+
+58
+00:04:32,599 --> 00:04:34,079
+they might want to do something as well
+
+59
+00:04:34,079 --> 00:04:36,839
+that is out of their zone or comfort zones.
+
+60
+00:04:36,839 --> 00:04:38,839
+Just wondering, like, how much time
+
+61
+00:04:38,839 --> 00:04:42,359
+did it take for you to structure your learning schedules
+
+62
+00:04:42,359 --> 00:04:44,679
+and how much time did it took for you
+
+63
+00:04:44,679 --> 00:04:47,120
+to really decide to really jump into the pool?
+
+64
+00:04:47,120 --> 00:04:48,639
+Yeah, I mean, I think I was lucky.
+
+65
+00:04:48,639 --> 00:04:49,879
+I was in a bit of a transition.
+
+66
+00:04:49,879 --> 00:04:51,679
+Is that like, I was a full-time student
+
+67
+00:04:51,720 --> 00:04:53,439
+and then I took, you know,
+
+68
+00:04:53,439 --> 00:04:55,519
+it was maybe the better part of like four months
+
+69
+00:04:55,519 --> 00:04:57,480
+before I started doing this MIT challenge.
+
+70
+00:04:57,480 --> 00:04:59,560
+So I had like a little bit of prep time
+
+71
+00:04:59,560 --> 00:05:01,280
+where I was like, okay, these are going
+
+72
+00:05:01,280 --> 00:05:02,800
+to be the classes I'm going to have to take
+
+73
+00:05:02,800 --> 00:05:05,079
+and making sure I have the books and the material
+
+74
+00:05:05,079 --> 00:05:07,639
+and, you know, there was definitely some research
+
+75
+00:05:07,639 --> 00:05:09,800
+to like make sure it was actually doable.
+
+76
+00:05:09,800 --> 00:05:12,800
+But I was lucky that I didn't already have,
+
+77
+00:05:12,800 --> 00:05:14,040
+let's say like a full-time job
+
+78
+00:05:14,040 --> 00:05:16,280
+or I already had some other thing that I had to maintain.
+
+79
+00:05:16,280 --> 00:05:18,879
+So I was stopping being a full-time student
+
+80
+00:05:18,879 --> 00:05:20,600
+so it was very easy for me to just slot this
+
+81
+00:05:20,600 --> 00:05:21,640
+into my schedule.
+
+82
+00:05:21,640 --> 00:05:25,160
+But yeah, it was definitely an intensive project.
+
+83
+00:05:25,160 --> 00:05:27,000
+I wouldn't say that most people should try
+
+84
+00:05:27,000 --> 00:05:28,240
+to do the same thing.
+
+85
+00:05:28,240 --> 00:05:29,960
+But I think there's some flavor of it,
+
+86
+00:05:29,960 --> 00:05:33,600
+which is that if you are able to focus on things,
+
+87
+00:05:33,600 --> 00:05:34,720
+if you're able to pick something
+
+88
+00:05:34,720 --> 00:05:36,600
+that you care about and focus on it,
+
+89
+00:05:36,600 --> 00:05:39,480
+then you can often do things that are things
+
+90
+00:05:39,480 --> 00:05:40,360
+you didn't think you could do.
+
+91
+00:05:40,360 --> 00:05:42,040
+Whether that's learning another language,
+
+92
+00:05:42,040 --> 00:05:44,720
+picking up a new hobby, mastering a career skill.
+
+93
+00:05:44,720 --> 00:05:46,600
+And so I've worked with a lot of people
+
+94
+00:05:46,600 --> 00:05:48,760
+on much smaller scale projects over the years.
+
+95
+00:05:48,959 --> 00:05:51,159
+And it's often, they're often surprised
+
+96
+00:05:51,159 --> 00:05:52,279
+at what they're able to accomplish
+
+97
+00:05:52,279 --> 00:05:53,599
+when they're really able to focus
+
+98
+00:05:53,599 --> 00:05:55,199
+and actually work on it.
+
+99
+00:05:55,199 --> 00:05:56,279
+Wow, that's amazing.
+
+100
+00:05:56,279 --> 00:05:58,839
+So as I said, I was a full-time student.
+
+101
+00:05:58,839 --> 00:06:01,240
+I had been already sort of setting up
+
+102
+00:06:01,240 --> 00:06:02,719
+my kind of career as a writer.
+
+103
+00:06:02,719 --> 00:06:05,120
+I was, I had like a bit of a study skills business.
+
+104
+00:06:05,120 --> 00:06:07,279
+So I was doing a little bit of
+
+105
+00:06:07,279 --> 00:06:09,120
+sort of like an early subscription-based model
+
+106
+00:06:09,120 --> 00:06:12,599
+where I was giving people studying tips
+
+107
+00:06:12,599 --> 00:06:15,159
+that was kind of a very early progenitor
+
+108
+00:06:15,159 --> 00:06:17,079
+of what now people are doing with like newsletters
+
+109
+00:06:17,079 --> 00:06:18,199
+and things like this.
+
+110
+00:06:18,240 --> 00:06:20,839
+And I was earning enough money at the time
+
+111
+00:06:20,839 --> 00:06:22,560
+that it was like, okay, I can do this
+
+112
+00:06:22,560 --> 00:06:24,079
+and I just have to do a little bit of work
+
+113
+00:06:24,079 --> 00:06:26,199
+to maintain that kind of business
+
+114
+00:06:26,199 --> 00:06:27,639
+and I can support myself.
+
+115
+00:06:27,639 --> 00:06:29,159
+So now I have two small kids.
+
+116
+00:06:29,159 --> 00:06:31,879
+I definitely wouldn't be like 60 hours a week studying,
+
+117
+00:06:31,879 --> 00:06:34,959
+but I think every stage of life,
+
+118
+00:06:34,959 --> 00:06:36,439
+every position that you're in,
+
+119
+00:06:36,439 --> 00:06:38,560
+they have constraints and opportunities.
+
+120
+00:06:38,560 --> 00:06:42,000
+And so I think that one was a particularly
+
+121
+00:06:42,000 --> 00:06:44,360
+opportune moment for taking on that kind of challenge.
+
+122
+00:06:44,360 --> 00:06:45,480
+That's great, that's great.
+
+123
+00:06:45,480 --> 00:06:48,000
+And I just want to put in another questions
+
+124
+00:06:48,000 --> 00:06:50,360
+following up your career decisions I will say
+
+125
+00:06:50,360 --> 00:06:52,640
+because I think to a lot of our Taiwanese audience,
+
+126
+00:06:52,640 --> 00:06:55,160
+especially it really takes a lot of courage,
+
+127
+00:06:55,160 --> 00:06:57,160
+you know, go on a traditional route
+
+128
+00:06:57,160 --> 00:06:59,280
+whether it's something standard
+
+129
+00:06:59,280 --> 00:07:01,040
+and the corporate your parents will know
+
+130
+00:07:01,040 --> 00:07:04,120
+that you'll be in office from nine to nine or nine to six.
+
+131
+00:07:04,120 --> 00:07:07,759
+Yeah, what was the career discovery stage for you
+
+132
+00:07:07,759 --> 00:07:10,800
+that you decided to do becoming a teacher,
+
+133
+00:07:10,800 --> 00:07:13,439
+a writer, a master of productivity for a time?
+
+134
+00:07:13,439 --> 00:07:16,160
+Well, I mean, I don't know, this is a long journey
+
+135
+00:07:16,160 --> 00:07:18,759
+but I sort of started out at the beginning of university.
+
+136
+00:07:18,759 --> 00:07:21,839
+This was at the sort of very early days of the internet
+
+137
+00:07:21,839 --> 00:07:24,519
+where people were maybe doing this as a career.
+
+138
+00:07:24,519 --> 00:07:27,279
+So nowadays I think people are aware
+
+139
+00:07:27,279 --> 00:07:29,600
+that there's people who are making content online
+
+140
+00:07:29,600 --> 00:07:32,040
+that are, you know, whether they're a YouTuber
+
+141
+00:07:32,040 --> 00:07:34,839
+and influencer, there's some kind of, you know,
+
+142
+00:07:34,839 --> 00:07:36,560
+business consultant or they're offering
+
+143
+00:07:36,560 --> 00:07:38,519
+some kind of online product.
+
+144
+00:07:38,519 --> 00:07:41,120
+That is, you know, it's certainly hard to do now.
+
+145
+00:07:41,120 --> 00:07:43,519
+I don't want to say that it's easy to just pick that
+
+146
+00:07:43,519 --> 00:07:45,079
+as a profession the way you would, you know,
+
+147
+00:07:45,079 --> 00:07:46,399
+okay, I'm going to become an accountant
+
+148
+00:07:46,399 --> 00:07:47,519
+or something like that.
+
+149
+00:07:47,519 --> 00:07:49,759
+But it's at least something that people understand.
+
+150
+00:07:49,759 --> 00:07:52,759
+Whereas back then I feel like it was a very emerging thing.
+
+151
+00:07:52,759 --> 00:07:54,280
+You know, definitely when I was telling my parents,
+
+152
+00:07:54,280 --> 00:07:57,240
+okay, I'm thinking I want to kind of go in this field.
+
+153
+00:07:57,240 --> 00:07:58,480
+They were hesitant about it,
+
+154
+00:07:58,480 --> 00:08:00,879
+but I had the benefit of starting really early
+
+155
+00:08:00,879 --> 00:08:03,480
+and so I grew myself to a position
+
+156
+00:08:03,480 --> 00:08:06,560
+where I was able to earn a decent living from it
+
+157
+00:08:06,560 --> 00:08:08,319
+while I was still in college.
+
+158
+00:08:08,319 --> 00:08:09,920
+And this is a lot of the origin
+
+159
+00:08:10,000 --> 00:08:11,879
+of like the studying and the productivity advice
+
+160
+00:08:11,879 --> 00:08:13,560
+because it was like, okay, I want to grow this business
+
+161
+00:08:13,560 --> 00:08:15,199
+while I also have full-time classes.
+
+162
+00:08:15,199 --> 00:08:17,520
+And so that meant that when I graduated,
+
+163
+00:08:17,520 --> 00:08:19,640
+it was like, well, I'm earning enough to support myself.
+
+164
+00:08:19,640 --> 00:08:20,800
+So I can keep doing it.
+
+165
+00:08:20,800 --> 00:08:24,160
+It's not the case that I have to like take this unnecessary risk
+
+166
+00:08:24,160 --> 00:08:26,960
+and let's say working on the craft, working on the writing,
+
+167
+00:08:26,960 --> 00:08:28,560
+we're figuring out what it is that I'm going to do.
+
+168
+00:08:28,560 --> 00:08:30,280
+And it just turns out that, you know,
+
+169
+00:08:30,280 --> 00:08:32,080
+I ended up writing a lot about learning
+
+170
+00:08:32,080 --> 00:08:34,519
+and productivity and psychology and focus
+
+171
+00:08:34,519 --> 00:08:35,320
+and these sorts of things.
+
+172
+00:08:35,320 --> 00:08:38,080
+And yeah, I've been doing it for 20 years now.
+
+173
+00:08:38,080 --> 00:08:40,520
+So I think it's done fairly well.
+
+174
+00:08:40,520 --> 00:08:44,040
+I can't complain too much about how it's done for me.
+
+175
+00:08:44,040 --> 00:08:45,280
+That's great, guys, good.
+
+176
+00:08:45,280 --> 00:08:47,240
+I think Scott, you're being really modest.
+
+177
+00:08:47,240 --> 00:08:49,440
+You have a lot of really good golden nuggets
+
+178
+00:08:49,440 --> 00:08:52,000
+of knowledge hidden inside your YouTube channels
+
+179
+00:08:52,000 --> 00:08:53,240
+and also your newsletter.
+
+180
+00:08:53,240 --> 00:08:55,200
+We'll put the links and the information below.
+
+181
+00:08:55,200 --> 00:08:57,200
+So all the audience, if you're interested,
+
+182
+00:08:57,200 --> 00:08:58,560
+please click on it.
+
+183
+00:08:58,560 --> 00:09:01,480
+Just spend another 10 minutes or 50 minutes going there.
+
+184
+00:09:01,480 --> 00:09:04,400
+You'll find a lot of treasures hidden inside.
+
+185
+00:09:04,400 --> 00:09:06,080
+Like throughout the 20 years of writing,
+
+186
+00:09:06,080 --> 00:09:08,000
+learning and definitely have some really deep
+
+187
+00:09:08,000 --> 00:09:10,520
+and great conversations with the top thought leaders
+
+188
+00:09:10,520 --> 00:09:12,560
+and within the productivity field.
+
+189
+00:09:12,560 --> 00:09:16,560
+If Scott, we ask you to pick three top criminals
+
+190
+00:09:16,560 --> 00:09:18,000
+in modern days, that's still a way
+
+191
+00:09:18,000 --> 00:09:19,600
+our focus in modern day life.
+
+192
+00:09:19,600 --> 00:09:21,920
+What would be your top three pick?
+
+193
+00:09:21,920 --> 00:09:23,080
+If you want the short list,
+
+194
+00:09:23,080 --> 00:09:27,080
+like I think probably social media, video games
+
+195
+00:09:27,080 --> 00:09:30,480
+and I would argue like the rise of streaming television
+
+196
+00:09:30,480 --> 00:09:32,560
+in particular are things that still wear focus.
+
+197
+00:09:32,560 --> 00:09:34,080
+But I want to shift the discussion a little bit
+
+198
+00:09:34,080 --> 00:09:35,960
+because I think there's a risk
+
+199
+00:09:35,960 --> 00:09:38,080
+of me just sounding really judgmental when I'm doing this.
+
+200
+00:09:38,080 --> 00:09:40,440
+Like, oh, all that stuff that you have fun doing,
+
+201
+00:09:40,440 --> 00:09:41,280
+that's bad for you.
+
+202
+00:09:41,280 --> 00:09:44,040
+You should be like reading hard books and doing MIT classes.
+
+203
+00:09:44,040 --> 00:09:45,400
+And that's not my intention at all.
+
+204
+00:09:45,400 --> 00:09:47,600
+And that's not how I like to teach things.
+
+205
+00:09:47,600 --> 00:09:50,200
+The way I'd like to instead encourage people
+
+206
+00:09:50,200 --> 00:09:52,960
+to think about it is, imagine you're stepping back
+
+207
+00:09:52,960 --> 00:09:54,879
+and you have the ability to decide
+
+208
+00:09:54,879 --> 00:09:56,920
+how you're going to spend the days of your life,
+
+209
+00:09:56,920 --> 00:09:58,080
+the hours of your life.
+
+210
+00:09:58,080 --> 00:10:00,040
+What are the things that you're going to feel good about
+
+211
+00:10:00,040 --> 00:10:01,480
+having spent that time on?
+
+212
+00:10:01,480 --> 00:10:02,800
+And obviously in the moment,
+
+213
+00:10:02,800 --> 00:10:05,160
+it's hard to necessarily spend your time
+
+214
+00:10:05,160 --> 00:10:06,360
+let's say doing a creative hobby,
+
+215
+00:10:06,360 --> 00:10:09,880
+like we were talking about art or learn a new skill
+
+216
+00:10:09,880 --> 00:10:11,800
+or read some difficult book.
+
+217
+00:10:11,800 --> 00:10:13,040
+It's hard to do those things.
+
+218
+00:10:13,040 --> 00:10:15,400
+And so often we gravitate towards these things
+
+219
+00:10:15,400 --> 00:10:17,360
+that we call distractions or time-waisters.
+
+220
+00:10:17,360 --> 00:10:20,000
+But the aim of what I try to do
+
+221
+00:10:20,000 --> 00:10:22,000
+and what I try to teach is not to suppress
+
+222
+00:10:22,000 --> 00:10:23,000
+everything good in your life.
+
+223
+00:10:23,000 --> 00:10:25,160
+But there's something that you find really, really valuable
+
+224
+00:10:25,160 --> 00:10:27,680
+and it's a social media account or a YouTube account
+
+225
+00:10:27,680 --> 00:10:29,320
+or something entertaining.
+
+226
+00:10:29,320 --> 00:10:30,160
+That's great.
+
+227
+00:10:30,160 --> 00:10:31,000
+You should have those things.
+
+228
+00:10:31,000 --> 00:10:32,200
+Like watching great movies is a great
+
+229
+00:10:32,200 --> 00:10:33,680
+watching great television shows is a great,
+
+230
+00:10:33,680 --> 00:10:35,040
+I love those things too.
+
+231
+00:10:35,040 --> 00:10:37,040
+But that we want to be conscious,
+
+232
+00:10:37,040 --> 00:10:39,080
+we want to be deliberate in our choices about it.
+
+233
+00:10:39,080 --> 00:10:40,680
+We don't want to just do things mindlessly
+
+234
+00:10:40,680 --> 00:10:41,680
+and then be like, oh man,
+
+235
+00:10:41,680 --> 00:10:43,640
+I spent hours and hours and hours.
+
+236
+00:10:43,640 --> 00:10:45,280
+I don't know where all the time went.
+
+237
+00:10:45,280 --> 00:10:47,200
+I could have done something that I really valued.
+
+238
+00:10:47,200 --> 00:10:49,759
+I want us to organize our time in a way
+
+239
+00:10:49,759 --> 00:10:51,080
+that after we spend the time,
+
+240
+00:10:51,080 --> 00:10:51,920
+we're like, you know what?
+
+241
+00:10:51,920 --> 00:10:54,080
+I'm good about how I spent my time doing those things.
+
+242
+00:10:54,080 --> 00:10:55,879
+And that could be lots of different things
+
+243
+00:10:55,879 --> 00:10:56,800
+for different people.
+
+244
+00:10:56,800 --> 00:10:59,160
+And so I do think that when we're thinking about
+
+245
+00:10:59,160 --> 00:11:01,120
+spending our time and focusing on things,
+
+246
+00:11:01,120 --> 00:11:04,159
+it's not so much about vilifying whether it's television
+
+247
+00:11:04,159 --> 00:11:06,679
+or social media or any of these things,
+
+248
+00:11:06,679 --> 00:11:08,919
+but rather it's about choosing what you really want
+
+249
+00:11:08,919 --> 00:11:09,919
+to spend your time with
+
+250
+00:11:09,919 --> 00:11:12,120
+and making sure that your time is actually consistent
+
+251
+00:11:12,120 --> 00:11:13,039
+with that focus.
+
+252
+00:11:13,039 --> 00:11:13,879
+Oh, that's great.
+
+253
+00:11:13,879 --> 00:11:14,919
+You just bought me to ask a,
+
+254
+00:11:14,919 --> 00:11:16,320
+do you have a time tracker app
+
+255
+00:11:16,320 --> 00:11:18,120
+that you use on a daily basis though?
+
+256
+00:11:18,120 --> 00:11:20,639
+I have done various different kinds of time trackers.
+
+257
+00:11:20,639 --> 00:11:22,080
+So even one of the things that we talk about
+
+258
+00:11:22,080 --> 00:11:23,279
+in this life of focus courses
+
+259
+00:11:23,279 --> 00:11:25,399
+that we have a deep work tracker,
+
+260
+00:11:25,399 --> 00:11:26,560
+which I find very valuable.
+
+261
+00:11:26,560 --> 00:11:28,680
+So that method basically is just when you want to do
+
+262
+00:11:28,680 --> 00:11:29,519
+a deep work session,
+
+263
+00:11:29,519 --> 00:11:31,360
+maybe we'll go into what deep work isn't a little bit
+
+264
+00:11:31,360 --> 00:11:33,279
+but basically you just jot down,
+
+265
+00:11:33,279 --> 00:11:34,960
+okay, I'm going to start 9 a.m.
+
+266
+00:11:34,960 --> 00:11:36,279
+9 a.m. and you put a little dash
+
+267
+00:11:36,279 --> 00:11:38,039
+and then you go sort of for as long as you can
+
+268
+00:11:38,039 --> 00:11:40,279
+before you get sidetracked under different task
+
+269
+00:11:40,279 --> 00:11:41,360
+or you're forced to stop
+
+270
+00:11:41,360 --> 00:11:43,759
+or someone interrupts you for a 15 minute meeting
+
+271
+00:11:43,759 --> 00:11:44,919
+and then you just mark the time.
+
+272
+00:11:44,919 --> 00:11:46,480
+And so tracking the deep work hours
+
+273
+00:11:46,480 --> 00:11:48,679
+is something that I've done for a number of years.
+
+274
+00:11:48,679 --> 00:11:50,519
+Other things that I've done is just even like,
+
+275
+00:11:50,519 --> 00:11:52,120
+you know, you're talking about time trackers.
+
+276
+00:11:52,120 --> 00:11:54,279
+One of the things I often do is on my phone.
+
+277
+00:11:54,279 --> 00:11:55,679
+I do like using my phone.
+
+278
+00:11:55,679 --> 00:11:57,360
+I have lots of good things on my phone,
+
+279
+00:11:57,360 --> 00:11:59,319
+but as I mentioned, it can be full of distractions
+
+280
+00:11:59,440 --> 00:12:00,160
+as well.
+
+281
+00:12:00,160 --> 00:12:02,280
+So even just using things like the app
+
+282
+00:12:02,280 --> 00:12:04,640
+I'm using these days is one called screens in.
+
+283
+00:12:04,640 --> 00:12:06,480
+So the few apps that I have remaining
+
+284
+00:12:06,480 --> 00:12:07,879
+that I want to use a little bit of,
+
+285
+00:12:07,879 --> 00:12:09,480
+but not too much of, I put,
+
+286
+00:12:09,480 --> 00:12:11,800
+so okay, I can use, let's say,
+
+287
+00:12:11,800 --> 00:12:13,080
+this is maybe not gonna be as relevant
+
+288
+00:12:13,080 --> 00:12:14,680
+for the Taiwanese audience,
+
+289
+00:12:14,680 --> 00:12:17,520
+but there's a major news app here called New York Times.
+
+290
+00:12:17,520 --> 00:12:18,760
+New York Times app, I like it,
+
+291
+00:12:18,760 --> 00:12:20,280
+but I only want to watch it once per day.
+
+292
+00:12:20,280 --> 00:12:21,840
+So I just had it set up 20 minutes,
+
+293
+00:12:21,840 --> 00:12:23,640
+once per day I have it with my morning coffee.
+
+294
+00:12:23,640 --> 00:12:24,480
+That's a good one.
+
+295
+00:12:24,480 --> 00:12:25,320
+And then it's locked.
+
+296
+00:12:25,320 --> 00:12:26,800
+No, I'm not checking the news every five minutes
+
+297
+00:12:26,800 --> 00:12:28,760
+and so these are little strategies that I use.
+
+298
+00:12:28,759 --> 00:12:30,960
+So I'm not sure if it's the same thing as a time tracker app,
+
+299
+00:12:30,960 --> 00:12:34,799
+but technology, and I'm using it to try to steer again,
+
+300
+00:12:34,799 --> 00:12:36,439
+steer my focus more towards,
+
+301
+00:12:36,439 --> 00:12:39,080
+this is how I actually want to spend the hours of my day.
+
+302
+00:12:39,080 --> 00:12:40,000
+This is what I want to feel good
+
+303
+00:12:40,000 --> 00:12:41,200
+about doing at the end of the day.
+
+304
+00:12:41,200 --> 00:12:42,039
+That's really great.
+
+305
+00:12:42,039 --> 00:12:44,840
+I think you actually help us really structure a framework,
+
+306
+00:12:44,840 --> 00:12:46,480
+actually, before we dive into
+
+307
+00:12:46,480 --> 00:12:49,159
+what kind of productivity we want to gain,
+
+308
+00:12:49,159 --> 00:12:50,080
+it is actually the goal,
+
+309
+00:12:50,080 --> 00:12:51,360
+and also the work of life, right?
+
+310
+00:12:51,360 --> 00:12:53,159
+So later on, I think we're gonna touch based on,
+
+311
+00:12:53,159 --> 00:12:54,879
+you know, what's a dream of life like.
+
+312
+00:12:54,879 --> 00:12:56,080
+And then when you start,
+
+313
+00:12:56,080 --> 00:12:58,480
+but I think it's a really good reminder that you have pointed out
+
+314
+00:12:58,480 --> 00:13:01,600
+is that sometime we categorically put things
+
+315
+00:13:01,600 --> 00:13:03,800
+that are indeed non-productive area,
+
+316
+00:13:03,800 --> 00:13:05,399
+it's probably that something we want to do
+
+317
+00:13:05,399 --> 00:13:06,159
+outside of our work,
+
+318
+00:13:06,159 --> 00:13:07,879
+or want to become our full-time work
+
+319
+00:13:07,879 --> 00:13:10,480
+that we constantly missed out in our career planning
+
+320
+00:13:10,480 --> 00:13:11,720
+or day of life planning,
+
+321
+00:13:11,720 --> 00:13:12,840
+that may be something that we miss.
+
+322
+00:13:12,840 --> 00:13:13,920
+So we can bring back,
+
+323
+00:13:13,920 --> 00:13:15,680
+and then we'll look at how can we bring focus
+
+324
+00:13:15,680 --> 00:13:17,440
+into something that's long lasting,
+
+325
+00:13:17,440 --> 00:13:18,920
+can bring like a pot-time writing
+
+326
+00:13:18,920 --> 00:13:21,639
+or bring a pot-time hobby into a full-time career.
+
+327
+00:13:21,639 --> 00:13:24,560
+That is probably something that we can uncover today
+
+328
+00:13:24,560 --> 00:13:26,080
+in the conversation.
+
+329
+00:13:26,080 --> 00:13:28,159
+So this is definitely clearly something
+
+330
+00:13:28,159 --> 00:13:30,799
+that you have thought about a lot every day.
+
+331
+00:13:30,799 --> 00:13:34,000
+And it makes me think of one of your partners, Cal.
+
+332
+00:13:34,000 --> 00:13:36,360
+Because of the topic focus is basically
+
+333
+00:13:36,360 --> 00:13:37,759
+what he focuses on, right?
+
+334
+00:13:37,759 --> 00:13:39,480
+So I'm really curious.
+
+335
+00:13:39,480 --> 00:13:41,240
+How did you two first connect
+
+336
+00:13:41,240 --> 00:13:43,919
+and how did this course actually come about?
+
+337
+00:13:43,919 --> 00:13:45,199
+Yeah, so we were talking a little bit
+
+338
+00:13:45,199 --> 00:13:46,240
+on my origin stories,
+
+339
+00:13:46,240 --> 00:13:49,279
+but I've known Cal now for 20 years.
+
+340
+00:13:49,279 --> 00:13:53,000
+And we first met when we were both giving study advice.
+
+341
+00:13:53,000 --> 00:13:54,919
+So I was just starting,
+
+342
+00:13:54,919 --> 00:13:56,159
+I was a freshman in university,
+
+343
+00:13:56,159 --> 00:14:00,240
+so I was just beginning my writing about student issues.
+
+344
+00:14:00,240 --> 00:14:02,879
+And I think he was a grad student at MIT,
+
+345
+00:14:02,879 --> 00:14:04,319
+and he had just written a book,
+
+346
+00:14:04,319 --> 00:14:06,000
+and he was just starting a blog too,
+
+347
+00:14:06,000 --> 00:14:07,959
+and we kind of connected over that,
+
+348
+00:14:07,959 --> 00:14:09,600
+and we've been friends since.
+
+349
+00:14:09,600 --> 00:14:12,279
+And so there's a lot of synchronicity in our thinking,
+
+350
+00:14:12,279 --> 00:14:14,799
+and certainly Cal, someone I've learned a lot
+
+351
+00:14:14,799 --> 00:14:15,879
+from over the years.
+
+352
+00:14:15,879 --> 00:14:18,360
+So a lot of his ideas has had a deep influence
+
+353
+00:14:18,360 --> 00:14:20,879
+on how I think about work and productivity.
+
+354
+00:14:20,879 --> 00:14:22,839
+And yeah, I just have to say
+
+355
+00:14:22,839 --> 00:14:24,199
+it's been a productive relationship,
+
+356
+00:14:24,720 --> 00:14:28,400
+and certainly my team and I were very excited
+
+357
+00:14:28,400 --> 00:14:29,840
+that we've been able to work with Cal
+
+358
+00:14:29,840 --> 00:14:31,600
+and bringing some of his ideas
+
+359
+00:14:31,600 --> 00:14:33,200
+also in the course format as well,
+
+360
+00:14:33,200 --> 00:14:34,920
+since he writes such excellent books.
+
+361
+00:14:34,920 --> 00:14:37,560
+We've been happy to help him get some of those things
+
+362
+00:14:37,560 --> 00:14:39,120
+into courses that people can follow
+
+363
+00:14:39,120 --> 00:14:41,600
+and really implement some of these ideas into their life.
+
+364
+00:14:41,600 --> 00:14:42,480
+Well, that's amazing.
+
+365
+00:14:42,480 --> 00:14:45,040
+So if we just get to pick one,
+
+366
+00:14:45,040 --> 00:14:46,400
+I'll do so many lesson learned
+
+367
+00:14:46,400 --> 00:14:50,160
+that you probably exchange it with Cal within the past 20 years,
+
+368
+00:14:50,160 --> 00:14:51,800
+definitely lots of things to go back in.
+
+369
+00:14:51,800 --> 00:14:56,040
+What were one stories that were a thought
+
+370
+00:14:56,040 --> 00:14:58,400
+that brought up by Cal that really changed your life?
+
+371
+00:14:58,400 --> 00:14:59,400
+Now I can give two answers.
+
+372
+00:14:59,400 --> 00:15:00,240
+So I'll give them more.
+
+373
+00:15:59,988 --> 00:16:03,288
+New Tech-London Gibe introduced New Working Models,
+
+374
+00:16:03,288 --> 00:16:06,188
+for example back then there was nothing like a remote worker.
+
+375
+00:16:06,188 --> 00:16:09,408
+Now everyone is talking about hybrid or going back to office,
+
+376
+00:16:09,408 --> 00:16:13,807
+so really curious for regular office worker in a in person office settings,
+
+377
+00:16:13,807 --> 00:16:17,488
+I'll say it is really genuinely hard to completely see yourself from
+
+378
+00:16:17,488 --> 00:16:19,708
+all of those kind of distractions where disturbance,
+
+379
+00:16:19,708 --> 00:16:23,108
+and in a day of life or work whether that is intended or non-tended
+
+380
+00:16:23,108 --> 00:16:25,868
+There is a common scenario I think a lot of us,
+
+381
+00:16:25,868 --> 00:16:31,048
+The audience can relate to is a client or managers could be messaging you at any moment
+
+382
+00:16:31,048 --> 00:16:34,628
+and if you miss it, you're going to get into troubles, you might drop a bowl.
+
+383
+00:16:34,628 --> 00:16:40,188
+So linking back to your own workflow and your experience coaching so many students,
+
+384
+00:16:40,188 --> 00:16:45,148
+if we break into two parts, the first part is, are there any smart hacks to actually reduce
+
+385
+00:16:45,148 --> 00:16:49,668
+these kind of a frequent of interruptions from these urgent messages?
+
+386
+00:16:49,668 --> 00:16:53,548
+Yeah, so first I want to just step back a second, because I think one of the things
+
+387
+00:16:53,548 --> 00:16:59,168
+I've found learning from a lot of people is that often my boss needs this or my colleagues
+
+388
+00:16:59,168 --> 00:17:03,188
+they interrupt me is often the excuse people give for not wanting to focus and do
+
+389
+00:17:03,188 --> 00:17:04,188
+deep work.
+
+390
+00:17:04,188 --> 00:17:09,188
+But there's actually very interesting research from the researcher Gloria Marx that in fact
+
+391
+00:17:09,188 --> 00:17:12,948
+people are initiating distractions about half the time.
+
+392
+00:17:12,948 --> 00:17:15,948
+So about half of the distractions that you have are not because someone interrupted you
+
+393
+00:17:15,948 --> 00:17:20,827
+but because you initiated a distraction, you wanted to check your email, you wanted to basically
+
+394
+00:17:20,827 --> 00:17:24,788
+get a break from whatever difficult task you were doing to go do something else.
+
+395
+00:17:24,788 --> 00:17:29,307
+So even right there, even if we were just saying I don't have any control over anyone else
+
+396
+00:17:29,307 --> 00:17:34,428
+in my office, I am too junior and employee that I don't have the audacity to tell my boss
+
+397
+00:17:34,428 --> 00:17:36,347
+not to email me nonstop.
+
+398
+00:17:36,347 --> 00:17:40,347
+If I can just control the self initiated distractions, that's half of it right there, right?
+
+399
+00:17:40,347 --> 00:17:42,468
+So I think that's the first good thing to remember.
+
+400
+00:17:42,468 --> 00:17:48,148
+The second thing is that very often when we are working with other people, it's this process
+
+401
+00:17:48,148 --> 00:17:49,148
+of negotiating.
+
+402
+00:17:49,148 --> 00:17:52,908
+It's this process of figuring out, okay, here's what I'm trying to do in my job.
+
+403
+00:17:52,908 --> 00:17:56,508
+And I want to try to accomplish that goal and the other people around me presumably want
+
+404
+00:17:56,508 --> 00:17:58,228
+me to accomplish that goal as well.
+
+405
+00:17:58,228 --> 00:18:02,587
+And I want to get as much focus as possible without interfering with their jobs and their
+
+406
+00:18:02,587 --> 00:18:04,388
+roles and their goals that they have.
+
+407
+00:18:04,388 --> 00:18:06,508
+So there's lots of different ways you can do it.
+
+408
+00:18:06,508 --> 00:18:09,468
+So one of the ways that I do, which I'm not going to say is going to be universal for everyone,
+
+409
+00:18:09,468 --> 00:18:13,587
+but one of the things that I do is that I don't have my email inbox open.
+
+410
+00:18:13,587 --> 00:18:18,708
+So people that I work with know that if they need to interrupt me with something immediately,
+
+411
+00:18:18,708 --> 00:18:22,148
+they send me a text message on my phone or they give me a phone call.
+
+412
+00:18:22,148 --> 00:18:25,188
+If it needs to be done right now, they give me a phone call.
+
+413
+00:18:25,188 --> 00:18:29,188
+If it's something that needs to be done in the next six hours, email is fine.
+
+414
+00:18:29,188 --> 00:18:32,587
+And so this is a simple kind of policy that people know this about me, so I was working
+
+415
+00:18:32,587 --> 00:18:33,587
+this way.
+
+416
+00:18:33,587 --> 00:18:37,228
+Now if you are in an office setting where you can't necessarily do that, you can't tell
+
+417
+00:18:37,228 --> 00:18:41,188
+your boss who can write to me through this medium and not that medium, then you could maybe
+
+418
+00:18:41,188 --> 00:18:46,628
+set up some email rule so that maybe, okay, will you get pings whenever someone so sends
+
+419
+00:18:46,628 --> 00:18:50,588
+you an email, but not when like the newsletter comes in or the span email comes in.
+
+420
+00:18:50,588 --> 00:18:53,908
+So there are more technical ways to set it up that you can walk through that you can work
+
+421
+00:18:53,908 --> 00:18:54,827
+on this kind of thing.
+
+422
+00:18:54,827 --> 00:18:58,827
+But it starts by having this question of what am I trying to accomplish?
+
+423
+00:18:58,827 --> 00:19:01,268
+What are the sort of benefits of me focusing?
+
+424
+00:19:01,268 --> 00:19:05,067
+And what are the sort of difficulties that I'm asking other people to undertake?
+
+425
+00:19:05,067 --> 00:19:08,148
+And I think depending on your position in the company, you can sometimes ask someone
+
+426
+00:19:08,148 --> 00:19:11,948
+to be like, you know what, for the next two hours, I'm going to be focusing really hard
+
+427
+00:19:11,948 --> 00:19:12,948
+on this.
+
+428
+00:19:12,948 --> 00:19:14,948
+Maybe don't distract me unless it's an emergency.
+
+429
+00:19:14,948 --> 00:19:15,948
+Right.
+
+430
+00:19:15,948 --> 00:19:18,108
+Okay, for some people, they're not able to do that.
+
+431
+00:19:18,108 --> 00:19:21,628
+So a lot of what we do in the course and a lot of what we do in the coaching is not so
+
+432
+00:19:21,628 --> 00:19:23,708
+much prescribing a one size fits all.
+
+433
+00:19:23,708 --> 00:19:25,508
+This is how everyone has to do their work.
+
+434
+00:19:25,508 --> 00:19:29,588
+But rather exploring the constraints, figuring out, okay, what are the relationships, what
+
+435
+00:19:29,588 --> 00:19:33,347
+are the other people, what are the environments, dealing with those self distractions, so dealing
+
+436
+00:19:33,347 --> 00:19:34,867
+with that other half of it.
+
+437
+00:19:34,867 --> 00:19:38,827
+And then for the other half that we don't entirely control, finding good policies so that we
+
+438
+00:19:38,827 --> 00:19:39,827
+can minimize it.
+
+439
+00:19:39,827 --> 00:19:42,668
+And you know what, if you do get interrupted every once in a while, it's not the end of
+
+440
+00:19:42,668 --> 00:19:43,668
+the world.
+
+441
+00:19:43,668 --> 00:19:45,468
+A lot of it is about setting the intention.
+
+442
+00:19:45,468 --> 00:19:49,867
+So if you can set the intention to focus, if you can say, okay, I'm going to focus
+
+443
+00:19:49,867 --> 00:19:53,548
+for this chunk of time, for three hours, maybe you get interrupted once or twice.
+
+444
+00:19:53,548 --> 00:19:55,708
+You still get quite a bit of deep work done.
+
+445
+00:19:55,708 --> 00:19:59,628
+In contrast, if you just sort of throw your hands up and say, I can't possibly do this,
+
+446
+00:19:59,628 --> 00:20:03,388
+there's too many people distracting me and then I just have to work in these five minute
+
+447
+00:20:03,388 --> 00:20:04,388
+chunks.
+
+448
+00:20:04,388 --> 00:20:05,548
+Well, then of course you're not going to get any done.
+
+449
+00:20:05,548 --> 00:20:10,148
+So a lot of what I try to do is try to figure out what's possible within someone's environment
+
+450
+00:20:10,148 --> 00:20:12,428
+rather than telling them, do exactly this thing.
+
+451
+00:20:12,468 --> 00:20:14,148
+Yeah, I think that's a really great suggestion.
+
+452
+00:20:14,148 --> 00:20:18,268
+It's especially I think in the other day, especially for those, let's say, younger professional
+
+453
+00:20:18,268 --> 00:20:22,468
+just got into the work, I think everyone's a little bit shying away from making active
+
+454
+00:20:22,468 --> 00:20:26,748
+communications on, you know, what's the preferred work mode and how do you like to structure
+
+455
+00:20:26,748 --> 00:20:29,668
+your most productive, let's say, deep work schedules.
+
+456
+00:20:29,668 --> 00:20:32,988
+I think that's something that we can probably review during the weekend and probably get
+
+457
+00:20:32,988 --> 00:20:36,508
+by the time next week, we can start that conversations in the office with our colleagues
+
+458
+00:20:36,508 --> 00:20:41,228
+where let's say supervisor, that may increase the likelihood that we get a protected time
+
+459
+00:20:41,307 --> 00:20:43,468
+to really go into the deep work part.
+
+460
+00:20:43,468 --> 00:20:48,148
+And since you mentioned about it, we can reduce, you know, self-initiated distractions.
+
+461
+00:20:48,148 --> 00:20:51,948
+And also the other part is through communications, we can improve on how we best collaborate
+
+462
+00:20:51,948 --> 00:20:53,827
+with the other colleagues in the office.
+
+463
+00:20:53,827 --> 00:21:01,108
+And if we still unfortunately got interrupted and lost focus, are there any tips that can
+
+464
+00:21:01,108 --> 00:21:04,508
+help us switch back to our original focus states within just a few minutes?
+
+465
+00:21:04,508 --> 00:21:10,827
+I think in general, the problem with these distractions is how fragmented the time is.
+
+466
+00:21:10,908 --> 00:21:15,028
+I think there is some cost that you pay, how it talks a lot about this attention residue
+
+467
+00:21:15,028 --> 00:21:18,548
+that you have like some remaining thoughts on whatever task you're in, sliding over to
+
+468
+00:21:18,548 --> 00:21:19,548
+the new task.
+
+469
+00:21:19,548 --> 00:21:23,588
+And this is a real thing, but we're talking about something that is on this surface.
+
+470
+00:21:23,588 --> 00:21:25,068
+There's not a huge difference.
+
+471
+00:21:25,068 --> 00:21:28,668
+So if you get interrupted again, once in a one hour session, we're not talking about an
+
+472
+00:21:28,668 --> 00:21:29,948
+enormous cost.
+
+473
+00:21:29,948 --> 00:21:34,188
+The problem I think and the problem that really cow rails against is that we often are in
+
+474
+00:21:34,188 --> 00:21:39,988
+this fragmented workplace where we are not either from self-initiated or other people
+
+475
+00:21:39,988 --> 00:21:40,988
+interruptions.
+
+476
+00:21:40,988 --> 00:21:44,908
+We're not getting more than a few minutes in a row before we have some interruption
+
+477
+00:21:44,908 --> 00:21:45,908
+or some other task.
+
+478
+00:21:45,908 --> 00:21:48,948
+And so it's more I think about stretching it over the hour.
+
+479
+00:21:48,948 --> 00:21:52,468
+If you get interrupted and you have to get back to it, I think usually it's fine.
+
+480
+00:21:52,468 --> 00:21:53,988
+It's not usually going to be a problem.
+
+481
+00:21:53,988 --> 00:21:58,268
+The problem I think is more often that I decide, okay, I'm going to go check my email
+
+482
+00:21:58,268 --> 00:22:01,188
+and then I start going down a rabbit hole and I'm answering emails and then I'm doing that
+
+483
+00:22:01,188 --> 00:22:02,188
+for 20 minutes.
+
+484
+00:22:02,188 --> 00:22:06,307
+If it was sort of like, okay, I've set my intention to do my deep work for the next two hours,
+
+485
+00:22:06,307 --> 00:22:09,028
+and then an email comes up and I have to reply to it.
+
+486
+00:22:09,028 --> 00:22:12,108
+And then I keep my intention, I get back to task, yeah, maybe you're going to lose
+
+487
+00:22:12,108 --> 00:22:13,108
+a little bit.
+
+488
+00:22:13,108 --> 00:22:14,108
+It's a bit of a speed bump.
+
+489
+00:22:14,108 --> 00:22:15,908
+But the problem is really like going back and forth.
+
+490
+00:22:15,908 --> 00:22:19,508
+And I have my email inbox open and I'm switching back and forth between doing my work and
+
+491
+00:22:19,508 --> 00:22:20,508
+answering emails.
+
+492
+00:22:20,508 --> 00:22:23,347
+Well, that itself is going to erode your ability to do that concentration.
+
+493
+00:22:23,347 --> 00:22:24,347
+Right, right.
+
+494
+00:22:24,347 --> 00:22:26,068
+That's a great suggestion.
+
+495
+00:22:26,068 --> 00:22:30,428
+And I think our team actually found there's a super country to go to nuggets and your course
+
+496
+00:22:30,428 --> 00:22:35,347
+that caught our eye is you mentioned that the idea that you need to zone out and scroll
+
+497
+00:22:35,347 --> 00:22:39,588
+your phone to relax is actually one of the least effective way to relax.
+
+498
+00:22:39,588 --> 00:22:40,588
+So why is that?
+
+499
+00:22:40,588 --> 00:22:45,228
+And what does a true high quality recharge activity for our brain actually looks like?
+
+500
+00:22:45,228 --> 00:22:46,228
+Yeah.
+
+501
+00:22:46,228 --> 00:22:48,068
+So there's an interesting paradox of this.
+
+502
+00:22:48,068 --> 00:22:52,668
+This is one of the researchers who actually studies like rest and recovery from work.
+
+503
+00:22:52,668 --> 00:22:54,948
+Believe it or not, there is such a thing that you can specialize in.
+
+504
+00:22:54,948 --> 00:22:57,588
+This is a researcher being a son and tag.
+
+505
+00:22:57,588 --> 00:23:04,268
+She calls this the relaxation paradox, which is that if you look at how much recovery benefit
+
+506
+00:23:04,268 --> 00:23:09,028
+you get from various kinds of activities, it's often not the easiest activities to
+
+507
+00:23:09,028 --> 00:23:10,028
+do.
+
+508
+00:23:10,028 --> 00:23:13,868
+So we actually benefit from doing things that are more challenging.
+
+509
+00:23:13,868 --> 00:23:16,668
+Now that the details for this are a little bit more complicated, but basically there's
+
+510
+00:23:16,668 --> 00:23:19,748
+two different things that we get from resting.
+
+511
+00:23:19,748 --> 00:23:23,307
+One of them is just to relax, just basically what you're saying, to zone out, turn off our
+
+512
+00:23:23,307 --> 00:23:24,307
+brain.
+
+513
+00:23:24,307 --> 00:23:26,708
+And yeah, watching your phone doing this thing can do that.
+
+514
+00:23:26,708 --> 00:23:30,148
+But one of the other things that we get from resting is that we get a chance to fulfill
+
+515
+00:23:30,148 --> 00:23:32,347
+things that are meaning for us, basically satisfying.
+
+516
+00:23:32,347 --> 00:23:35,628
+And a lot of our work, we're doing something someone else has told us to do, or that
+
+517
+00:23:35,628 --> 00:23:39,148
+we need to do just to earn money or just to have some sort of accomplishment within our
+
+518
+00:23:39,148 --> 00:23:40,347
+profession.
+
+519
+00:23:40,347 --> 00:23:42,068
+And we don't get to do as many things for us.
+
+520
+00:23:42,068 --> 00:23:43,867
+So maybe there's some book you want to do.
+
+521
+00:23:43,867 --> 00:23:45,387
+Maybe you've wanted to learn French.
+
+522
+00:23:45,387 --> 00:23:47,548
+Maybe you've wanted to master a skill.
+
+523
+00:23:47,548 --> 00:23:52,508
+Maybe you've wanted to always watch that movie that everyone's been telling you about.
+
+524
+00:23:52,508 --> 00:23:57,588
+These kinds of things, when you do these kinds of activities, you not only get the recovery
+
+525
+00:23:57,588 --> 00:24:01,867
+benefit of, you know, again, just turning off your brain and not doing something very effortful,
+
+526
+00:24:01,867 --> 00:24:05,548
+but you also get the satisfaction that comes from doing things that are valued activities,
+
+527
+00:24:05,548 --> 00:24:07,307
+doing things that feel valuable.
+
+528
+00:24:07,307 --> 00:24:10,988
+And the problem is that a lot of those activities have a higher initiation cost.
+
+529
+00:24:10,988 --> 00:24:13,588
+So they have a little bit more effort to get started.
+
+530
+00:24:13,588 --> 00:24:17,748
+And so often we can get in this trap where we feel tired, we feel like we have difficulty
+
+531
+00:24:17,748 --> 00:24:20,548
+focusing, and we do these low value activities.
+
+532
+00:24:20,548 --> 00:24:24,228
+So they do let us kind of rest and turn off our brain a little bit.
+
+533
+00:24:24,228 --> 00:24:27,068
+But then once we're done, we feel like, oh, I've wasted all this time.
+
+534
+00:24:27,068 --> 00:24:30,387
+I haven't done anything valuable for me and I have to go back to doing my job or I have
+
+535
+00:24:30,387 --> 00:24:33,628
+to go back to doing these other tasks that are also not for me.
+
+536
+00:24:33,628 --> 00:24:35,188
+And you feel kind of almost weighed down.
+
+537
+00:24:35,188 --> 00:24:40,268
+Like you have this low motivation, this low vigor to use the term from psychology.
+
+538
+00:24:40,268 --> 00:24:45,427
+And so the idea here is that if you can cultivate high value leisure activities, things that
+
+539
+00:24:45,427 --> 00:24:50,228
+you genuinely value, then not only does it give you a chance to take a break because you're
+
+540
+00:24:50,228 --> 00:24:54,347
+doing something mentally, cognitively different than you're doing your daytime, but you also
+
+541
+00:24:54,347 --> 00:24:57,748
+get a chance to do something that you're going to find worthwhile after.
+
+542
+00:24:57,748 --> 00:24:59,028
+And it goes back to my original point.
+
+543
+00:24:59,028 --> 00:25:00,028
+I was making it.
+
+544
+00:25:00,028 --> 00:25:04,748
+The goal here is not to eliminate all entertainment or never do anything fun or never relax.
+
+545
+00:25:04,748 --> 00:25:05,668
+That's definitely not the goal.
+
+546
+00:25:05,668 --> 00:25:10,468
+The goal is to be able to look back at the time you spent in the last day, the last week
+
+547
+00:25:10,468 --> 00:25:13,748
+and say, you know what, I'm really glad about how that week went and we don't always feel
+
+548
+00:25:13,748 --> 00:25:14,748
+that way.
+
+549
+00:25:14,748 --> 00:25:15,748
+Wow.
+
+550
+00:25:15,748 --> 00:25:16,748
+Okay.
+
+551
+00:25:16,748 --> 00:25:18,268
+It's just a quick follow-up question on that.
+
+552
+00:25:18,268 --> 00:25:19,268
+Sure.
+
+553
+00:25:19,268 --> 00:25:21,947
+You mentioned about some of the activities that we may thought that it's okay, it's a leisure
+
+554
+00:25:21,947 --> 00:25:22,947
+time.
+
+555
+00:25:22,947 --> 00:25:23,947
+It's something that we can get out of work.
+
+556
+00:25:23,947 --> 00:25:26,508
+I just want to do something that's not working related.
+
+557
+00:25:26,508 --> 00:25:31,668
+But somehow, it's actually us knowing that it's getting us distracted from work, but
+
+558
+00:25:31,668 --> 00:25:35,307
+that's not really high quality and active leaders.
+
+559
+00:25:35,307 --> 00:25:40,067
+How do you categorize and rate the quality of the leaders or, let's say, whether we should
+
+560
+00:25:40,067 --> 00:25:42,708
+put that into our Monday to Friday schedules or not?
+
+561
+00:25:42,708 --> 00:25:43,907
+I think there's two ways to do it.
+
+562
+00:25:43,907 --> 00:25:48,188
+So one way would be to just try different things out so you can just sort of see which things
+
+563
+00:25:48,188 --> 00:25:49,468
+you feel valuable about.
+
+564
+00:25:49,468 --> 00:25:54,268
+So there is a little bit of a bit of cognitive bias here that sometimes when we are thinking
+
+565
+00:25:54,268 --> 00:25:56,468
+about some activity, we think we're going to enjoy it.
+
+566
+00:25:56,468 --> 00:25:58,068
+It's way less than we actually do.
+
+567
+00:25:58,068 --> 00:26:03,748
+And so there's a lot of interesting research about how people systematically underrate certain
+
+568
+00:26:03,748 --> 00:26:04,908
+kinds of activities.
+
+569
+00:26:04,908 --> 00:26:09,188
+So for instance, people very frequently think that they're going to feel more tired after
+
+570
+00:26:09,188 --> 00:26:12,948
+exercising when it's almost always the opposite, that after you exercise, you feel like you
+
+571
+00:26:12,948 --> 00:26:13,948
+have more energy.
+
+572
+00:26:13,948 --> 00:26:17,188
+And so this is one of those things where it's again, we've exercised a lot of times, but
+
+573
+00:26:17,188 --> 00:26:21,387
+somehow we think it's going to be tiring, but it's more that it's tiring to imagine doing
+
+574
+00:26:21,387 --> 00:26:22,387
+this activity.
+
+575
+00:26:22,387 --> 00:26:23,948
+Once you actually do it, you usually feel good.
+
+576
+00:26:23,948 --> 00:26:26,708
+Another example would be socialising, so a lot of times you think, you know what?
+
+577
+00:26:26,708 --> 00:26:30,708
+I just need to be away from other people, glued to my phone, this kind of thing.
+
+578
+00:26:30,708 --> 00:26:34,148
+But actually if you spend time with friends, if you do an activity with other people, you
+
+579
+00:26:34,148 --> 00:26:37,388
+go out for dinner, you have a phone call with someone, you actually usually feel better
+
+580
+00:26:37,388 --> 00:26:38,388
+about it.
+
+581
+00:26:38,388 --> 00:26:40,548
+It's one of these cognitive biases.
+
+582
+00:26:40,548 --> 00:26:45,188
+So figuring out what those high quality leisure activities for you, what your life is like,
+
+583
+00:26:45,188 --> 00:26:50,068
+this is a kind of a complicated process because we can't totally rely on our first 10 experience.
+
+584
+00:26:50,068 --> 00:26:55,428
+My advice to people would be to first kind of map out what your ideal day or week would
+
+585
+00:26:55,428 --> 00:27:00,068
+look like in terms of what sorts of activities are there, then figure out, okay, given the
+
+586
+00:27:00,068 --> 00:27:02,908
+constraints of my life, given that I have to work a job, I have to do all these things
+
+587
+00:27:02,908 --> 00:27:07,988
+that maybe I don't desire to do, but are the chores that I have to do to like go on living.
+
+588
+00:27:07,988 --> 00:27:11,708
+How can I fit in the most of those things that are really valuable as possible?
+
+589
+00:27:11,708 --> 00:27:15,068
+So sort of like imagine a better version of yourself, like they have the Latin phrase
+
+590
+00:27:15,068 --> 00:27:18,307
+carpet, and like seize the day, like imagine if you were just full of energy and you
+
+591
+00:27:18,307 --> 00:27:22,988
+were just like willpower and all those things for no problem, I'm going to paint, I'm going
+
+592
+00:27:22,988 --> 00:27:26,548
+to learn a language, I'm going to read a hard book, I'm going to go to the library, I'm
+
+593
+00:27:26,548 --> 00:27:29,988
+going to do all these things, plan those kind of things out, and not just that you have
+
+594
+00:27:29,988 --> 00:27:33,508
+to spend all of your time doing that, but that sets a goal, that sets an intention.
+
+595
+00:27:33,508 --> 00:27:36,548
+And then you can start experimenting with different habits, different changes to see how
+
+596
+00:27:36,548 --> 00:27:37,548
+this works.
+
+597
+00:27:37,548 --> 00:27:39,688
+And I mean, this is only on one end of the problem.
+
+598
+00:27:39,688 --> 00:27:44,028
+So one end of the problem is on cultivating positive things that you're interested in, but
+
+599
+00:27:44,028 --> 00:27:46,387
+the other part of it is we need to break some of our bad habits.
+
+600
+00:27:46,387 --> 00:27:49,988
+So we were talking a little bit about being distracted at work, so a big part of it is
+
+601
+00:27:49,988 --> 00:27:50,988
+having focus work.
+
+602
+00:27:50,988 --> 00:27:55,387
+So how do you have work, you can get your important work done in chunks, so you don't feel
+
+603
+00:27:55,387 --> 00:28:00,268
+hairy, you don't constantly feel like okay, I have to be working 10 times more because
+
+604
+00:28:00,268 --> 00:28:01,427
+I'm constantly behind.
+
+605
+00:28:01,427 --> 00:28:05,548
+You are one of the performers in your field, you get your work done, you're doing great,
+
+606
+00:28:05,548 --> 00:28:09,028
+you have a little bit more leeway, a little bit more flexibility, talking about remote
+
+607
+00:28:09,028 --> 00:28:13,508
+work, especially a lot of these situations where maybe you're not necessarily, you know necessarily
+
+608
+00:28:13,508 --> 00:28:17,228
+I have to be at the office these exact hours, but I have certain tasks, I have to accomplish
+
+609
+00:28:17,228 --> 00:28:21,028
+I have certain goals that my organization or my profession is set for me.
+
+610
+00:28:21,028 --> 00:28:24,708
+How can I accomplish those with the least amount of fuss?
+
+611
+00:28:24,708 --> 00:28:28,148
+And then second, we have to talk about the sort of leisure activities we're doing.
+
+612
+00:28:28,148 --> 00:28:32,508
+So a big part of this is how do you sort of temporarily take yourself away from some of
+
+613
+00:28:32,508 --> 00:28:39,148
+these tempting, easier kind of low value options, just so you can experience what it's like to
+
+614
+00:28:39,148 --> 00:28:41,228
+not have to be glued to your phone all the time.
+
+615
+00:28:41,228 --> 00:28:43,708
+And then that gives you space to try to explore some of these things.
+
+616
+00:28:43,708 --> 00:28:47,268
+So it is a bit of a complicated process, I don't want to say that it's a one step, you
+
+617
+00:28:47,268 --> 00:28:48,548
+can just turn it on.
+
+618
+00:28:48,548 --> 00:28:52,548
+But if you go through this sort of systematically, you can often end up in a situation where
+
+619
+00:28:52,548 --> 00:28:55,708
+yeah, you are spending more time doing things that you really, truly value.
+
+620
+00:28:55,708 --> 00:28:56,708
+Wow, that was great.
+
+621
+00:28:56,708 --> 00:29:00,108
+I think that also answered like a two part of the sub-questions that we prepare in the
+
+622
+00:29:00,108 --> 00:29:05,428
+later half, is one is everyone in the workforce probably have done their 16 personality test.
+
+623
+00:29:05,428 --> 00:29:09,827
+And everyone will be fixed to add out, okay, I'm an extrovert, so I really need to get
+
+624
+00:29:09,827 --> 00:29:13,788
+some leisure point that is at least a group activity is waiting out with friends.
+
+625
+00:29:13,788 --> 00:29:17,988
+And for the other spectrum, for those really introverts, they will want to maximize their
+
+626
+00:29:17,988 --> 00:29:18,988
+time alone.
+
+627
+00:29:18,988 --> 00:29:19,988
+That's probably something.
+
+628
+00:29:19,988 --> 00:29:23,908
+But I think throughout this explorations and also the recategorizing your leisure, high
+
+629
+00:29:23,908 --> 00:29:28,068
+quality time, I think that's something a really fruitful exercise that everyone can do.
+
+630
+00:29:28,068 --> 00:29:29,827
+And probably we're going to learn something new.
+
+631
+00:29:29,827 --> 00:29:33,628
+Maybe there are some really active, high quality leisure activities that we have been missing
+
+632
+00:29:33,628 --> 00:29:37,628
+out for the past, I don't know how many years, but that's something that should be putting
+
+633
+00:29:37,708 --> 00:29:40,028
+into our schedules for the upcoming months.
+
+634
+00:29:40,028 --> 00:29:41,028
+That's a great one.
+
+635
+00:29:41,028 --> 00:29:44,827
+I think that that framework part would definitely solve like 90% of the issues for a lot of
+
+636
+00:29:44,827 --> 00:29:46,028
+our audience.
+
+637
+00:29:46,028 --> 00:29:48,867
+And we have another 10%, that's a harder part for now.
+
+638
+00:29:48,867 --> 00:29:52,948
+So if real rest comes from active and high quality leisure, this is a really important
+
+639
+00:29:52,948 --> 00:29:56,988
+lesson learned that we learned so far, then here's a question for our audience might
+
+640
+00:29:56,988 --> 00:29:57,988
+have.
+
+641
+00:29:57,988 --> 00:29:59,948
+Some of the folks would probably say...
+
+642
+00:30:59,988 --> 00:31:29,988
+在這裏,這裏,這裏,這裏,這裏,這裏。
+
+643
+00:31:59,988 --> 00:32:29,988
+這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏
+
+644
+00:32:29,988 --> 00:32:31,567
+maybe it is a bit of an investment.
+
+645
+00:32:31,567 --> 00:32:34,067
+But I think, you know, there's a dream that we all have.
+
+646
+00:32:34,067 --> 00:32:36,668
+There is an idea of ourselves that we have.
+
+647
+00:32:36,668 --> 00:32:38,208
+Yeah, maybe it's not, like,
+
+648
+00:32:38,208 --> 00:32:40,208
+I don't enjoy doing this thing right right now,
+
+649
+00:32:40,208 --> 00:32:42,408
+but I can imagine becoming the kind of person
+
+650
+00:32:42,408 --> 00:32:43,768
+that enjoys doing these things.
+
+651
+00:32:43,768 --> 00:32:46,048
+And, you know, seeing how you can navigate
+
+652
+00:32:46,048 --> 00:32:47,968
+into doing those activities.
+
+653
+00:32:47,968 --> 00:32:50,208
+Certainly, I feel like it's a better way to live.
+
+654
+00:32:50,208 --> 00:32:51,648
+It's a healthier way to live than to imagine
+
+655
+00:32:51,648 --> 00:32:53,748
+that, okay, I just worked myself to the bone,
+
+656
+00:32:53,748 --> 00:32:56,688
+and then I just do something that I find completely
+
+657
+00:32:56,688 --> 00:33:00,168
+valueless in my spare time just because I'm so exhausted
+
+658
+00:33:00,168 --> 00:33:01,608
+from working that I can't go on.
+
+659
+00:33:01,608 --> 00:33:02,888
+Like, to me, that's pretty bleak.
+
+660
+00:33:02,888 --> 00:33:04,208
+I don't want to live that way.
+
+661
+00:33:04,208 --> 00:33:06,248
+And so I hope the people who are listening here,
+
+662
+00:33:06,248 --> 00:33:09,408
+that's not the thing that they aspire for to the end, either.
+
+663
+00:33:09,408 --> 00:33:12,288
+That's a really good suggestion to some antidote, I'll say,
+
+664
+00:33:12,288 --> 00:33:14,327
+for especially for a Taiwanese audience.
+
+665
+00:33:14,327 --> 00:33:15,528
+Thank you so much.
+
+666
+00:33:15,528 --> 00:33:17,248
+Yeah, I think this is a great segue.
+
+667
+00:33:17,248 --> 00:33:19,208
+And we definitely have to talk about a course
+
+668
+00:33:19,208 --> 00:33:21,368
+that you and Cal have took so much of your time
+
+669
+00:33:21,368 --> 00:33:22,648
+and then developed together.
+
+670
+00:33:22,648 --> 00:33:25,368
+So there's one of the three modules of the course.
+
+671
+00:33:25,367 --> 00:33:27,567
+It's called a training of brain's deep focus
+
+672
+00:33:27,567 --> 00:33:30,168
+through completing a challenging learning project.
+
+673
+00:33:30,168 --> 00:33:32,847
+So I'll say this sounds really interesting to me,
+
+674
+00:33:32,847 --> 00:33:34,847
+but I believe some of our audience heard like,
+
+675
+00:33:34,847 --> 00:33:37,847
+please don't make me do something challenging right now.
+
+676
+00:33:37,847 --> 00:33:38,888
+I just want to relax.
+
+677
+00:33:38,888 --> 00:33:41,367
+So all of all the students who have taken this course,
+
+678
+00:33:41,367 --> 00:33:44,087
+can you share with us this story of someone
+
+679
+00:33:44,087 --> 00:33:47,488
+whose results show the biggest before and after contrast?
+
+680
+00:33:47,488 --> 00:33:50,168
+And like, someone who completely blew your mind
+
+681
+00:33:50,168 --> 00:33:51,488
+because they achieved something
+
+682
+00:33:51,488 --> 00:33:53,367
+that's originally seen totally impossible
+
+683
+00:33:53,367 --> 00:33:55,728
+and even impossible from your point of view.
+
+684
+00:33:55,728 --> 00:33:57,208
+Well, first of all, I want to preface.
+
+685
+00:33:57,208 --> 00:33:58,367
+This is the third month.
+
+686
+00:33:58,367 --> 00:34:01,168
+The three months in English, the way we name it
+
+687
+00:34:01,168 --> 00:34:03,847
+was focus work, focus life, and focus mind.
+
+688
+00:34:03,847 --> 00:34:06,528
+So get focus work focusing on the deep work part.
+
+689
+00:34:06,528 --> 00:34:09,447
+Focus life is a little bit based on kind of giving yourself
+
+690
+00:34:09,447 --> 00:34:11,887
+space, so getting away from some of the digital distractions,
+
+691
+00:34:11,887 --> 00:34:14,088
+some of this low quality leisure time we were talking about.
+
+692
+00:34:14,088 --> 00:34:17,007
+And then the focus mind was to make or learn something new.
+
+693
+00:34:17,007 --> 00:34:19,488
+And I would actually say that a lot of the things
+
+694
+00:34:19,488 --> 00:34:21,327
+are related to what we were talking about before
+
+695
+00:34:21,327 --> 00:34:23,288
+is that people manage to free up this time.
+
+696
+00:34:23,288 --> 00:34:26,768
+And then they start doing some kind of activity or hobby
+
+697
+00:34:26,768 --> 00:34:28,608
+that they'd like kind of always wanted to do.
+
+698
+00:34:28,608 --> 00:34:30,008
+And then now they're actually doing it
+
+699
+00:34:30,008 --> 00:34:30,887
+and they're excited about it.
+
+700
+00:34:30,887 --> 00:34:32,967
+So I think someone was doing photography.
+
+701
+00:34:32,967 --> 00:34:33,967
+I think there was another person
+
+702
+00:34:33,967 --> 00:34:37,128
+who was doing some kind of needlework or this kind of thing.
+
+703
+00:34:37,128 --> 00:34:38,448
+And I mean, it's just a month.
+
+704
+00:34:38,448 --> 00:34:40,568
+So this is not like, I'm not saying these people
+
+705
+00:34:40,568 --> 00:34:42,768
+have become super geniuses, but it's a shift.
+
+706
+00:34:42,768 --> 00:34:43,648
+It's a shift in their life.
+
+707
+00:34:43,648 --> 00:34:46,088
+So it's very much what we're talking about here.
+
+708
+00:34:46,088 --> 00:34:48,168
+But the ordering of the months is important too,
+
+709
+00:34:48,168 --> 00:34:50,528
+because if we started with that month,
+
+710
+00:34:50,528 --> 00:34:53,248
+again, people are coming in month one,
+
+711
+00:34:53,248 --> 00:34:56,688
+you feel swamped at work because you're constantly busy.
+
+712
+00:34:56,688 --> 00:34:57,927
+You're not able to get everything done.
+
+713
+00:34:57,927 --> 00:34:58,688
+You feel harried.
+
+714
+00:34:58,688 --> 00:35:00,168
+You're constantly being distracted.
+
+715
+00:35:00,168 --> 00:35:02,088
+You're not able to get your important work done.
+
+716
+00:35:02,088 --> 00:35:03,768
+You feel like you have to work overtime
+
+717
+00:35:03,768 --> 00:35:06,128
+and on the weekends to just stay on top of things.
+
+718
+00:35:06,128 --> 00:35:07,967
+For the focus life, you are again,
+
+719
+00:35:07,967 --> 00:35:11,288
+you're so sucked into a lot of the digital distractions
+
+720
+00:35:11,288 --> 00:35:13,327
+that we all engage in now and again.
+
+721
+00:35:13,327 --> 00:35:15,288
+That again, you don't feel like you have any time.
+
+722
+00:35:15,288 --> 00:35:17,728
+You're just constantly sucked into these things.
+
+723
+00:35:17,728 --> 00:35:20,048
+That it's only once we kind of turn down the noise
+
+724
+00:35:20,128 --> 00:35:22,007
+on those two problems
+
+725
+00:35:22,007 --> 00:35:23,768
+that they're actually become space
+
+726
+00:35:23,768 --> 00:35:25,248
+to work on this third thing.
+
+727
+00:35:25,248 --> 00:35:26,488
+And so I think the structuring
+
+728
+00:35:26,488 --> 00:35:28,007
+and the sequencing of it was very important,
+
+729
+00:35:28,007 --> 00:35:29,447
+because I think if we'd started with that third one,
+
+730
+00:35:29,447 --> 00:35:31,768
+people are like, I don't have time for that, right?
+
+731
+00:35:31,768 --> 00:35:33,967
+Whereas it's only once you've made time
+
+732
+00:35:33,967 --> 00:35:34,887
+through doing some of these things,
+
+733
+00:35:34,887 --> 00:35:36,967
+you're like, oh, actually, I can do some of these things
+
+734
+00:35:36,967 --> 00:35:38,887
+that are meaningful and valuable to me.
+
+735
+00:35:38,887 --> 00:35:41,608
+And other people, they take it in a more productive direction.
+
+736
+00:35:41,608 --> 00:35:44,728
+So there's people who decide to work on some career skill
+
+737
+00:35:44,728 --> 00:35:45,568
+or get better at something.
+
+738
+00:35:45,568 --> 00:35:46,887
+It's gonna be good for their job.
+
+739
+00:35:46,887 --> 00:35:47,728
+But for a lot of people,
+
+740
+00:35:47,728 --> 00:35:48,728
+it's just reclaiming something
+
+741
+00:35:48,728 --> 00:35:49,807
+that they've always wanted to do
+
+742
+00:35:49,807 --> 00:35:52,128
+that they just haven't felt like they've had the capacity for.
+
+743
+00:35:52,128 --> 00:35:53,048
+That's very nice.
+
+744
+00:35:53,048 --> 00:35:55,608
+Wondering if there's any mental antidote, for example,
+
+745
+00:35:55,608 --> 00:35:57,248
+like to one of the students
+
+746
+00:35:57,248 --> 00:35:59,007
+that may already be starting
+
+747
+00:35:59,007 --> 00:36:01,768
+that taking your courses in the training sessions,
+
+748
+00:36:01,768 --> 00:36:04,048
+they probably already finished the first month successfully.
+
+749
+00:36:04,048 --> 00:36:05,407
+But later on, they are staff,
+
+750
+00:36:05,407 --> 00:36:08,048
+for example, have to go on a business trip for three weeks
+
+751
+00:36:08,048 --> 00:36:09,048
+and they will have to pause
+
+752
+00:36:09,048 --> 00:36:10,447
+for learning from this course.
+
+753
+00:36:10,447 --> 00:36:13,088
+And then by the time when they return from the business trip,
+
+754
+00:36:13,088 --> 00:36:15,367
+maybe they feel really down, being annoyed
+
+755
+00:36:15,367 --> 00:36:17,807
+that they haven't really put in the three weeks time
+
+756
+00:36:17,807 --> 00:36:20,128
+to really learn about the second month of the excess.
+
+757
+00:36:20,128 --> 00:36:21,648
+Is there any mental antidote
+
+758
+00:36:21,648 --> 00:36:23,807
+for these kind of a senior or for your students?
+
+759
+00:36:23,807 --> 00:36:25,407
+Well, I think the right way to think about it
+
+760
+00:36:25,407 --> 00:36:28,168
+is that a typical course is something that you learn.
+
+761
+00:36:28,168 --> 00:36:30,407
+You go in and then we teach you lessons
+
+762
+00:36:30,407 --> 00:36:33,568
+and then you learn some content knowledge.
+
+763
+00:36:33,568 --> 00:36:35,887
+The way we wanted to design this was a little different.
+
+764
+00:36:35,887 --> 00:36:37,807
+We wanted it to be an experience
+
+765
+00:36:37,807 --> 00:36:41,528
+that you go through that would help you build new habits.
+
+766
+00:36:41,528 --> 00:36:44,327
+So it's not as if these ideas are totally revolutionary
+
+767
+00:36:44,327 --> 00:36:45,728
+although there are a lot of nuances
+
+768
+00:36:45,728 --> 00:36:48,208
+that you have to get right to make it successful.
+
+769
+00:36:48,208 --> 00:36:50,688
+But it's about having the space to focus on,
+
+770
+00:36:50,688 --> 00:36:52,728
+okay, we're going to fix this particular thing.
+
+771
+00:36:52,728 --> 00:36:54,288
+We're going to track our deep work hours
+
+772
+00:36:54,288 --> 00:36:56,448
+or we're going to take a temporary reprieve
+
+773
+00:36:56,448 --> 00:36:57,208
+from the digital vices
+
+774
+00:36:57,208 --> 00:36:59,048
+or we're going to work on one of these projects.
+
+775
+00:36:59,048 --> 00:37:01,367
+And that experience allows you
+
+776
+00:37:01,367 --> 00:37:04,448
+to sort of fix some things in your routines,
+
+777
+00:37:04,448 --> 00:37:06,327
+make some improvements.
+
+778
+00:37:06,327 --> 00:37:07,608
+But it's not the end all be all.
+
+779
+00:37:07,608 --> 00:37:09,208
+It's a little bit like joining a gym program
+
+780
+00:37:09,208 --> 00:37:10,208
+or an exercise program.
+
+781
+00:37:10,208 --> 00:37:12,288
+It's not like you do some three month exercise program
+
+782
+00:37:12,288 --> 00:37:14,847
+and all of a sudden you become an Olympic athlete.
+
+783
+00:37:14,847 --> 00:37:16,208
+But you may find that you're in better shape
+
+784
+00:37:16,208 --> 00:37:17,327
+than you were there when you started.
+
+785
+00:37:17,327 --> 00:37:19,568
+And so one of the things that's been really heartening for me
+
+786
+00:37:19,568 --> 00:37:22,488
+is that we've been running this program since 2020
+
+787
+00:37:22,488 --> 00:37:24,847
+and we've had people that have written in the thing
+
+788
+00:37:24,847 --> 00:37:26,847
+that this is their fifth time doing it.
+
+789
+00:37:26,847 --> 00:37:28,768
+They've gone through it five times.
+
+790
+00:37:28,768 --> 00:37:31,568
+And that allows them to sort of like,
+
+791
+00:37:31,568 --> 00:37:33,528
+okay, I got a lot of benefit the first time
+
+792
+00:37:33,528 --> 00:37:35,327
+and then life gets in the way it's chaotic.
+
+793
+00:37:35,327 --> 00:37:37,568
+You set us let something slide, something slip.
+
+794
+00:37:37,568 --> 00:37:39,608
+And maybe there were some problems.
+
+795
+00:37:39,608 --> 00:37:40,728
+You didn't quite figure out.
+
+796
+00:37:40,728 --> 00:37:42,807
+You didn't quite figure out how to negotiate this thing
+
+797
+00:37:42,807 --> 00:37:44,327
+with your boss or you tried this thing out
+
+798
+00:37:44,407 --> 00:37:45,327
+and it didn't quite work.
+
+799
+00:37:45,327 --> 00:37:46,768
+And then you come back and you try it again.
+
+800
+00:37:46,768 --> 00:37:47,568
+And then you try it again.
+
+801
+00:37:47,568 --> 00:37:51,728
+And each time you're sort of deepening to excuse the pun,
+
+802
+00:37:51,728 --> 00:37:54,648
+you're deepening that process that you're working with.
+
+803
+00:37:54,648 --> 00:37:57,128
+And so I really like being able to work with people
+
+804
+00:37:57,128 --> 00:37:58,367
+in courses because that's something that,
+
+805
+00:37:58,367 --> 00:37:59,528
+you know, you can do with a book.
+
+806
+00:37:59,528 --> 00:38:00,688
+You can certainly pick up the book
+
+807
+00:38:00,688 --> 00:38:02,728
+and read it again and try to apply it again.
+
+808
+00:38:02,728 --> 00:38:04,807
+But there's something about having a structured process
+
+809
+00:38:04,807 --> 00:38:07,448
+that like goes out over a period of time
+
+810
+00:38:07,448 --> 00:38:09,048
+that you're able to sort of meditate on.
+
+811
+00:38:09,048 --> 00:38:11,088
+So anyone who falls off the wagon
+
+812
+00:38:11,088 --> 00:38:13,088
+or they get stuck or do this kind of thing,
+
+813
+00:38:13,088 --> 00:38:15,488
+I would just say that just like any other kind of training,
+
+814
+00:38:15,488 --> 00:38:17,448
+anything you're doing for a jam or learning a language
+
+815
+00:38:17,448 --> 00:38:20,248
+or anything where it requires investment
+
+816
+00:38:20,248 --> 00:38:21,887
+over a long period of time,
+
+817
+00:38:21,887 --> 00:38:23,407
+there's no problem starting back
+
+818
+00:38:23,407 --> 00:38:25,448
+and just going back and starting that month over again
+
+819
+00:38:25,448 --> 00:38:26,728
+or doing the whole thing over again
+
+820
+00:38:26,728 --> 00:38:28,128
+or starting over in the beginning.
+
+821
+00:38:28,128 --> 00:38:30,568
+Because the material is not crazy time-consuming.
+
+822
+00:38:30,568 --> 00:38:32,768
+What matters is the intention that, you know,
+
+823
+00:38:32,768 --> 00:38:34,967
+when you have an entire month intended on like,
+
+824
+00:38:34,967 --> 00:38:37,007
+let's work on focus in my work,
+
+825
+00:38:37,007 --> 00:38:38,528
+you'd be surprised how much you can do, right?
+
+826
+00:38:38,528 --> 00:38:40,007
+Because that's your intention for that month.
+
+827
+00:38:40,007 --> 00:38:42,887
+This is what we really try to preach in our course.
+
+828
+00:38:43,168 --> 00:38:44,327
+Okay, that's amazing.
+
+829
+00:38:44,327 --> 00:38:46,367
+And I think that's a great encouragement as well.
+
+830
+00:38:46,367 --> 00:38:48,128
+So I think we're probably going to bring
+
+831
+00:38:48,128 --> 00:38:50,007
+another questions following up
+
+832
+00:38:50,007 --> 00:38:51,007
+some of the mental challenges.
+
+833
+00:38:51,007 --> 00:38:52,887
+Because I think quite frequently,
+
+834
+00:38:52,887 --> 00:38:55,488
+I think a lot of our barriers are not physical barriers,
+
+835
+00:38:55,488 --> 00:38:57,688
+but mental barriers that we put up ourselves.
+
+836
+00:38:57,688 --> 00:38:59,648
+And we persuade ourselves not to do something
+
+837
+00:38:59,648 --> 00:39:03,088
+because we probably think that it's probably too challenging
+
+838
+00:39:03,088 --> 00:39:05,168
+to actually crush a challenge.
+
+839
+00:39:05,168 --> 00:39:08,088
+Could you share with us one actionable method,
+
+840
+00:39:08,088 --> 00:39:10,488
+maybe from the course so our audience can try it out
+
+841
+00:39:10,488 --> 00:39:11,528
+at home today?
+
+842
+00:39:11,568 --> 00:39:13,327
+So I think there's two things there.
+
+843
+00:39:13,327 --> 00:39:15,807
+So one is about having the right kind of mindset
+
+844
+00:39:15,807 --> 00:39:17,087
+with regards to challenge.
+
+845
+00:39:17,087 --> 00:39:18,447
+And this is one of the things that, you know,
+
+846
+00:39:18,447 --> 00:39:20,768
+some of the most popular lessons from the course.
+
+847
+00:39:20,768 --> 00:39:24,208
+Cal has a lesson called inspiration is for amateurs
+
+848
+00:39:24,208 --> 00:39:26,047
+and he talks about the process of writing
+
+849
+00:39:26,047 --> 00:39:28,168
+and how many writers will come up to new writers
+
+850
+00:39:28,168 --> 00:39:30,608
+and they'll say things like, you know what I want to write,
+
+851
+00:39:30,608 --> 00:39:32,768
+but I just sit down and it's just like so hard.
+
+852
+00:39:32,768 --> 00:39:33,608
+I have these ideas.
+
+853
+00:39:33,608 --> 00:39:34,688
+I don't know what to put.
+
+854
+00:39:34,688 --> 00:39:35,807
+I don't know how to start.
+
+855
+00:39:35,807 --> 00:39:36,847
+It's just very difficult.
+
+856
+00:39:36,847 --> 00:39:37,967
+It's frustrating.
+
+857
+00:39:37,967 --> 00:39:41,208
+And you know, I just, like, I don't have any inspiration.
+
+858
+00:39:41,208 --> 00:39:43,688
+His argument is that that's what writing is.
+
+859
+00:39:43,688 --> 00:39:45,208
+That's what it means to do writing
+
+860
+00:39:45,208 --> 00:39:47,367
+is that you're struggling through that difficulty.
+
+861
+00:39:47,367 --> 00:39:50,007
+And so sometimes part of the way of dealing with challenge
+
+862
+00:39:50,007 --> 00:39:52,088
+is that if you expected to be fun and easy
+
+863
+00:39:52,088 --> 00:39:53,448
+and if you have this idea that like,
+
+864
+00:39:53,448 --> 00:39:55,327
+well, it's mentally challenging,
+
+865
+00:39:55,327 --> 00:39:58,007
+therefore I'm doing it wrong or it's hard,
+
+866
+00:39:58,007 --> 00:40:00,048
+that itself can be a bit of an obstacle.
+
+867
+00:40:00,048 --> 00:40:02,688
+That part of the idea of deep work of,
+
+868
+00:40:02,688 --> 00:40:05,288
+I think, Cal Newport's advice and why it resonates
+
+869
+00:40:05,288 --> 00:40:08,288
+is because it is a little bit like having the idea
+
+870
+00:40:08,288 --> 00:40:10,048
+that, you know, like, I'm going to go to the gym
+
+871
+00:40:10,048 --> 00:40:11,528
+and lift weights and it's like, oh, but I don't like
+
+872
+00:40:11,528 --> 00:40:13,128
+when my arms are sore, right?
+
+873
+00:40:13,128 --> 00:40:16,088
+But like, you know, you learn that the arms being sore,
+
+874
+00:40:16,088 --> 00:40:17,528
+it doesn't mean you're injuring yourself.
+
+875
+00:40:17,528 --> 00:40:18,648
+It means that you're training, right?
+
+876
+00:40:18,648 --> 00:40:20,568
+So that's the first thing is having the right mindset
+
+877
+00:40:20,568 --> 00:40:22,208
+that difficulty is part of it
+
+878
+00:40:22,208 --> 00:40:24,168
+and that you should feel good about the difficulty.
+
+879
+00:40:24,168 --> 00:40:26,008
+It means that you're doing something important.
+
+880
+00:40:26,008 --> 00:40:27,488
+You're doing something worthwhile,
+
+881
+00:40:27,488 --> 00:40:29,008
+not just that you are failing
+
+882
+00:40:29,008 --> 00:40:30,008
+or that you're wasting your time.
+
+883
+00:40:30,008 --> 00:40:30,528
+Right.
+
+884
+00:40:30,528 --> 00:40:31,368
+The second thing that I would say
+
+885
+00:40:31,368 --> 00:40:33,768
+is a more practical advice, not just the mindset.
+
+886
+00:40:33,768 --> 00:40:35,608
+Is it often when we're dealing with difficulty?
+
+887
+00:40:35,608 --> 00:40:37,088
+What we're having difficulty doing
+
+888
+00:40:37,088 --> 00:40:38,288
+is that we have ambiguity.
+
+889
+00:40:38,288 --> 00:40:40,248
+We don't actually know what the next step is.
+
+890
+00:40:40,248 --> 00:40:43,128
+So one of these exercises I get the students to go through
+
+891
+00:40:43,128 --> 00:40:44,608
+is just whenever you're dealing with a task
+
+892
+00:40:44,608 --> 00:40:47,248
+is just to always ask yourself, what's the next step?
+
+893
+00:40:47,248 --> 00:40:49,088
+And if that doesn't feel doable, ask yourself,
+
+894
+00:40:49,088 --> 00:40:50,967
+what's the next step within that?
+
+895
+00:40:50,967 --> 00:40:52,288
+And you often break things down.
+
+896
+00:40:52,288 --> 00:40:53,248
+So I'll give an example.
+
+897
+00:40:53,248 --> 00:40:54,408
+Let's say I have to write an essay
+
+898
+00:40:54,408 --> 00:40:55,288
+and I don't know where to start.
+
+899
+00:40:55,288 --> 00:40:57,768
+Like, I have this idea that I want to write for an essay.
+
+900
+00:40:57,768 --> 00:40:58,488
+I don't know what to start.
+
+901
+00:40:58,488 --> 00:40:59,807
+So what will be the next step?
+
+902
+00:40:59,807 --> 00:41:02,008
+Well, maybe it's writing an outline, right?
+
+903
+00:41:02,008 --> 00:41:03,368
+And then I write an outline and we get my ideas
+
+904
+00:41:03,368 --> 00:41:05,128
+and I'm like, ah, I still don't think there's...
+
+905
+00:41:05,128 --> 00:41:06,048
+What's the next step?
+
+906
+00:41:06,048 --> 00:41:07,648
+Well, maybe I need to do a little bit more research
+
+907
+00:41:07,688 --> 00:41:08,488
+on this one point.
+
+908
+00:41:08,488 --> 00:41:09,528
+So I do a little bit of research.
+
+909
+00:41:09,528 --> 00:41:11,208
+But I don't know where to do this research.
+
+910
+00:41:11,208 --> 00:41:12,688
+Well, maybe you need to like go into Google
+
+911
+00:41:12,688 --> 00:41:14,088
+and type in that keyword
+
+912
+00:41:14,088 --> 00:41:16,608
+and like see what comes up and read a few of the essays.
+
+913
+00:41:16,608 --> 00:41:19,568
+So the idea here is that often what we are dealing with
+
+914
+00:41:19,568 --> 00:41:21,047
+when we're dealing with a difficult task
+
+915
+00:41:21,047 --> 00:41:24,447
+is just to use an idea from my second book.
+
+916
+00:41:24,447 --> 00:41:26,568
+The problem space we're dealing with is too vast.
+
+917
+00:41:26,568 --> 00:41:28,807
+There's too many different directions we could go.
+
+918
+00:41:28,807 --> 00:41:30,447
+We don't have a sense of the path
+
+919
+00:41:30,447 --> 00:41:33,488
+from where we are right now to our work being finished.
+
+920
+00:41:33,488 --> 00:41:34,847
+And so we need to scope it down.
+
+921
+00:41:34,847 --> 00:41:37,047
+We need to start off with a smaller task
+
+922
+00:41:37,048 --> 00:41:38,967
+that, okay, I can definitely do this thing.
+
+923
+00:41:38,967 --> 00:41:40,408
+I can definitely work on this goal.
+
+924
+00:41:40,408 --> 00:41:41,807
+And sometimes that comes automatically.
+
+925
+00:41:41,807 --> 00:41:43,528
+I don't want to say that you always have to go through
+
+926
+00:41:43,528 --> 00:41:45,448
+this sort of explicit process.
+
+927
+00:41:45,448 --> 00:41:47,568
+But often I find myself in a situation
+
+928
+00:41:47,568 --> 00:41:49,048
+where I find this apprehension
+
+929
+00:41:49,048 --> 00:41:51,168
+and I find this like, ah, maybe I should procrastinate.
+
+930
+00:41:51,168 --> 00:41:52,568
+Maybe I should go do something else.
+
+931
+00:41:52,568 --> 00:41:55,568
+If I go through this, what's next process a few times?
+
+932
+00:41:55,568 --> 00:41:57,008
+You end up with a task like, okay, well,
+
+933
+00:41:57,008 --> 00:41:57,847
+that's easy to do.
+
+934
+00:41:57,847 --> 00:41:58,688
+I can do that thing
+
+935
+00:41:58,688 --> 00:41:59,728
+and then you can do the next thing
+
+936
+00:41:59,728 --> 00:42:00,927
+and the next thing and the next thing.
+
+937
+00:42:00,927 --> 00:42:04,128
+And so I think those two attitudes that work,
+
+938
+00:42:04,128 --> 00:42:06,648
+especially important work often is difficult
+
+939
+00:42:06,648 --> 00:42:08,807
+and asking what's next are two ways
+
+940
+00:42:08,807 --> 00:42:10,288
+to deal with this idea of challenge.
+
+941
+00:42:10,288 --> 00:42:12,608
+You have a really good suggestions back there.
+
+942
+00:42:12,608 --> 00:42:13,847
+One is a mental framework
+
+943
+00:42:13,847 --> 00:42:15,648
+and the other is the actionable items
+
+944
+00:42:15,648 --> 00:42:16,608
+that we can directly do.
+
+945
+00:42:16,608 --> 00:42:18,648
+And I'm just wondering, like asking
+
+946
+00:42:18,648 --> 00:42:20,208
+for all the parents out there.
+
+947
+00:42:20,208 --> 00:42:23,007
+What are the top productivity tips
+
+948
+00:42:23,007 --> 00:42:24,887
+that you have been applying to, you know,
+
+949
+00:42:24,887 --> 00:42:26,568
+to bring up two beautiful children?
+
+950
+00:42:26,568 --> 00:42:29,768
+Well, I think with kids, it's a little different
+
+951
+00:42:29,768 --> 00:42:31,967
+because I think my kids are three and six, by the way.
+
+952
+00:42:31,967 --> 00:42:33,248
+But I think when it works with kids,
+
+953
+00:42:33,248 --> 00:42:35,447
+I think having a positive attitude
+
+954
+00:42:35,448 --> 00:42:36,927
+and instilling the value of hard work
+
+955
+00:42:36,927 --> 00:42:38,608
+but also making it fun and enjoyable
+
+956
+00:42:38,608 --> 00:42:41,728
+for them not stressful is the most important thing.
+
+957
+00:42:41,728 --> 00:42:44,288
+I think that kids definitely benefit.
+
+958
+00:42:44,288 --> 00:42:46,168
+They have a harder time seeing the big picture, right?
+
+959
+00:42:46,168 --> 00:42:47,327
+You know why it's important
+
+960
+00:42:47,327 --> 00:42:49,248
+and you know why they should be doing expires
+
+961
+00:42:49,248 --> 00:42:50,688
+but they often have a harder time.
+
+962
+00:42:50,688 --> 00:42:51,887
+So the more you can make it a game,
+
+963
+00:42:51,887 --> 00:42:53,688
+the more you can make it fun for them.
+
+964
+00:42:53,688 --> 00:42:55,367
+The more you can be patient and encouraging,
+
+965
+00:42:55,367 --> 00:42:56,408
+I think those things are valuable
+
+966
+00:42:56,408 --> 00:42:58,408
+and there's certainly things that I'm no master of
+
+967
+00:42:58,408 --> 00:42:59,807
+but I strive to do as a parent.
+
+968
+00:42:59,807 --> 00:43:01,128
+I think a lot of your parents
+
+969
+00:43:01,128 --> 00:43:03,048
+that's out on or from an audience bowl
+
+970
+00:43:03,048 --> 00:43:04,367
+will definitely learn something from it.
+
+971
+00:43:04,367 --> 00:43:06,288
+We always like to ask about something
+
+972
+00:43:06,288 --> 00:43:08,327
+that's really modern and recently
+
+973
+00:43:08,327 --> 00:43:10,367
+to all of our invited guests.
+
+974
+00:43:10,367 --> 00:43:12,047
+So one of the things is nowadays
+
+975
+00:43:12,047 --> 00:43:14,327
+in this just past three to four years,
+
+976
+00:43:14,327 --> 00:43:16,448
+I would say a lot of productivity tools
+
+977
+00:43:16,448 --> 00:43:18,128
+have been turned into AI tools.
+
+978
+00:43:18,128 --> 00:43:20,047
+So I think modern age,
+
+979
+00:43:20,047 --> 00:43:23,007
+you probably heard some questions from the students,
+
+980
+00:43:23,007 --> 00:43:25,407
+your students or your readers as well.
+
+981
+00:43:25,407 --> 00:43:29,128
+Scott, there has been so much productivity gain on the AI.
+
+982
+00:43:29,128 --> 00:43:32,288
+I can just use my cloud or Gemini to do most of his stuff.
+
+983
+00:43:32,288 --> 00:43:34,408
+What else should we people,
+
+984
+00:43:34,408 --> 00:43:36,887
+a human physical brain that we should learn
+
+985
+00:43:36,887 --> 00:43:38,528
+in this next 10 years?
+
+986
+00:43:38,528 --> 00:43:40,927
+What would be your answer to that?
+
+987
+00:43:40,927 --> 00:43:42,288
+Yeah, you know it's funny.
+
+988
+00:43:42,288 --> 00:43:43,927
+I've been thinking about this more and more
+
+989
+00:43:43,927 --> 00:43:46,248
+and certainly if we had my colleague,
+
+990
+00:43:46,248 --> 00:43:47,128
+Kalle Lieufer down here
+
+991
+00:43:47,128 --> 00:43:49,048
+because he's a great AI skeptic.
+
+992
+00:43:49,048 --> 00:43:50,248
+He's been writing quite a bit
+
+993
+00:43:50,248 --> 00:43:52,488
+about how he thinks a lot of AI stuff is overrated.
+
+994
+00:43:52,488 --> 00:43:53,688
+So I'm sure he'd have his own thoughts.
+
+995
+00:43:53,688 --> 00:43:54,768
+So I'll just speak for myself.
+
+996
+00:43:54,768 --> 00:43:56,048
+I won't speak for Kyle.
+
+997
+00:43:56,048 --> 00:43:56,887
+He has a whole beat.
+
+998
+00:43:56,887 --> 00:43:58,408
+He's written a lot of essays about it.
+
+999
+00:43:58,408 --> 00:44:00,768
+But I think that in some ways,
+
+1000
+00:44:00,768 --> 00:44:02,807
+certainly this is a technological change.
+
+1001
+00:44:02,807 --> 00:44:04,248
+It's going to change a lot of things
+
+1002
+00:44:04,248 --> 00:44:05,488
+about how we're doing work.
+
+1003
+00:44:05,488 --> 00:44:07,248
+So certainly if you're, let's say a programmer,
+
+1004
+00:44:07,248 --> 00:44:09,447
+this is like one of the main fields where
+
+1005
+00:44:09,447 --> 00:44:11,967
+now you can get a coding agent
+
+1006
+00:44:11,967 --> 00:44:13,288
+to do a lot of coding for you
+
+1007
+00:44:13,288 --> 00:44:15,568
+and there's limits to it on clear as well.
+
+1008
+00:44:15,568 --> 00:44:17,648
+And I think there are going to be changes to workflow.
+
+1009
+00:44:17,648 --> 00:44:19,128
+There's going to be changes to tools.
+
+1010
+00:44:19,128 --> 00:44:21,407
+But I think ultimately we need to evaluate these things
+
+1011
+00:44:21,407 --> 00:44:24,088
+as tools, as things that are going to shape our work.
+
+1012
+00:44:24,088 --> 00:44:26,648
+And I think one of the things that I would say
+
+1013
+00:44:26,648 --> 00:44:28,967
+is that to prepare yourself for the future,
+
+1014
+00:44:28,967 --> 00:44:31,967
+it's often not learning the most cutting edge,
+
+1015
+00:44:31,967 --> 00:44:34,967
+most new, most recent tool that has the value,
+
+1016
+00:44:34,967 --> 00:44:36,367
+but learning things that are old,
+
+1017
+00:44:36,367 --> 00:44:38,967
+that are deep, that have stood the test of time
+
+1018
+00:44:38,967 --> 00:44:40,007
+to make a difference.
+
+1019
+00:44:40,007 --> 00:44:41,608
+So I'll give an example from my own sake.
+
+1020
+00:44:41,608 --> 00:44:42,847
+Now I'm not a professional programmer,
+
+1021
+00:44:42,847 --> 00:44:44,007
+I'm a writer, I teach,
+
+1022
+00:44:44,007 --> 00:44:45,688
+I read a lot about cognitive science.
+
+1023
+00:44:45,688 --> 00:44:48,608
+So I won't speak as someone who's in the industry.
+
+1024
+00:44:48,608 --> 00:44:51,248
+But when I was doing this MIT Challenge Project,
+
+1025
+00:44:51,248 --> 00:44:54,007
+which we opened the course, which was now in 2012,
+
+1026
+00:44:54,007 --> 00:44:57,887
+so does it like 14 years ago, 15 years ago, right?
+
+1027
+00:44:57,887 --> 00:45:00,007
+When I was doing it at the time, I was,
+
+1028
+00:45:59,988 --> 00:46:29,988
+所以, learning AI is very important. It's certainly going to be a tool that's going to be used for your job. But if you're asking yourself, where should you make investments? Things that are unlikely to be obsolete a year or two later? I wouldn't actually be looking at the frontier. I would be looking back at what are the skills that have remained valuable for a very long period of time.
+
+1029
+00:46:29,988 --> 00:46:40,988
+On a lot of the audience, I think, it's really high chance that they probably work in tech, whether the technology or semiconductor or electronics manufacturing, that probably takes up 40% or 50% of the GDP in Taiwan.
+
+1030
+00:46:40,988 --> 00:46:57,988
+But, you know, there is a comeback, and there's a saying in Taiwan right now. It's probably, you know, everyone must learn those philosophical courses that probably, you know, 20 years ago, everyone skipped those classes, but they will become more fundamental and more important in terms of the current nowadays curriculum.
+
+1031
+00:46:57,988 --> 00:47:07,988
+Whether that's philosophy or history or, let's say, literature, it was kind of a fundamental thing that we used to skip, especially when we want to get something tangible and done.
+
+1032
+00:47:07,988 --> 00:47:24,988
+Well, it can be technical too. So, I want to be clear. I think that I've met a lot of people who work in tech, so I don't want to project too much. But the amount of people I've met in tech that are truly masters of every single deep part of their discipline are exceedingly few. Usually, you have some specialty, you have something that you do in your job.
+
+1033
+00:47:24,988 --> 00:47:35,988
+Because of the pace of change, the specialty is always changing, right? So, you kind of, it's basically, you can imagine it's like the surface area of the field, right? But the surface area is being held up by foundations that are deeper and don't change that often.
+
+1034
+00:47:35,988 --> 00:47:49,988
+So, the surface is always rippling, right? But what's underneath is often solved. So, you know, if you're talking about semiconductors and this kind of things, well, there's going to be some specific technique that people are using right now that some sort of process that they're working in, and then this is see your narrow specialty.
+
+1035
+00:47:49,988 --> 00:48:00,988
+You know nothing about it to be able to say what those things are. But basic ideas about physics, basic ideas about computation, basic ideas about these sorts of deeper principles.
+
+1036
+00:48:00,988 --> 00:48:09,988
+Again, there's this principle called the Lindy effect, which is basically how long something's persisted is a good guess of how long it'll persist into the future.
+
+1037
+00:48:09,988 --> 00:48:19,988
+The good way of looking at it is like have the people who've known this, have they gained benefit from having this knowledge, and if it's older than it's usually going to also persist, because it's deeper, it's more fundamental.
+
+1038
+00:48:19,988 --> 00:48:34,988
+So, you know, as I said, like the cutting edge and this kind of stuff, it's always good, it's always good to know about it. But if you're looking for things that are unlikely to change in a year or two, those are very often deep things that are not that new, but they're still hard, there's still things that, you know, most of us haven't mastered yet.
+
+1039
+00:48:34,988 --> 00:48:57,988
+That's really good to suggest as a reminder I'll say. So, yeah, thank you so much Scott. We basically cover so many golden nuggets. I think the conversation can definitely last another one hour or two if, you know, we're giving the time, but today about brain training and also deep focus for the very last questions that want to loop back to the timeline of this entire conversations, which is the harbor of your course.
+
+1040
+00:48:57,988 --> 00:49:06,988
+So, measuring focus makes your life freer. So, Scott really curious, like for you personally right here right now, how would you define a truly free life?
+
+1041
+00:49:06,988 --> 00:49:23,988
+I think this is something that we often don't ask ourselves enough, like we were talking about it before, but so often we're on a path where you've been given, this is the goal that you have to work for, this is the thing you have to achieve, these are the things you have to do, and we don't actually ask ourselves, well what do we really want in our life, what makes a life meaningful for you?
+
+1042
+00:49:23,988 --> 00:49:35,988
+So, I can't speak for other people, but I can say some of the things that are really important to me are like being able to have time with my kids, you know, being able to be productive at what I'm doing so that, you know, I don't have to be one of these people that's constantly on the road traveling.
+
+1043
+00:49:35,988 --> 00:49:48,988
+I don't have to be at the office late at night. This is a bit of an exception. We're in Taiwan right now. I'm on late at night tonight just making a special exception for you, but usually I'm at home at a reasonable time and I can, you know, have dinner with my family and do all that kind of stuff.
+
+1044
+00:49:48,988 --> 00:49:59,988
+Usually I am able to do these things because I've cultivated some of that focus, and certainly when you're in an entrepreneurial setting, there's a direct payoff because if you're more productive, you set your own hours, so you can just work less.
+
+1045
+00:49:59,988 --> 00:50:07,988
+But even in a professional setting, if you are a high performer, if you're someone who does a really good job at your work, you can use that to negotiate better positions.
+
+1046
+00:50:07,988 --> 00:50:22,988
+Like if you're someone who always gets your work done and you're a star player, then it's much easier for you to negotiate, you know, a better job position, better perks, better control of your time, then someone who, well, you know, we keep you around, but we're not really satisfied with the work you're doing.
+
+1047
+00:50:22,988 --> 00:50:33,988
+And so these things are related, productivity and freedom are definitely related, and focus and freedom are related too because if you have the ability to focus, then again, you basically get to make that decision about where your attention gets spent.
+
+1048
+00:50:33,988 --> 00:50:49,988
+So when we're talking about your leisure time, imagine that hypothetical scenario where you're thinking about your past week, and like how would you spend each minute of it if it was like you had the ability to just plan it however you want, what would you spend it on, and that not being the way people actually spend the minutes of their life is very frequent.
+
+1049
+00:50:49,988 --> 00:51:02,988
+And so cultivating this ability to focus is about like, okay, well, actually I would have this much time for exercise or I would have this much time for reading that hard book or doing that hobby or calling that old friend or doing that thing.
+
+1050
+00:51:02,988 --> 00:51:10,988
+If you're able to do that, then I think that's, that's very freeing because you're not just doing whatever you're doing because it's the easiest thing available to you.
+
+1051
+00:51:10,988 --> 00:51:23,988
+Well, that's really good sharing Scott. Thank you so much for putting yourself out there for us. And just curious like, you know, during your high quality leisure time, what kind of books or what kind of podcasts do you listen to on daily or weekly basis?
+
+1052
+00:51:23,988 --> 00:51:33,988
+Yeah, so while I read lots of books, lots of different books here, like I got, I was reading this right before this call star, this is Martha Newsbombs, the fragility of goodness, you can see it's nice.
+
+1053
+00:51:33,988 --> 00:51:45,988
+So that's that's a book about Greek philosophy, but I like lots of podcasts. I really like, these are in English. So, you know, anyone here is listening, I don't know how well it'll translate, but it'll be good practice for you if you're working in English too.
+
+1054
+00:51:45,988 --> 00:51:52,988
+But I really like Tyler Cowan's conversations with Tyler. He's an economist and he has a lot of illustrious guests on and they ask people about there.
+
+1055
+00:51:52,988 --> 00:52:05,988
+I have a number of other podcasts. I like, if you're in tech, I really like Dworkish Patel's podcast. He has a good one about a lot of stuff related to AI, a lot of these other things. And he's also a real auto-diad act who I appreciate.
+
+1056
+00:52:05,988 --> 00:52:13,988
+And then, of course, my co-author, Cal Newport Deep Questions, another great podcast. So, if you're listening to those ones, I think that you're not doing too bad.
+
+1057
+00:52:13,988 --> 00:52:28,988
+We'll definitely put all those links in the information box below. And Scott, thank you so much for your time today. And just curious, if giving you some more spare time, you know, I didn't take care of your beautiful kids and also being productive, what would you want to learn this year?
+
+1058
+00:52:28,988 --> 00:52:34,988
+I think we were talking about art in the beginning and that's sort of what I'm working on right now. So, I've been taking some painting courses, I've been working on that.
+
+1059
+00:52:34,988 --> 00:52:43,988
+So, that's been one thing I've been doing in my spare time. I find whenever the weather gets nicer, I have this idea of like going out in a nature and, you know, bringing a sketchbook and doing that. So, that's one thing I want to do.
+
+1060
+00:52:43,988 --> 00:52:55,988
+I've also been really getting into running recently. So, I ran a marathon last year, but I'd like to get a better time. So, I'd like to run a better marathon next year. So, maybe those are goals that are going to be on the horizon for the next few months.
+
+1061
+00:52:55,988 --> 00:53:02,988
+So, thank you so much for a lot of golden nuggets, Scott, you share with us today. And hopefully we'll be going to be inviting more Taiwanese audience into your course.
+
+1062
+00:53:02,988 --> 00:53:14,988
+And definitely we'll definitely look really forward to catching up with you again in a quarter or two down the road and see, you know, how 2026 turn out and what else of productivity gained that we can learn from in this modern AI world.
+
+1063
+00:53:14,988 --> 00:53:15,988
+Really appreciate it.
+
+1064
+00:53:15,988 --> 00:53:16,988
+Yes, thank you so much. It was great.
+
+1065
+00:53:16,988 --> 00:53:17,988
+Thank you so much.
+
+1066
+00:53:25,988 --> 00:53:27,988
+Thank you so much.
+

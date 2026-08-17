@@ -1,0 +1,1066 @@
+[00:02:00 -> 00:02:30] 所以,這集中的這集中文的對話是繁體中文的對話是繁體中文的對話是繁體中文的對話。
+[00:02:30 -> 00:02:35] 這集中的1st Questionogle,我們有沒有期派很多新聞聯繫到upply?
+[00:02:35 -> 00:02:38] 這集中的1st QuestionmeLEVE
+[00:02:38 -> 00:02:47] 我們有很多新聞聯繫到upply?
+[00:02:47 -> 00:02:55] 這裡推文文的可言所以我們有很多新聞聯繫的可言所以
+[00:02:55 -> 00:02:57] 他又有很多人
+[00:02:57 -> 00:02:58] 是他画他们做的
+[00:02:58 -> 00:03:00] 这是原本的
+[00:03:00 -> 00:03:01] 他们是他就是
+[00:03:01 -> 00:03:02] 部分的
+[00:03:02 -> 00:03:05] 已经有些什么
+[00:03:05 -> 00:03:07] 就是他多忙碌什么
+[00:03:07 -> 00:03:09] 但原本的
+[00:03:09 -> 00:03:11] 他多有多联合
+[00:03:11 -> 00:03:13] 她也有很多
+[00:03:13 -> 00:03:14] 也有很多
+[00:03:14 -> 00:03:16] 那些有很多
+[00:03:16 -> 00:03:17] 因为她多有多么
+[00:03:17 -> 00:03:18] 因为她多有多么
+[00:03:18 -> 00:03:19] 因为她多有多么
+[00:03:19 -> 00:03:20] 因为她多有多么
+[00:03:20 -> 00:03:22] 那么她多有多么
+[00:03:22 -> 00:03:24] 因为她多有多么
+[00:03:24 -> 00:03:26] After I'd finished school, I was like,
+[00:03:26 -> 00:03:29] OK, I'd like to learn computer science.
+[00:03:29 -> 00:03:30] MIT has all these courses for free.
+[00:03:30 -> 00:03:33] Let's try a little project and try it out.
+[00:03:33 -> 00:03:35] And I wasn't really expecting it to be the thing
+[00:03:35 -> 00:03:37] that I'd still talking about.
+[00:03:37 -> 00:03:40] What is it now, like, 16 years later,
+[00:03:40 -> 00:03:42] more than that amount of time later?
+[00:03:42 -> 00:03:45] But I mean, it's definitely had a resonance with people.
+[00:03:45 -> 00:03:48] And so it was one of the big first projects I did.
+[00:03:48 -> 00:03:50] And then I did a couple other ones
+[00:03:50 -> 00:03:51] and that culminated in ultra learning.
+[00:03:51 -> 00:03:53] And really, I've just been writing about,
+[00:03:53 -> 00:03:55] how do you teach yourself hard skills?
+[00:03:55 -> 00:03:56] How do you focus?
+[00:03:56 -> 00:03:58] How do you actually get to doing this studying?
+[00:03:58 -> 00:04:00] A lot of these things have been major themes in my work.
+[00:04:00 -> 00:04:01] Well, that's amazing.
+[00:04:01 -> 00:04:04] And just a reminder to all of our audience,
+[00:04:04 -> 00:04:07] that was pre-gen AI and pre-authentic people
+[00:04:07 -> 00:04:08] that we get to have this.
+[00:04:08 -> 00:04:09] I know I'm a dinosaur now,
+[00:04:09 -> 00:04:10] where I'll talk to you about, like, it's not AI.
+[00:04:10 -> 00:04:11] It's not AI.
+[00:04:11 -> 00:04:14] Yeah, but I bet that the people will definitely
+[00:04:14 -> 00:04:17] be paying like millions of dollars
+[00:04:17 -> 00:04:19] to actually get the learning materials
+[00:04:19 -> 00:04:20] that you actually structure yourself
+[00:04:20 -> 00:04:22] and also the study plan, for example.
+[00:04:22 -> 00:04:25] That can be really good training, training material
+[00:04:25 -> 00:04:27] for the current AI, definitely, for training.
+[00:04:27 -> 00:04:29] So Scott, you mentioned about,
+[00:04:29 -> 00:04:30] you want to learn about computer science,
+[00:04:30 -> 00:04:32] but I think a lot of the individuals,
+[00:04:32 -> 00:04:34] they might want to do something as well
+[00:04:34 -> 00:04:36] that is out of their zone or comfort zones.
+[00:04:36 -> 00:04:38] Just wondering, like, how much time
+[00:04:38 -> 00:04:42] did it take for you to structure your learning schedules
+[00:04:42 -> 00:04:44] and how much time did it took for you
+[00:04:44 -> 00:04:47] to really decide to really jump into the pool?
+[00:04:47 -> 00:04:48] Yeah, I mean, I think I was lucky.
+[00:04:48 -> 00:04:49] I was in a bit of a transition.
+[00:04:49 -> 00:04:51] Is that like, I was a full-time student
+[00:04:51 -> 00:04:53] and then I took, you know,
+[00:04:53 -> 00:04:55] it was maybe the better part of like four months
+[00:04:55 -> 00:04:57] before I started doing this MIT challenge.
+[00:04:57 -> 00:04:59] So I had like a little bit of prep time
+[00:04:59 -> 00:05:01] where I was like, okay, these are going
+[00:05:01 -> 00:05:02] to be the classes I'm going to have to take
+[00:05:02 -> 00:05:05] and making sure I have the books and the material
+[00:05:05 -> 00:05:07] and, you know, there was definitely some research
+[00:05:07 -> 00:05:09] to like make sure it was actually doable.
+[00:05:09 -> 00:05:12] But I was lucky that I didn't already have,
+[00:05:12 -> 00:05:14] let's say like a full-time job
+[00:05:14 -> 00:05:16] or I already had some other thing that I had to maintain.
+[00:05:16 -> 00:05:18] So I was stopping being a full-time student
+[00:05:18 -> 00:05:20] so it was very easy for me to just slot this
+[00:05:20 -> 00:05:21] into my schedule.
+[00:05:21 -> 00:05:25] But yeah, it was definitely an intensive project.
+[00:05:25 -> 00:05:27] I wouldn't say that most people should try
+[00:05:27 -> 00:05:28] to do the same thing.
+[00:05:28 -> 00:05:29] But I think there's some flavor of it,
+[00:05:29 -> 00:05:33] which is that if you are able to focus on things,
+[00:05:33 -> 00:05:34] if you're able to pick something
+[00:05:34 -> 00:05:36] that you care about and focus on it,
+[00:05:36 -> 00:05:39] then you can often do things that are things
+[00:05:39 -> 00:05:40] you didn't think you could do.
+[00:05:40 -> 00:05:42] Whether that's learning another language,
+[00:05:42 -> 00:05:44] picking up a new hobby, mastering a career skill.
+[00:05:44 -> 00:05:46] And so I've worked with a lot of people
+[00:05:46 -> 00:05:48] on much smaller scale projects over the years.
+[00:05:48 -> 00:05:51] And it's often, they're often surprised
+[00:05:51 -> 00:05:52] at what they're able to accomplish
+[00:05:52 -> 00:05:53] when they're really able to focus
+[00:05:53 -> 00:05:55] and actually work on it.
+[00:05:55 -> 00:05:56] Wow, that's amazing.
+[00:05:56 -> 00:05:58] So as I said, I was a full-time student.
+[00:05:58 -> 00:06:01] I had been already sort of setting up
+[00:06:01 -> 00:06:02] my kind of career as a writer.
+[00:06:02 -> 00:06:05] I was, I had like a bit of a study skills business.
+[00:06:05 -> 00:06:07] So I was doing a little bit of
+[00:06:07 -> 00:06:09] sort of like an early subscription-based model
+[00:06:09 -> 00:06:12] where I was giving people studying tips
+[00:06:12 -> 00:06:15] that was kind of a very early progenitor
+[00:06:15 -> 00:06:17] of what now people are doing with like newsletters
+[00:06:17 -> 00:06:18] and things like this.
+[00:06:18 -> 00:06:20] And I was earning enough money at the time
+[00:06:20 -> 00:06:22] that it was like, okay, I can do this
+[00:06:22 -> 00:06:24] and I just have to do a little bit of work
+[00:06:24 -> 00:06:26] to maintain that kind of business
+[00:06:26 -> 00:06:27] and I can support myself.
+[00:06:27 -> 00:06:29] So now I have two small kids.
+[00:06:29 -> 00:06:31] I definitely wouldn't be like 60 hours a week studying,
+[00:06:31 -> 00:06:34] but I think every stage of life,
+[00:06:34 -> 00:06:36] every position that you're in,
+[00:06:36 -> 00:06:38] they have constraints and opportunities.
+[00:06:38 -> 00:06:42] And so I think that one was a particularly
+[00:06:42 -> 00:06:44] opportune moment for taking on that kind of challenge.
+[00:06:44 -> 00:06:45] That's great, that's great.
+[00:06:45 -> 00:06:48] And I just want to put in another questions
+[00:06:48 -> 00:06:50] following up your career decisions I will say
+[00:06:50 -> 00:06:52] because I think to a lot of our Taiwanese audience,
+[00:06:52 -> 00:06:55] especially it really takes a lot of courage,
+[00:06:55 -> 00:06:57] you know, go on a traditional route
+[00:06:57 -> 00:06:59] whether it's something standard
+[00:06:59 -> 00:07:01] and the corporate your parents will know
+[00:07:01 -> 00:07:04] that you'll be in office from nine to nine or nine to six.
+[00:07:04 -> 00:07:07] Yeah, what was the career discovery stage for you
+[00:07:07 -> 00:07:10] that you decided to do becoming a teacher,
+[00:07:10 -> 00:07:13] a writer, a master of productivity for a time?
+[00:07:13 -> 00:07:16] Well, I mean, I don't know, this is a long journey
+[00:07:16 -> 00:07:18] but I sort of started out at the beginning of university.
+[00:07:18 -> 00:07:21] This was at the sort of very early days of the internet
+[00:07:21 -> 00:07:24] where people were maybe doing this as a career.
+[00:07:24 -> 00:07:27] So nowadays I think people are aware
+[00:07:27 -> 00:07:29] that there's people who are making content online
+[00:07:29 -> 00:07:32] that are, you know, whether they're a YouTuber
+[00:07:32 -> 00:07:34] and influencer, there's some kind of, you know,
+[00:07:34 -> 00:07:36] business consultant or they're offering
+[00:07:36 -> 00:07:38] some kind of online product.
+[00:07:38 -> 00:07:41] That is, you know, it's certainly hard to do now.
+[00:07:41 -> 00:07:43] I don't want to say that it's easy to just pick that
+[00:07:43 -> 00:07:45] as a profession the way you would, you know,
+[00:07:45 -> 00:07:46] okay, I'm going to become an accountant
+[00:07:46 -> 00:07:47] or something like that.
+[00:07:47 -> 00:07:49] But it's at least something that people understand.
+[00:07:49 -> 00:07:52] Whereas back then I feel like it was a very emerging thing.
+[00:07:52 -> 00:07:54] You know, definitely when I was telling my parents,
+[00:07:54 -> 00:07:57] okay, I'm thinking I want to kind of go in this field.
+[00:07:57 -> 00:07:58] They were hesitant about it,
+[00:07:58 -> 00:08:00] but I had the benefit of starting really early
+[00:08:00 -> 00:08:03] and so I grew myself to a position
+[00:08:03 -> 00:08:06] where I was able to earn a decent living from it
+[00:08:06 -> 00:08:08] while I was still in college.
+[00:08:08 -> 00:08:09] And this is a lot of the origin
+[00:08:10 -> 00:08:11] of like the studying and the productivity advice
+[00:08:11 -> 00:08:13] because it was like, okay, I want to grow this business
+[00:08:13 -> 00:08:15] while I also have full-time classes.
+[00:08:15 -> 00:08:17] And so that meant that when I graduated,
+[00:08:17 -> 00:08:19] it was like, well, I'm earning enough to support myself.
+[00:08:19 -> 00:08:20] So I can keep doing it.
+[00:08:20 -> 00:08:24] It's not the case that I have to like take this unnecessary risk
+[00:08:24 -> 00:08:26] and let's say working on the craft, working on the writing,
+[00:08:26 -> 00:08:28] we're figuring out what it is that I'm going to do.
+[00:08:28 -> 00:08:30] And it just turns out that, you know,
+[00:08:30 -> 00:08:32] I ended up writing a lot about learning
+[00:08:32 -> 00:08:34] and productivity and psychology and focus
+[00:08:34 -> 00:08:35] and these sorts of things.
+[00:08:35 -> 00:08:38] And yeah, I've been doing it for 20 years now.
+[00:08:38 -> 00:08:40] So I think it's done fairly well.
+[00:08:40 -> 00:08:44] I can't complain too much about how it's done for me.
+[00:08:44 -> 00:08:45] That's great, guys, good.
+[00:08:45 -> 00:08:47] I think Scott, you're being really modest.
+[00:08:47 -> 00:08:49] You have a lot of really good golden nuggets
+[00:08:49 -> 00:08:52] of knowledge hidden inside your YouTube channels
+[00:08:52 -> 00:08:53] and also your newsletter.
+[00:08:53 -> 00:08:55] We'll put the links and the information below.
+[00:08:55 -> 00:08:57] So all the audience, if you're interested,
+[00:08:57 -> 00:08:58] please click on it.
+[00:08:58 -> 00:09:01] Just spend another 10 minutes or 50 minutes going there.
+[00:09:01 -> 00:09:04] You'll find a lot of treasures hidden inside.
+[00:09:04 -> 00:09:06] Like throughout the 20 years of writing,
+[00:09:06 -> 00:09:08] learning and definitely have some really deep
+[00:09:08 -> 00:09:10] and great conversations with the top thought leaders
+[00:09:10 -> 00:09:12] and within the productivity field.
+[00:09:12 -> 00:09:16] If Scott, we ask you to pick three top criminals
+[00:09:16 -> 00:09:18] in modern days, that's still a way
+[00:09:18 -> 00:09:19] our focus in modern day life.
+[00:09:19 -> 00:09:21] What would be your top three pick?
+[00:09:21 -> 00:09:23] If you want the short list,
+[00:09:23 -> 00:09:27] like I think probably social media, video games
+[00:09:27 -> 00:09:30] and I would argue like the rise of streaming television
+[00:09:30 -> 00:09:32] in particular are things that still wear focus.
+[00:09:32 -> 00:09:34] But I want to shift the discussion a little bit
+[00:09:34 -> 00:09:35] because I think there's a risk
+[00:09:35 -> 00:09:38] of me just sounding really judgmental when I'm doing this.
+[00:09:38 -> 00:09:40] Like, oh, all that stuff that you have fun doing,
+[00:09:40 -> 00:09:41] that's bad for you.
+[00:09:41 -> 00:09:44] You should be like reading hard books and doing MIT classes.
+[00:09:44 -> 00:09:45] And that's not my intention at all.
+[00:09:45 -> 00:09:47] And that's not how I like to teach things.
+[00:09:47 -> 00:09:50] The way I'd like to instead encourage people
+[00:09:50 -> 00:09:52] to think about it is, imagine you're stepping back
+[00:09:52 -> 00:09:54] and you have the ability to decide
+[00:09:54 -> 00:09:56] how you're going to spend the days of your life,
+[00:09:56 -> 00:09:58] the hours of your life.
+[00:09:58 -> 00:10:00] What are the things that you're going to feel good about
+[00:10:00 -> 00:10:01] having spent that time on?
+[00:10:01 -> 00:10:02] And obviously in the moment,
+[00:10:02 -> 00:10:05] it's hard to necessarily spend your time
+[00:10:05 -> 00:10:06] let's say doing a creative hobby,
+[00:10:06 -> 00:10:09] like we were talking about art or learn a new skill
+[00:10:09 -> 00:10:11] or read some difficult book.
+[00:10:11 -> 00:10:13] It's hard to do those things.
+[00:10:13 -> 00:10:15] And so often we gravitate towards these things
+[00:10:15 -> 00:10:17] that we call distractions or time-waisters.
+[00:10:17 -> 00:10:20] But the aim of what I try to do
+[00:10:20 -> 00:10:22] and what I try to teach is not to suppress
+[00:10:22 -> 00:10:23] everything good in your life.
+[00:10:23 -> 00:10:25] But there's something that you find really, really valuable
+[00:10:25 -> 00:10:27] and it's a social media account or a YouTube account
+[00:10:27 -> 00:10:29] or something entertaining.
+[00:10:29 -> 00:10:30] That's great.
+[00:10:30 -> 00:10:31] You should have those things.
+[00:10:31 -> 00:10:32] Like watching great movies is a great
+[00:10:32 -> 00:10:33] watching great television shows is a great,
+[00:10:33 -> 00:10:35] I love those things too.
+[00:10:35 -> 00:10:37] But that we want to be conscious,
+[00:10:37 -> 00:10:39] we want to be deliberate in our choices about it.
+[00:10:39 -> 00:10:40] We don't want to just do things mindlessly
+[00:10:40 -> 00:10:41] and then be like, oh man,
+[00:10:41 -> 00:10:43] I spent hours and hours and hours.
+[00:10:43 -> 00:10:45] I don't know where all the time went.
+[00:10:45 -> 00:10:47] I could have done something that I really valued.
+[00:10:47 -> 00:10:49] I want us to organize our time in a way
+[00:10:49 -> 00:10:51] that after we spend the time,
+[00:10:51 -> 00:10:51] we're like, you know what?
+[00:10:51 -> 00:10:54] I'm good about how I spent my time doing those things.
+[00:10:54 -> 00:10:55] And that could be lots of different things
+[00:10:55 -> 00:10:56] for different people.
+[00:10:56 -> 00:10:59] And so I do think that when we're thinking about
+[00:10:59 -> 00:11:01] spending our time and focusing on things,
+[00:11:01 -> 00:11:04] it's not so much about vilifying whether it's television
+[00:11:04 -> 00:11:06] or social media or any of these things,
+[00:11:06 -> 00:11:08] but rather it's about choosing what you really want
+[00:11:08 -> 00:11:09] to spend your time with
+[00:11:09 -> 00:11:12] and making sure that your time is actually consistent
+[00:11:12 -> 00:11:13] with that focus.
+[00:11:13 -> 00:11:13] Oh, that's great.
+[00:11:13 -> 00:11:14] You just bought me to ask a,
+[00:11:14 -> 00:11:16] do you have a time tracker app
+[00:11:16 -> 00:11:18] that you use on a daily basis though?
+[00:11:18 -> 00:11:20] I have done various different kinds of time trackers.
+[00:11:20 -> 00:11:22] So even one of the things that we talk about
+[00:11:22 -> 00:11:23] in this life of focus courses
+[00:11:23 -> 00:11:25] that we have a deep work tracker,
+[00:11:25 -> 00:11:26] which I find very valuable.
+[00:11:26 -> 00:11:28] So that method basically is just when you want to do
+[00:11:28 -> 00:11:29] a deep work session,
+[00:11:29 -> 00:11:31] maybe we'll go into what deep work isn't a little bit
+[00:11:31 -> 00:11:33] but basically you just jot down,
+[00:11:33 -> 00:11:34] okay, I'm going to start 9 a.m.
+[00:11:34 -> 00:11:36] 9 a.m. and you put a little dash
+[00:11:36 -> 00:11:38] and then you go sort of for as long as you can
+[00:11:38 -> 00:11:40] before you get sidetracked under different task
+[00:11:40 -> 00:11:41] or you're forced to stop
+[00:11:41 -> 00:11:43] or someone interrupts you for a 15 minute meeting
+[00:11:43 -> 00:11:44] and then you just mark the time.
+[00:11:44 -> 00:11:46] And so tracking the deep work hours
+[00:11:46 -> 00:11:48] is something that I've done for a number of years.
+[00:11:48 -> 00:11:50] Other things that I've done is just even like,
+[00:11:50 -> 00:11:52] you know, you're talking about time trackers.
+[00:11:52 -> 00:11:54] One of the things I often do is on my phone.
+[00:11:54 -> 00:11:55] I do like using my phone.
+[00:11:55 -> 00:11:57] I have lots of good things on my phone,
+[00:11:57 -> 00:11:59] but as I mentioned, it can be full of distractions
+[00:11:59 -> 00:12:00] as well.
+[00:12:00 -> 00:12:02] So even just using things like the app
+[00:12:02 -> 00:12:04] I'm using these days is one called screens in.
+[00:12:04 -> 00:12:06] So the few apps that I have remaining
+[00:12:06 -> 00:12:07] that I want to use a little bit of,
+[00:12:07 -> 00:12:09] but not too much of, I put,
+[00:12:09 -> 00:12:11] so okay, I can use, let's say,
+[00:12:11 -> 00:12:13] this is maybe not gonna be as relevant
+[00:12:13 -> 00:12:14] for the Taiwanese audience,
+[00:12:14 -> 00:12:17] but there's a major news app here called New York Times.
+[00:12:17 -> 00:12:18] New York Times app, I like it,
+[00:12:18 -> 00:12:20] but I only want to watch it once per day.
+[00:12:20 -> 00:12:21] So I just had it set up 20 minutes,
+[00:12:21 -> 00:12:23] once per day I have it with my morning coffee.
+[00:12:23 -> 00:12:24] That's a good one.
+[00:12:24 -> 00:12:25] And then it's locked.
+[00:12:25 -> 00:12:26] No, I'm not checking the news every five minutes
+[00:12:26 -> 00:12:28] and so these are little strategies that I use.
+[00:12:28 -> 00:12:30] So I'm not sure if it's the same thing as a time tracker app,
+[00:12:30 -> 00:12:34] but technology, and I'm using it to try to steer again,
+[00:12:34 -> 00:12:36] steer my focus more towards,
+[00:12:36 -> 00:12:39] this is how I actually want to spend the hours of my day.
+[00:12:39 -> 00:12:40] This is what I want to feel good
+[00:12:40 -> 00:12:41] about doing at the end of the day.
+[00:12:41 -> 00:12:42] That's really great.
+[00:12:42 -> 00:12:44] I think you actually help us really structure a framework,
+[00:12:44 -> 00:12:46] actually, before we dive into
+[00:12:46 -> 00:12:49] what kind of productivity we want to gain,
+[00:12:49 -> 00:12:50] it is actually the goal,
+[00:12:50 -> 00:12:51] and also the work of life, right?
+[00:12:51 -> 00:12:53] So later on, I think we're gonna touch based on,
+[00:12:53 -> 00:12:54] you know, what's a dream of life like.
+[00:12:54 -> 00:12:56] And then when you start,
+[00:12:56 -> 00:12:58] but I think it's a really good reminder that you have pointed out
+[00:12:58 -> 00:13:01] is that sometime we categorically put things
+[00:13:01 -> 00:13:03] that are indeed non-productive area,
+[00:13:03 -> 00:13:05] it's probably that something we want to do
+[00:13:05 -> 00:13:06] outside of our work,
+[00:13:06 -> 00:13:07] or want to become our full-time work
+[00:13:07 -> 00:13:10] that we constantly missed out in our career planning
+[00:13:10 -> 00:13:11] or day of life planning,
+[00:13:11 -> 00:13:12] that may be something that we miss.
+[00:13:12 -> 00:13:13] So we can bring back,
+[00:13:13 -> 00:13:15] and then we'll look at how can we bring focus
+[00:13:15 -> 00:13:17] into something that's long lasting,
+[00:13:17 -> 00:13:18] can bring like a pot-time writing
+[00:13:18 -> 00:13:21] or bring a pot-time hobby into a full-time career.
+[00:13:21 -> 00:13:24] That is probably something that we can uncover today
+[00:13:24 -> 00:13:26] in the conversation.
+[00:13:26 -> 00:13:28] So this is definitely clearly something
+[00:13:28 -> 00:13:30] that you have thought about a lot every day.
+[00:13:30 -> 00:13:34] And it makes me think of one of your partners, Cal.
+[00:13:34 -> 00:13:36] Because of the topic focus is basically
+[00:13:36 -> 00:13:37] what he focuses on, right?
+[00:13:37 -> 00:13:39] So I'm really curious.
+[00:13:39 -> 00:13:41] How did you two first connect
+[00:13:41 -> 00:13:43] and how did this course actually come about?
+[00:13:43 -> 00:13:45] Yeah, so we were talking a little bit
+[00:13:45 -> 00:13:46] on my origin stories,
+[00:13:46 -> 00:13:49] but I've known Cal now for 20 years.
+[00:13:49 -> 00:13:53] And we first met when we were both giving study advice.
+[00:13:53 -> 00:13:54] So I was just starting,
+[00:13:54 -> 00:13:56] I was a freshman in university,
+[00:13:56 -> 00:14:00] so I was just beginning my writing about student issues.
+[00:14:00 -> 00:14:02] And I think he was a grad student at MIT,
+[00:14:02 -> 00:14:04] and he had just written a book,
+[00:14:04 -> 00:14:06] and he was just starting a blog too,
+[00:14:06 -> 00:14:07] and we kind of connected over that,
+[00:14:07 -> 00:14:09] and we've been friends since.
+[00:14:09 -> 00:14:12] And so there's a lot of synchronicity in our thinking,
+[00:14:12 -> 00:14:14] and certainly Cal, someone I've learned a lot
+[00:14:14 -> 00:14:15] from over the years.
+[00:14:15 -> 00:14:18] So a lot of his ideas has had a deep influence
+[00:14:18 -> 00:14:20] on how I think about work and productivity.
+[00:14:20 -> 00:14:22] And yeah, I just have to say
+[00:14:22 -> 00:14:24] it's been a productive relationship,
+[00:14:24 -> 00:14:28] and certainly my team and I were very excited
+[00:14:28 -> 00:14:29] that we've been able to work with Cal
+[00:14:29 -> 00:14:31] and bringing some of his ideas
+[00:14:31 -> 00:14:33] also in the course format as well,
+[00:14:33 -> 00:14:34] since he writes such excellent books.
+[00:14:34 -> 00:14:37] We've been happy to help him get some of those things
+[00:14:37 -> 00:14:39] into courses that people can follow
+[00:14:39 -> 00:14:41] and really implement some of these ideas into their life.
+[00:14:41 -> 00:14:42] Well, that's amazing.
+[00:14:42 -> 00:14:45] So if we just get to pick one,
+[00:14:45 -> 00:14:46] I'll do so many lesson learned
+[00:14:46 -> 00:14:50] that you probably exchange it with Cal within the past 20 years,
+[00:14:50 -> 00:14:51] definitely lots of things to go back in.
+[00:14:51 -> 00:14:56] What were one stories that were a thought
+[00:14:56 -> 00:14:58] that brought up by Cal that really changed your life?
+[00:14:58 -> 00:14:59] Now I can give two answers.
+[00:14:59 -> 00:15:00] So I'll give them more.
+[00:15:59 -> 00:16:03] New Tech-London Gibe introduced New Working Models,
+[00:16:03 -> 00:16:06] for example back then there was nothing like a remote worker.
+[00:16:06 -> 00:16:09] Now everyone is talking about hybrid or going back to office,
+[00:16:09 -> 00:16:13] so really curious for regular office worker in a in person office settings,
+[00:16:13 -> 00:16:17] I'll say it is really genuinely hard to completely see yourself from
+[00:16:17 -> 00:16:19] all of those kind of distractions where disturbance,
+[00:16:19 -> 00:16:23] and in a day of life or work whether that is intended or non-tended
+[00:16:23 -> 00:16:25] There is a common scenario I think a lot of us,
+[00:16:25 -> 00:16:31] The audience can relate to is a client or managers could be messaging you at any moment
+[00:16:31 -> 00:16:34] and if you miss it, you're going to get into troubles, you might drop a bowl.
+[00:16:34 -> 00:16:40] So linking back to your own workflow and your experience coaching so many students,
+[00:16:40 -> 00:16:45] if we break into two parts, the first part is, are there any smart hacks to actually reduce
+[00:16:45 -> 00:16:49] these kind of a frequent of interruptions from these urgent messages?
+[00:16:49 -> 00:16:53] Yeah, so first I want to just step back a second, because I think one of the things
+[00:16:53 -> 00:16:59] I've found learning from a lot of people is that often my boss needs this or my colleagues
+[00:16:59 -> 00:17:03] they interrupt me is often the excuse people give for not wanting to focus and do
+[00:17:03 -> 00:17:04] deep work.
+[00:17:04 -> 00:17:09] But there's actually very interesting research from the researcher Gloria Marx that in fact
+[00:17:09 -> 00:17:12] people are initiating distractions about half the time.
+[00:17:12 -> 00:17:15] So about half of the distractions that you have are not because someone interrupted you
+[00:17:15 -> 00:17:20] but because you initiated a distraction, you wanted to check your email, you wanted to basically
+[00:17:20 -> 00:17:24] get a break from whatever difficult task you were doing to go do something else.
+[00:17:24 -> 00:17:29] So even right there, even if we were just saying I don't have any control over anyone else
+[00:17:29 -> 00:17:34] in my office, I am too junior and employee that I don't have the audacity to tell my boss
+[00:17:34 -> 00:17:36] not to email me nonstop.
+[00:17:36 -> 00:17:40] If I can just control the self initiated distractions, that's half of it right there, right?
+[00:17:40 -> 00:17:42] So I think that's the first good thing to remember.
+[00:17:42 -> 00:17:48] The second thing is that very often when we are working with other people, it's this process
+[00:17:48 -> 00:17:49] of negotiating.
+[00:17:49 -> 00:17:52] It's this process of figuring out, okay, here's what I'm trying to do in my job.
+[00:17:52 -> 00:17:56] And I want to try to accomplish that goal and the other people around me presumably want
+[00:17:56 -> 00:17:58] me to accomplish that goal as well.
+[00:17:58 -> 00:18:02] And I want to get as much focus as possible without interfering with their jobs and their
+[00:18:02 -> 00:18:04] roles and their goals that they have.
+[00:18:04 -> 00:18:06] So there's lots of different ways you can do it.
+[00:18:06 -> 00:18:09] So one of the ways that I do, which I'm not going to say is going to be universal for everyone,
+[00:18:09 -> 00:18:13] but one of the things that I do is that I don't have my email inbox open.
+[00:18:13 -> 00:18:18] So people that I work with know that if they need to interrupt me with something immediately,
+[00:18:18 -> 00:18:22] they send me a text message on my phone or they give me a phone call.
+[00:18:22 -> 00:18:25] If it needs to be done right now, they give me a phone call.
+[00:18:25 -> 00:18:29] If it's something that needs to be done in the next six hours, email is fine.
+[00:18:29 -> 00:18:32] And so this is a simple kind of policy that people know this about me, so I was working
+[00:18:32 -> 00:18:33] this way.
+[00:18:33 -> 00:18:37] Now if you are in an office setting where you can't necessarily do that, you can't tell
+[00:18:37 -> 00:18:41] your boss who can write to me through this medium and not that medium, then you could maybe
+[00:18:41 -> 00:18:46] set up some email rule so that maybe, okay, will you get pings whenever someone so sends
+[00:18:46 -> 00:18:50] you an email, but not when like the newsletter comes in or the span email comes in.
+[00:18:50 -> 00:18:53] So there are more technical ways to set it up that you can walk through that you can work
+[00:18:53 -> 00:18:54] on this kind of thing.
+[00:18:54 -> 00:18:58] But it starts by having this question of what am I trying to accomplish?
+[00:18:58 -> 00:19:01] What are the sort of benefits of me focusing?
+[00:19:01 -> 00:19:05] And what are the sort of difficulties that I'm asking other people to undertake?
+[00:19:05 -> 00:19:08] And I think depending on your position in the company, you can sometimes ask someone
+[00:19:08 -> 00:19:11] to be like, you know what, for the next two hours, I'm going to be focusing really hard
+[00:19:11 -> 00:19:12] on this.
+[00:19:12 -> 00:19:14] Maybe don't distract me unless it's an emergency.
+[00:19:14 -> 00:19:15] Right.
+[00:19:15 -> 00:19:18] Okay, for some people, they're not able to do that.
+[00:19:18 -> 00:19:21] So a lot of what we do in the course and a lot of what we do in the coaching is not so
+[00:19:21 -> 00:19:23] much prescribing a one size fits all.
+[00:19:23 -> 00:19:25] This is how everyone has to do their work.
+[00:19:25 -> 00:19:29] But rather exploring the constraints, figuring out, okay, what are the relationships, what
+[00:19:29 -> 00:19:33] are the other people, what are the environments, dealing with those self distractions, so dealing
+[00:19:33 -> 00:19:34] with that other half of it.
+[00:19:34 -> 00:19:38] And then for the other half that we don't entirely control, finding good policies so that we
+[00:19:38 -> 00:19:39] can minimize it.
+[00:19:39 -> 00:19:42] And you know what, if you do get interrupted every once in a while, it's not the end of
+[00:19:42 -> 00:19:43] the world.
+[00:19:43 -> 00:19:45] A lot of it is about setting the intention.
+[00:19:45 -> 00:19:49] So if you can set the intention to focus, if you can say, okay, I'm going to focus
+[00:19:49 -> 00:19:53] for this chunk of time, for three hours, maybe you get interrupted once or twice.
+[00:19:53 -> 00:19:55] You still get quite a bit of deep work done.
+[00:19:55 -> 00:19:59] In contrast, if you just sort of throw your hands up and say, I can't possibly do this,
+[00:19:59 -> 00:20:03] there's too many people distracting me and then I just have to work in these five minute
+[00:20:03 -> 00:20:04] chunks.
+[00:20:04 -> 00:20:05] Well, then of course you're not going to get any done.
+[00:20:05 -> 00:20:10] So a lot of what I try to do is try to figure out what's possible within someone's environment
+[00:20:10 -> 00:20:12] rather than telling them, do exactly this thing.
+[00:20:12 -> 00:20:14] Yeah, I think that's a really great suggestion.
+[00:20:14 -> 00:20:18] It's especially I think in the other day, especially for those, let's say, younger professional
+[00:20:18 -> 00:20:22] just got into the work, I think everyone's a little bit shying away from making active
+[00:20:22 -> 00:20:26] communications on, you know, what's the preferred work mode and how do you like to structure
+[00:20:26 -> 00:20:29] your most productive, let's say, deep work schedules.
+[00:20:29 -> 00:20:32] I think that's something that we can probably review during the weekend and probably get
+[00:20:32 -> 00:20:36] by the time next week, we can start that conversations in the office with our colleagues
+[00:20:36 -> 00:20:41] where let's say supervisor, that may increase the likelihood that we get a protected time
+[00:20:41 -> 00:20:43] to really go into the deep work part.
+[00:20:43 -> 00:20:48] And since you mentioned about it, we can reduce, you know, self-initiated distractions.
+[00:20:48 -> 00:20:51] And also the other part is through communications, we can improve on how we best collaborate
+[00:20:51 -> 00:20:53] with the other colleagues in the office.
+[00:20:53 -> 00:21:01] And if we still unfortunately got interrupted and lost focus, are there any tips that can
+[00:21:01 -> 00:21:04] help us switch back to our original focus states within just a few minutes?
+[00:21:04 -> 00:21:10] I think in general, the problem with these distractions is how fragmented the time is.
+[00:21:10 -> 00:21:15] I think there is some cost that you pay, how it talks a lot about this attention residue
+[00:21:15 -> 00:21:18] that you have like some remaining thoughts on whatever task you're in, sliding over to
+[00:21:18 -> 00:21:19] the new task.
+[00:21:19 -> 00:21:23] And this is a real thing, but we're talking about something that is on this surface.
+[00:21:23 -> 00:21:25] There's not a huge difference.
+[00:21:25 -> 00:21:28] So if you get interrupted again, once in a one hour session, we're not talking about an
+[00:21:28 -> 00:21:29] enormous cost.
+[00:21:29 -> 00:21:34] The problem I think and the problem that really cow rails against is that we often are in
+[00:21:34 -> 00:21:39] this fragmented workplace where we are not either from self-initiated or other people
+[00:21:39 -> 00:21:40] interruptions.
+[00:21:40 -> 00:21:44] We're not getting more than a few minutes in a row before we have some interruption
+[00:21:44 -> 00:21:45] or some other task.
+[00:21:45 -> 00:21:48] And so it's more I think about stretching it over the hour.
+[00:21:48 -> 00:21:52] If you get interrupted and you have to get back to it, I think usually it's fine.
+[00:21:52 -> 00:21:53] It's not usually going to be a problem.
+[00:21:53 -> 00:21:58] The problem I think is more often that I decide, okay, I'm going to go check my email
+[00:21:58 -> 00:22:01] and then I start going down a rabbit hole and I'm answering emails and then I'm doing that
+[00:22:01 -> 00:22:02] for 20 minutes.
+[00:22:02 -> 00:22:06] If it was sort of like, okay, I've set my intention to do my deep work for the next two hours,
+[00:22:06 -> 00:22:09] and then an email comes up and I have to reply to it.
+[00:22:09 -> 00:22:12] And then I keep my intention, I get back to task, yeah, maybe you're going to lose
+[00:22:12 -> 00:22:13] a little bit.
+[00:22:13 -> 00:22:14] It's a bit of a speed bump.
+[00:22:14 -> 00:22:15] But the problem is really like going back and forth.
+[00:22:15 -> 00:22:19] And I have my email inbox open and I'm switching back and forth between doing my work and
+[00:22:19 -> 00:22:20] answering emails.
+[00:22:20 -> 00:22:23] Well, that itself is going to erode your ability to do that concentration.
+[00:22:23 -> 00:22:24] Right, right.
+[00:22:24 -> 00:22:26] That's a great suggestion.
+[00:22:26 -> 00:22:30] And I think our team actually found there's a super country to go to nuggets and your course
+[00:22:30 -> 00:22:35] that caught our eye is you mentioned that the idea that you need to zone out and scroll
+[00:22:35 -> 00:22:39] your phone to relax is actually one of the least effective way to relax.
+[00:22:39 -> 00:22:40] So why is that?
+[00:22:40 -> 00:22:45] And what does a true high quality recharge activity for our brain actually looks like?
+[00:22:45 -> 00:22:46] Yeah.
+[00:22:46 -> 00:22:48] So there's an interesting paradox of this.
+[00:22:48 -> 00:22:52] This is one of the researchers who actually studies like rest and recovery from work.
+[00:22:52 -> 00:22:54] Believe it or not, there is such a thing that you can specialize in.
+[00:22:54 -> 00:22:57] This is a researcher being a son and tag.
+[00:22:57 -> 00:23:04] She calls this the relaxation paradox, which is that if you look at how much recovery benefit
+[00:23:04 -> 00:23:09] you get from various kinds of activities, it's often not the easiest activities to
+[00:23:09 -> 00:23:10] do.
+[00:23:10 -> 00:23:13] So we actually benefit from doing things that are more challenging.
+[00:23:13 -> 00:23:16] Now that the details for this are a little bit more complicated, but basically there's
+[00:23:16 -> 00:23:19] two different things that we get from resting.
+[00:23:19 -> 00:23:23] One of them is just to relax, just basically what you're saying, to zone out, turn off our
+[00:23:23 -> 00:23:24] brain.
+[00:23:24 -> 00:23:26] And yeah, watching your phone doing this thing can do that.
+[00:23:26 -> 00:23:30] But one of the other things that we get from resting is that we get a chance to fulfill
+[00:23:30 -> 00:23:32] things that are meaning for us, basically satisfying.
+[00:23:32 -> 00:23:35] And a lot of our work, we're doing something someone else has told us to do, or that
+[00:23:35 -> 00:23:39] we need to do just to earn money or just to have some sort of accomplishment within our
+[00:23:39 -> 00:23:40] profession.
+[00:23:40 -> 00:23:42] And we don't get to do as many things for us.
+[00:23:42 -> 00:23:43] So maybe there's some book you want to do.
+[00:23:43 -> 00:23:45] Maybe you've wanted to learn French.
+[00:23:45 -> 00:23:47] Maybe you've wanted to master a skill.
+[00:23:47 -> 00:23:52] Maybe you've wanted to always watch that movie that everyone's been telling you about.
+[00:23:52 -> 00:23:57] These kinds of things, when you do these kinds of activities, you not only get the recovery
+[00:23:57 -> 00:24:01] benefit of, you know, again, just turning off your brain and not doing something very effortful,
+[00:24:01 -> 00:24:05] but you also get the satisfaction that comes from doing things that are valued activities,
+[00:24:05 -> 00:24:07] doing things that feel valuable.
+[00:24:07 -> 00:24:10] And the problem is that a lot of those activities have a higher initiation cost.
+[00:24:10 -> 00:24:13] So they have a little bit more effort to get started.
+[00:24:13 -> 00:24:17] And so often we can get in this trap where we feel tired, we feel like we have difficulty
+[00:24:17 -> 00:24:20] focusing, and we do these low value activities.
+[00:24:20 -> 00:24:24] So they do let us kind of rest and turn off our brain a little bit.
+[00:24:24 -> 00:24:27] But then once we're done, we feel like, oh, I've wasted all this time.
+[00:24:27 -> 00:24:30] I haven't done anything valuable for me and I have to go back to doing my job or I have
+[00:24:30 -> 00:24:33] to go back to doing these other tasks that are also not for me.
+[00:24:33 -> 00:24:35] And you feel kind of almost weighed down.
+[00:24:35 -> 00:24:40] Like you have this low motivation, this low vigor to use the term from psychology.
+[00:24:40 -> 00:24:45] And so the idea here is that if you can cultivate high value leisure activities, things that
+[00:24:45 -> 00:24:50] you genuinely value, then not only does it give you a chance to take a break because you're
+[00:24:50 -> 00:24:54] doing something mentally, cognitively different than you're doing your daytime, but you also
+[00:24:54 -> 00:24:57] get a chance to do something that you're going to find worthwhile after.
+[00:24:57 -> 00:24:59] And it goes back to my original point.
+[00:24:59 -> 00:25:00] I was making it.
+[00:25:00 -> 00:25:04] The goal here is not to eliminate all entertainment or never do anything fun or never relax.
+[00:25:04 -> 00:25:05] That's definitely not the goal.
+[00:25:05 -> 00:25:10] The goal is to be able to look back at the time you spent in the last day, the last week
+[00:25:10 -> 00:25:13] and say, you know what, I'm really glad about how that week went and we don't always feel
+[00:25:13 -> 00:25:14] that way.
+[00:25:14 -> 00:25:15] Wow.
+[00:25:15 -> 00:25:16] Okay.
+[00:25:16 -> 00:25:18] It's just a quick follow-up question on that.
+[00:25:18 -> 00:25:19] Sure.
+[00:25:19 -> 00:25:21] You mentioned about some of the activities that we may thought that it's okay, it's a leisure
+[00:25:21 -> 00:25:22] time.
+[00:25:22 -> 00:25:23] It's something that we can get out of work.
+[00:25:23 -> 00:25:26] I just want to do something that's not working related.
+[00:25:26 -> 00:25:31] But somehow, it's actually us knowing that it's getting us distracted from work, but
+[00:25:31 -> 00:25:35] that's not really high quality and active leaders.
+[00:25:35 -> 00:25:40] How do you categorize and rate the quality of the leaders or, let's say, whether we should
+[00:25:40 -> 00:25:42] put that into our Monday to Friday schedules or not?
+[00:25:42 -> 00:25:43] I think there's two ways to do it.
+[00:25:43 -> 00:25:48] So one way would be to just try different things out so you can just sort of see which things
+[00:25:48 -> 00:25:49] you feel valuable about.
+[00:25:49 -> 00:25:54] So there is a little bit of a bit of cognitive bias here that sometimes when we are thinking
+[00:25:54 -> 00:25:56] about some activity, we think we're going to enjoy it.
+[00:25:56 -> 00:25:58] It's way less than we actually do.
+[00:25:58 -> 00:26:03] And so there's a lot of interesting research about how people systematically underrate certain
+[00:26:03 -> 00:26:04] kinds of activities.
+[00:26:04 -> 00:26:09] So for instance, people very frequently think that they're going to feel more tired after
+[00:26:09 -> 00:26:12] exercising when it's almost always the opposite, that after you exercise, you feel like you
+[00:26:12 -> 00:26:13] have more energy.
+[00:26:13 -> 00:26:17] And so this is one of those things where it's again, we've exercised a lot of times, but
+[00:26:17 -> 00:26:21] somehow we think it's going to be tiring, but it's more that it's tiring to imagine doing
+[00:26:21 -> 00:26:22] this activity.
+[00:26:22 -> 00:26:23] Once you actually do it, you usually feel good.
+[00:26:23 -> 00:26:26] Another example would be socialising, so a lot of times you think, you know what?
+[00:26:26 -> 00:26:30] I just need to be away from other people, glued to my phone, this kind of thing.
+[00:26:30 -> 00:26:34] But actually if you spend time with friends, if you do an activity with other people, you
+[00:26:34 -> 00:26:37] go out for dinner, you have a phone call with someone, you actually usually feel better
+[00:26:37 -> 00:26:38] about it.
+[00:26:38 -> 00:26:40] It's one of these cognitive biases.
+[00:26:40 -> 00:26:45] So figuring out what those high quality leisure activities for you, what your life is like,
+[00:26:45 -> 00:26:50] this is a kind of a complicated process because we can't totally rely on our first 10 experience.
+[00:26:50 -> 00:26:55] My advice to people would be to first kind of map out what your ideal day or week would
+[00:26:55 -> 00:27:00] look like in terms of what sorts of activities are there, then figure out, okay, given the
+[00:27:00 -> 00:27:02] constraints of my life, given that I have to work a job, I have to do all these things
+[00:27:02 -> 00:27:07] that maybe I don't desire to do, but are the chores that I have to do to like go on living.
+[00:27:07 -> 00:27:11] How can I fit in the most of those things that are really valuable as possible?
+[00:27:11 -> 00:27:15] So sort of like imagine a better version of yourself, like they have the Latin phrase
+[00:27:15 -> 00:27:18] carpet, and like seize the day, like imagine if you were just full of energy and you
+[00:27:18 -> 00:27:22] were just like willpower and all those things for no problem, I'm going to paint, I'm going
+[00:27:22 -> 00:27:26] to learn a language, I'm going to read a hard book, I'm going to go to the library, I'm
+[00:27:26 -> 00:27:29] going to do all these things, plan those kind of things out, and not just that you have
+[00:27:29 -> 00:27:33] to spend all of your time doing that, but that sets a goal, that sets an intention.
+[00:27:33 -> 00:27:36] And then you can start experimenting with different habits, different changes to see how
+[00:27:36 -> 00:27:37] this works.
+[00:27:37 -> 00:27:39] And I mean, this is only on one end of the problem.
+[00:27:39 -> 00:27:44] So one end of the problem is on cultivating positive things that you're interested in, but
+[00:27:44 -> 00:27:46] the other part of it is we need to break some of our bad habits.
+[00:27:46 -> 00:27:49] So we were talking a little bit about being distracted at work, so a big part of it is
+[00:27:49 -> 00:27:50] having focus work.
+[00:27:50 -> 00:27:55] So how do you have work, you can get your important work done in chunks, so you don't feel
+[00:27:55 -> 00:28:00] hairy, you don't constantly feel like okay, I have to be working 10 times more because
+[00:28:00 -> 00:28:01] I'm constantly behind.
+[00:28:01 -> 00:28:05] You are one of the performers in your field, you get your work done, you're doing great,
+[00:28:05 -> 00:28:09] you have a little bit more leeway, a little bit more flexibility, talking about remote
+[00:28:09 -> 00:28:13] work, especially a lot of these situations where maybe you're not necessarily, you know necessarily
+[00:28:13 -> 00:28:17] I have to be at the office these exact hours, but I have certain tasks, I have to accomplish
+[00:28:17 -> 00:28:21] I have certain goals that my organization or my profession is set for me.
+[00:28:21 -> 00:28:24] How can I accomplish those with the least amount of fuss?
+[00:28:24 -> 00:28:28] And then second, we have to talk about the sort of leisure activities we're doing.
+[00:28:28 -> 00:28:32] So a big part of this is how do you sort of temporarily take yourself away from some of
+[00:28:32 -> 00:28:39] these tempting, easier kind of low value options, just so you can experience what it's like to
+[00:28:39 -> 00:28:41] not have to be glued to your phone all the time.
+[00:28:41 -> 00:28:43] And then that gives you space to try to explore some of these things.
+[00:28:43 -> 00:28:47] So it is a bit of a complicated process, I don't want to say that it's a one step, you
+[00:28:47 -> 00:28:48] can just turn it on.
+[00:28:48 -> 00:28:52] But if you go through this sort of systematically, you can often end up in a situation where
+[00:28:52 -> 00:28:55] yeah, you are spending more time doing things that you really, truly value.
+[00:28:55 -> 00:28:56] Wow, that was great.
+[00:28:56 -> 00:29:00] I think that also answered like a two part of the sub-questions that we prepare in the
+[00:29:00 -> 00:29:05] later half, is one is everyone in the workforce probably have done their 16 personality test.
+[00:29:05 -> 00:29:09] And everyone will be fixed to add out, okay, I'm an extrovert, so I really need to get
+[00:29:09 -> 00:29:13] some leisure point that is at least a group activity is waiting out with friends.
+[00:29:13 -> 00:29:17] And for the other spectrum, for those really introverts, they will want to maximize their
+[00:29:17 -> 00:29:18] time alone.
+[00:29:18 -> 00:29:19] That's probably something.
+[00:29:19 -> 00:29:23] But I think throughout this explorations and also the recategorizing your leisure, high
+[00:29:23 -> 00:29:28] quality time, I think that's something a really fruitful exercise that everyone can do.
+[00:29:28 -> 00:29:29] And probably we're going to learn something new.
+[00:29:29 -> 00:29:33] Maybe there are some really active, high quality leisure activities that we have been missing
+[00:29:33 -> 00:29:37] out for the past, I don't know how many years, but that's something that should be putting
+[00:29:37 -> 00:29:40] into our schedules for the upcoming months.
+[00:29:40 -> 00:29:41] That's a great one.
+[00:29:41 -> 00:29:44] I think that that framework part would definitely solve like 90% of the issues for a lot of
+[00:29:44 -> 00:29:46] our audience.
+[00:29:46 -> 00:29:48] And we have another 10%, that's a harder part for now.
+[00:29:48 -> 00:29:52] So if real rest comes from active and high quality leisure, this is a really important
+[00:29:52 -> 00:29:56] lesson learned that we learned so far, then here's a question for our audience might
+[00:29:56 -> 00:29:57] have.
+[00:29:57 -> 00:29:59] Some of the folks would probably say...
+[00:30:59 -> 00:31:29] 在這裏,這裏,這裏,這裏,這裏,這裏。
+[00:31:59 -> 00:32:29] 這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏,這裏
+[00:32:29 -> 00:32:31] maybe it is a bit of an investment.
+[00:32:31 -> 00:32:34] But I think, you know, there's a dream that we all have.
+[00:32:34 -> 00:32:36] There is an idea of ourselves that we have.
+[00:32:36 -> 00:32:38] Yeah, maybe it's not, like,
+[00:32:38 -> 00:32:40] I don't enjoy doing this thing right right now,
+[00:32:40 -> 00:32:42] but I can imagine becoming the kind of person
+[00:32:42 -> 00:32:43] that enjoys doing these things.
+[00:32:43 -> 00:32:46] And, you know, seeing how you can navigate
+[00:32:46 -> 00:32:47] into doing those activities.
+[00:32:47 -> 00:32:50] Certainly, I feel like it's a better way to live.
+[00:32:50 -> 00:32:51] It's a healthier way to live than to imagine
+[00:32:51 -> 00:32:53] that, okay, I just worked myself to the bone,
+[00:32:53 -> 00:32:56] and then I just do something that I find completely
+[00:32:56 -> 00:33:00] valueless in my spare time just because I'm so exhausted
+[00:33:00 -> 00:33:01] from working that I can't go on.
+[00:33:01 -> 00:33:02] Like, to me, that's pretty bleak.
+[00:33:02 -> 00:33:04] I don't want to live that way.
+[00:33:04 -> 00:33:06] And so I hope the people who are listening here,
+[00:33:06 -> 00:33:09] that's not the thing that they aspire for to the end, either.
+[00:33:09 -> 00:33:12] That's a really good suggestion to some antidote, I'll say,
+[00:33:12 -> 00:33:14] for especially for a Taiwanese audience.
+[00:33:14 -> 00:33:15] Thank you so much.
+[00:33:15 -> 00:33:17] Yeah, I think this is a great segue.
+[00:33:17 -> 00:33:19] And we definitely have to talk about a course
+[00:33:19 -> 00:33:21] that you and Cal have took so much of your time
+[00:33:21 -> 00:33:22] and then developed together.
+[00:33:22 -> 00:33:25] So there's one of the three modules of the course.
+[00:33:25 -> 00:33:27] It's called a training of brain's deep focus
+[00:33:27 -> 00:33:30] through completing a challenging learning project.
+[00:33:30 -> 00:33:32] So I'll say this sounds really interesting to me,
+[00:33:32 -> 00:33:34] but I believe some of our audience heard like,
+[00:33:34 -> 00:33:37] please don't make me do something challenging right now.
+[00:33:37 -> 00:33:38] I just want to relax.
+[00:33:38 -> 00:33:41] So all of all the students who have taken this course,
+[00:33:41 -> 00:33:44] can you share with us this story of someone
+[00:33:44 -> 00:33:47] whose results show the biggest before and after contrast?
+[00:33:47 -> 00:33:50] And like, someone who completely blew your mind
+[00:33:50 -> 00:33:51] because they achieved something
+[00:33:51 -> 00:33:53] that's originally seen totally impossible
+[00:33:53 -> 00:33:55] and even impossible from your point of view.
+[00:33:55 -> 00:33:57] Well, first of all, I want to preface.
+[00:33:57 -> 00:33:58] This is the third month.
+[00:33:58 -> 00:34:01] The three months in English, the way we name it
+[00:34:01 -> 00:34:03] was focus work, focus life, and focus mind.
+[00:34:03 -> 00:34:06] So get focus work focusing on the deep work part.
+[00:34:06 -> 00:34:09] Focus life is a little bit based on kind of giving yourself
+[00:34:09 -> 00:34:11] space, so getting away from some of the digital distractions,
+[00:34:11 -> 00:34:14] some of this low quality leisure time we were talking about.
+[00:34:14 -> 00:34:17] And then the focus mind was to make or learn something new.
+[00:34:17 -> 00:34:19] And I would actually say that a lot of the things
+[00:34:19 -> 00:34:21] are related to what we were talking about before
+[00:34:21 -> 00:34:23] is that people manage to free up this time.
+[00:34:23 -> 00:34:26] And then they start doing some kind of activity or hobby
+[00:34:26 -> 00:34:28] that they'd like kind of always wanted to do.
+[00:34:28 -> 00:34:30] And then now they're actually doing it
+[00:34:30 -> 00:34:30] and they're excited about it.
+[00:34:30 -> 00:34:32] So I think someone was doing photography.
+[00:34:32 -> 00:34:33] I think there was another person
+[00:34:33 -> 00:34:37] who was doing some kind of needlework or this kind of thing.
+[00:34:37 -> 00:34:38] And I mean, it's just a month.
+[00:34:38 -> 00:34:40] So this is not like, I'm not saying these people
+[00:34:40 -> 00:34:42] have become super geniuses, but it's a shift.
+[00:34:42 -> 00:34:43] It's a shift in their life.
+[00:34:43 -> 00:34:46] So it's very much what we're talking about here.
+[00:34:46 -> 00:34:48] But the ordering of the months is important too,
+[00:34:48 -> 00:34:50] because if we started with that month,
+[00:34:50 -> 00:34:53] again, people are coming in month one,
+[00:34:53 -> 00:34:56] you feel swamped at work because you're constantly busy.
+[00:34:56 -> 00:34:57] You're not able to get everything done.
+[00:34:57 -> 00:34:58] You feel harried.
+[00:34:58 -> 00:35:00] You're constantly being distracted.
+[00:35:00 -> 00:35:02] You're not able to get your important work done.
+[00:35:02 -> 00:35:03] You feel like you have to work overtime
+[00:35:03 -> 00:35:06] and on the weekends to just stay on top of things.
+[00:35:06 -> 00:35:07] For the focus life, you are again,
+[00:35:07 -> 00:35:11] you're so sucked into a lot of the digital distractions
+[00:35:11 -> 00:35:13] that we all engage in now and again.
+[00:35:13 -> 00:35:15] That again, you don't feel like you have any time.
+[00:35:15 -> 00:35:17] You're just constantly sucked into these things.
+[00:35:17 -> 00:35:20] That it's only once we kind of turn down the noise
+[00:35:20 -> 00:35:22] on those two problems
+[00:35:22 -> 00:35:23] that they're actually become space
+[00:35:23 -> 00:35:25] to work on this third thing.
+[00:35:25 -> 00:35:26] And so I think the structuring
+[00:35:26 -> 00:35:28] and the sequencing of it was very important,
+[00:35:28 -> 00:35:29] because I think if we'd started with that third one,
+[00:35:29 -> 00:35:31] people are like, I don't have time for that, right?
+[00:35:31 -> 00:35:33] Whereas it's only once you've made time
+[00:35:33 -> 00:35:34] through doing some of these things,
+[00:35:34 -> 00:35:36] you're like, oh, actually, I can do some of these things
+[00:35:36 -> 00:35:38] that are meaningful and valuable to me.
+[00:35:38 -> 00:35:41] And other people, they take it in a more productive direction.
+[00:35:41 -> 00:35:44] So there's people who decide to work on some career skill
+[00:35:44 -> 00:35:45] or get better at something.
+[00:35:45 -> 00:35:46] It's gonna be good for their job.
+[00:35:46 -> 00:35:47] But for a lot of people,
+[00:35:47 -> 00:35:48] it's just reclaiming something
+[00:35:48 -> 00:35:49] that they've always wanted to do
+[00:35:49 -> 00:35:52] that they just haven't felt like they've had the capacity for.
+[00:35:52 -> 00:35:53] That's very nice.
+[00:35:53 -> 00:35:55] Wondering if there's any mental antidote, for example,
+[00:35:55 -> 00:35:57] like to one of the students
+[00:35:57 -> 00:35:59] that may already be starting
+[00:35:59 -> 00:36:01] that taking your courses in the training sessions,
+[00:36:01 -> 00:36:04] they probably already finished the first month successfully.
+[00:36:04 -> 00:36:05] But later on, they are staff,
+[00:36:05 -> 00:36:08] for example, have to go on a business trip for three weeks
+[00:36:08 -> 00:36:09] and they will have to pause
+[00:36:09 -> 00:36:10] for learning from this course.
+[00:36:10 -> 00:36:13] And then by the time when they return from the business trip,
+[00:36:13 -> 00:36:15] maybe they feel really down, being annoyed
+[00:36:15 -> 00:36:17] that they haven't really put in the three weeks time
+[00:36:17 -> 00:36:20] to really learn about the second month of the excess.
+[00:36:20 -> 00:36:21] Is there any mental antidote
+[00:36:21 -> 00:36:23] for these kind of a senior or for your students?
+[00:36:23 -> 00:36:25] Well, I think the right way to think about it
+[00:36:25 -> 00:36:28] is that a typical course is something that you learn.
+[00:36:28 -> 00:36:30] You go in and then we teach you lessons
+[00:36:30 -> 00:36:33] and then you learn some content knowledge.
+[00:36:33 -> 00:36:35] The way we wanted to design this was a little different.
+[00:36:35 -> 00:36:37] We wanted it to be an experience
+[00:36:37 -> 00:36:41] that you go through that would help you build new habits.
+[00:36:41 -> 00:36:44] So it's not as if these ideas are totally revolutionary
+[00:36:44 -> 00:36:45] although there are a lot of nuances
+[00:36:45 -> 00:36:48] that you have to get right to make it successful.
+[00:36:48 -> 00:36:50] But it's about having the space to focus on,
+[00:36:50 -> 00:36:52] okay, we're going to fix this particular thing.
+[00:36:52 -> 00:36:54] We're going to track our deep work hours
+[00:36:54 -> 00:36:56] or we're going to take a temporary reprieve
+[00:36:56 -> 00:36:57] from the digital vices
+[00:36:57 -> 00:36:59] or we're going to work on one of these projects.
+[00:36:59 -> 00:37:01] And that experience allows you
+[00:37:01 -> 00:37:04] to sort of fix some things in your routines,
+[00:37:04 -> 00:37:06] make some improvements.
+[00:37:06 -> 00:37:07] But it's not the end all be all.
+[00:37:07 -> 00:37:09] It's a little bit like joining a gym program
+[00:37:09 -> 00:37:10] or an exercise program.
+[00:37:10 -> 00:37:12] It's not like you do some three month exercise program
+[00:37:12 -> 00:37:14] and all of a sudden you become an Olympic athlete.
+[00:37:14 -> 00:37:16] But you may find that you're in better shape
+[00:37:16 -> 00:37:17] than you were there when you started.
+[00:37:17 -> 00:37:19] And so one of the things that's been really heartening for me
+[00:37:19 -> 00:37:22] is that we've been running this program since 2020
+[00:37:22 -> 00:37:24] and we've had people that have written in the thing
+[00:37:24 -> 00:37:26] that this is their fifth time doing it.
+[00:37:26 -> 00:37:28] They've gone through it five times.
+[00:37:28 -> 00:37:31] And that allows them to sort of like,
+[00:37:31 -> 00:37:33] okay, I got a lot of benefit the first time
+[00:37:33 -> 00:37:35] and then life gets in the way it's chaotic.
+[00:37:35 -> 00:37:37] You set us let something slide, something slip.
+[00:37:37 -> 00:37:39] And maybe there were some problems.
+[00:37:39 -> 00:37:40] You didn't quite figure out.
+[00:37:40 -> 00:37:42] You didn't quite figure out how to negotiate this thing
+[00:37:42 -> 00:37:44] with your boss or you tried this thing out
+[00:37:44 -> 00:37:45] and it didn't quite work.
+[00:37:45 -> 00:37:46] And then you come back and you try it again.
+[00:37:46 -> 00:37:47] And then you try it again.
+[00:37:47 -> 00:37:51] And each time you're sort of deepening to excuse the pun,
+[00:37:51 -> 00:37:54] you're deepening that process that you're working with.
+[00:37:54 -> 00:37:57] And so I really like being able to work with people
+[00:37:57 -> 00:37:58] in courses because that's something that,
+[00:37:58 -> 00:37:59] you know, you can do with a book.
+[00:37:59 -> 00:38:00] You can certainly pick up the book
+[00:38:00 -> 00:38:02] and read it again and try to apply it again.
+[00:38:02 -> 00:38:04] But there's something about having a structured process
+[00:38:04 -> 00:38:07] that like goes out over a period of time
+[00:38:07 -> 00:38:09] that you're able to sort of meditate on.
+[00:38:09 -> 00:38:11] So anyone who falls off the wagon
+[00:38:11 -> 00:38:13] or they get stuck or do this kind of thing,
+[00:38:13 -> 00:38:15] I would just say that just like any other kind of training,
+[00:38:15 -> 00:38:17] anything you're doing for a jam or learning a language
+[00:38:17 -> 00:38:20] or anything where it requires investment
+[00:38:20 -> 00:38:21] over a long period of time,
+[00:38:21 -> 00:38:23] there's no problem starting back
+[00:38:23 -> 00:38:25] and just going back and starting that month over again
+[00:38:25 -> 00:38:26] or doing the whole thing over again
+[00:38:26 -> 00:38:28] or starting over in the beginning.
+[00:38:28 -> 00:38:30] Because the material is not crazy time-consuming.
+[00:38:30 -> 00:38:32] What matters is the intention that, you know,
+[00:38:32 -> 00:38:34] when you have an entire month intended on like,
+[00:38:34 -> 00:38:37] let's work on focus in my work,
+[00:38:37 -> 00:38:38] you'd be surprised how much you can do, right?
+[00:38:38 -> 00:38:40] Because that's your intention for that month.
+[00:38:40 -> 00:38:42] This is what we really try to preach in our course.
+[00:38:43 -> 00:38:44] Okay, that's amazing.
+[00:38:44 -> 00:38:46] And I think that's a great encouragement as well.
+[00:38:46 -> 00:38:48] So I think we're probably going to bring
+[00:38:48 -> 00:38:50] another questions following up
+[00:38:50 -> 00:38:51] some of the mental challenges.
+[00:38:51 -> 00:38:52] Because I think quite frequently,
+[00:38:52 -> 00:38:55] I think a lot of our barriers are not physical barriers,
+[00:38:55 -> 00:38:57] but mental barriers that we put up ourselves.
+[00:38:57 -> 00:38:59] And we persuade ourselves not to do something
+[00:38:59 -> 00:39:03] because we probably think that it's probably too challenging
+[00:39:03 -> 00:39:05] to actually crush a challenge.
+[00:39:05 -> 00:39:08] Could you share with us one actionable method,
+[00:39:08 -> 00:39:10] maybe from the course so our audience can try it out
+[00:39:10 -> 00:39:11] at home today?
+[00:39:11 -> 00:39:13] So I think there's two things there.
+[00:39:13 -> 00:39:15] So one is about having the right kind of mindset
+[00:39:15 -> 00:39:17] with regards to challenge.
+[00:39:17 -> 00:39:18] And this is one of the things that, you know,
+[00:39:18 -> 00:39:20] some of the most popular lessons from the course.
+[00:39:20 -> 00:39:24] Cal has a lesson called inspiration is for amateurs
+[00:39:24 -> 00:39:26] and he talks about the process of writing
+[00:39:26 -> 00:39:28] and how many writers will come up to new writers
+[00:39:28 -> 00:39:30] and they'll say things like, you know what I want to write,
+[00:39:30 -> 00:39:32] but I just sit down and it's just like so hard.
+[00:39:32 -> 00:39:33] I have these ideas.
+[00:39:33 -> 00:39:34] I don't know what to put.
+[00:39:34 -> 00:39:35] I don't know how to start.
+[00:39:35 -> 00:39:36] It's just very difficult.
+[00:39:36 -> 00:39:37] It's frustrating.
+[00:39:37 -> 00:39:41] And you know, I just, like, I don't have any inspiration.
+[00:39:41 -> 00:39:43] His argument is that that's what writing is.
+[00:39:43 -> 00:39:45] That's what it means to do writing
+[00:39:45 -> 00:39:47] is that you're struggling through that difficulty.
+[00:39:47 -> 00:39:50] And so sometimes part of the way of dealing with challenge
+[00:39:50 -> 00:39:52] is that if you expected to be fun and easy
+[00:39:52 -> 00:39:53] and if you have this idea that like,
+[00:39:53 -> 00:39:55] well, it's mentally challenging,
+[00:39:55 -> 00:39:58] therefore I'm doing it wrong or it's hard,
+[00:39:58 -> 00:40:00] that itself can be a bit of an obstacle.
+[00:40:00 -> 00:40:02] That part of the idea of deep work of,
+[00:40:02 -> 00:40:05] I think, Cal Newport's advice and why it resonates
+[00:40:05 -> 00:40:08] is because it is a little bit like having the idea
+[00:40:08 -> 00:40:10] that, you know, like, I'm going to go to the gym
+[00:40:10 -> 00:40:11] and lift weights and it's like, oh, but I don't like
+[00:40:11 -> 00:40:13] when my arms are sore, right?
+[00:40:13 -> 00:40:16] But like, you know, you learn that the arms being sore,
+[00:40:16 -> 00:40:17] it doesn't mean you're injuring yourself.
+[00:40:17 -> 00:40:18] It means that you're training, right?
+[00:40:18 -> 00:40:20] So that's the first thing is having the right mindset
+[00:40:20 -> 00:40:22] that difficulty is part of it
+[00:40:22 -> 00:40:24] and that you should feel good about the difficulty.
+[00:40:24 -> 00:40:26] It means that you're doing something important.
+[00:40:26 -> 00:40:27] You're doing something worthwhile,
+[00:40:27 -> 00:40:29] not just that you are failing
+[00:40:29 -> 00:40:30] or that you're wasting your time.
+[00:40:30 -> 00:40:30] Right.
+[00:40:30 -> 00:40:31] The second thing that I would say
+[00:40:31 -> 00:40:33] is a more practical advice, not just the mindset.
+[00:40:33 -> 00:40:35] Is it often when we're dealing with difficulty?
+[00:40:35 -> 00:40:37] What we're having difficulty doing
+[00:40:37 -> 00:40:38] is that we have ambiguity.
+[00:40:38 -> 00:40:40] We don't actually know what the next step is.
+[00:40:40 -> 00:40:43] So one of these exercises I get the students to go through
+[00:40:43 -> 00:40:44] is just whenever you're dealing with a task
+[00:40:44 -> 00:40:47] is just to always ask yourself, what's the next step?
+[00:40:47 -> 00:40:49] And if that doesn't feel doable, ask yourself,
+[00:40:49 -> 00:40:50] what's the next step within that?
+[00:40:50 -> 00:40:52] And you often break things down.
+[00:40:52 -> 00:40:53] So I'll give an example.
+[00:40:53 -> 00:40:54] Let's say I have to write an essay
+[00:40:54 -> 00:40:55] and I don't know where to start.
+[00:40:55 -> 00:40:57] Like, I have this idea that I want to write for an essay.
+[00:40:57 -> 00:40:58] I don't know what to start.
+[00:40:58 -> 00:40:59] So what will be the next step?
+[00:40:59 -> 00:41:02] Well, maybe it's writing an outline, right?
+[00:41:02 -> 00:41:03] And then I write an outline and we get my ideas
+[00:41:03 -> 00:41:05] and I'm like, ah, I still don't think there's...
+[00:41:05 -> 00:41:06] What's the next step?
+[00:41:06 -> 00:41:07] Well, maybe I need to do a little bit more research
+[00:41:07 -> 00:41:08] on this one point.
+[00:41:08 -> 00:41:09] So I do a little bit of research.
+[00:41:09 -> 00:41:11] But I don't know where to do this research.
+[00:41:11 -> 00:41:12] Well, maybe you need to like go into Google
+[00:41:12 -> 00:41:14] and type in that keyword
+[00:41:14 -> 00:41:16] and like see what comes up and read a few of the essays.
+[00:41:16 -> 00:41:19] So the idea here is that often what we are dealing with
+[00:41:19 -> 00:41:21] when we're dealing with a difficult task
+[00:41:21 -> 00:41:24] is just to use an idea from my second book.
+[00:41:24 -> 00:41:26] The problem space we're dealing with is too vast.
+[00:41:26 -> 00:41:28] There's too many different directions we could go.
+[00:41:28 -> 00:41:30] We don't have a sense of the path
+[00:41:30 -> 00:41:33] from where we are right now to our work being finished.
+[00:41:33 -> 00:41:34] And so we need to scope it down.
+[00:41:34 -> 00:41:37] We need to start off with a smaller task
+[00:41:37 -> 00:41:38] that, okay, I can definitely do this thing.
+[00:41:38 -> 00:41:40] I can definitely work on this goal.
+[00:41:40 -> 00:41:41] And sometimes that comes automatically.
+[00:41:41 -> 00:41:43] I don't want to say that you always have to go through
+[00:41:43 -> 00:41:45] this sort of explicit process.
+[00:41:45 -> 00:41:47] But often I find myself in a situation
+[00:41:47 -> 00:41:49] where I find this apprehension
+[00:41:49 -> 00:41:51] and I find this like, ah, maybe I should procrastinate.
+[00:41:51 -> 00:41:52] Maybe I should go do something else.
+[00:41:52 -> 00:41:55] If I go through this, what's next process a few times?
+[00:41:55 -> 00:41:57] You end up with a task like, okay, well,
+[00:41:57 -> 00:41:57] that's easy to do.
+[00:41:57 -> 00:41:58] I can do that thing
+[00:41:58 -> 00:41:59] and then you can do the next thing
+[00:41:59 -> 00:42:00] and the next thing and the next thing.
+[00:42:00 -> 00:42:04] And so I think those two attitudes that work,
+[00:42:04 -> 00:42:06] especially important work often is difficult
+[00:42:06 -> 00:42:08] and asking what's next are two ways
+[00:42:08 -> 00:42:10] to deal with this idea of challenge.
+[00:42:10 -> 00:42:12] You have a really good suggestions back there.
+[00:42:12 -> 00:42:13] One is a mental framework
+[00:42:13 -> 00:42:15] and the other is the actionable items
+[00:42:15 -> 00:42:16] that we can directly do.
+[00:42:16 -> 00:42:18] And I'm just wondering, like asking
+[00:42:18 -> 00:42:20] for all the parents out there.
+[00:42:20 -> 00:42:23] What are the top productivity tips
+[00:42:23 -> 00:42:24] that you have been applying to, you know,
+[00:42:24 -> 00:42:26] to bring up two beautiful children?
+[00:42:26 -> 00:42:29] Well, I think with kids, it's a little different
+[00:42:29 -> 00:42:31] because I think my kids are three and six, by the way.
+[00:42:31 -> 00:42:33] But I think when it works with kids,
+[00:42:33 -> 00:42:35] I think having a positive attitude
+[00:42:35 -> 00:42:36] and instilling the value of hard work
+[00:42:36 -> 00:42:38] but also making it fun and enjoyable
+[00:42:38 -> 00:42:41] for them not stressful is the most important thing.
+[00:42:41 -> 00:42:44] I think that kids definitely benefit.
+[00:42:44 -> 00:42:46] They have a harder time seeing the big picture, right?
+[00:42:46 -> 00:42:47] You know why it's important
+[00:42:47 -> 00:42:49] and you know why they should be doing expires
+[00:42:49 -> 00:42:50] but they often have a harder time.
+[00:42:50 -> 00:42:51] So the more you can make it a game,
+[00:42:51 -> 00:42:53] the more you can make it fun for them.
+[00:42:53 -> 00:42:55] The more you can be patient and encouraging,
+[00:42:55 -> 00:42:56] I think those things are valuable
+[00:42:56 -> 00:42:58] and there's certainly things that I'm no master of
+[00:42:58 -> 00:42:59] but I strive to do as a parent.
+[00:42:59 -> 00:43:01] I think a lot of your parents
+[00:43:01 -> 00:43:03] that's out on or from an audience bowl
+[00:43:03 -> 00:43:04] will definitely learn something from it.
+[00:43:04 -> 00:43:06] We always like to ask about something
+[00:43:06 -> 00:43:08] that's really modern and recently
+[00:43:08 -> 00:43:10] to all of our invited guests.
+[00:43:10 -> 00:43:12] So one of the things is nowadays
+[00:43:12 -> 00:43:14] in this just past three to four years,
+[00:43:14 -> 00:43:16] I would say a lot of productivity tools
+[00:43:16 -> 00:43:18] have been turned into AI tools.
+[00:43:18 -> 00:43:20] So I think modern age,
+[00:43:20 -> 00:43:23] you probably heard some questions from the students,
+[00:43:23 -> 00:43:25] your students or your readers as well.
+[00:43:25 -> 00:43:29] Scott, there has been so much productivity gain on the AI.
+[00:43:29 -> 00:43:32] I can just use my cloud or Gemini to do most of his stuff.
+[00:43:32 -> 00:43:34] What else should we people,
+[00:43:34 -> 00:43:36] a human physical brain that we should learn
+[00:43:36 -> 00:43:38] in this next 10 years?
+[00:43:38 -> 00:43:40] What would be your answer to that?
+[00:43:40 -> 00:43:42] Yeah, you know it's funny.
+[00:43:42 -> 00:43:43] I've been thinking about this more and more
+[00:43:43 -> 00:43:46] and certainly if we had my colleague,
+[00:43:46 -> 00:43:47] Kalle Lieufer down here
+[00:43:47 -> 00:43:49] because he's a great AI skeptic.
+[00:43:49 -> 00:43:50] He's been writing quite a bit
+[00:43:50 -> 00:43:52] about how he thinks a lot of AI stuff is overrated.
+[00:43:52 -> 00:43:53] So I'm sure he'd have his own thoughts.
+[00:43:53 -> 00:43:54] So I'll just speak for myself.
+[00:43:54 -> 00:43:56] I won't speak for Kyle.
+[00:43:56 -> 00:43:56] He has a whole beat.
+[00:43:56 -> 00:43:58] He's written a lot of essays about it.
+[00:43:58 -> 00:44:00] But I think that in some ways,
+[00:44:00 -> 00:44:02] certainly this is a technological change.
+[00:44:02 -> 00:44:04] It's going to change a lot of things
+[00:44:04 -> 00:44:05] about how we're doing work.
+[00:44:05 -> 00:44:07] So certainly if you're, let's say a programmer,
+[00:44:07 -> 00:44:09] this is like one of the main fields where
+[00:44:09 -> 00:44:11] now you can get a coding agent
+[00:44:11 -> 00:44:13] to do a lot of coding for you
+[00:44:13 -> 00:44:15] and there's limits to it on clear as well.
+[00:44:15 -> 00:44:17] And I think there are going to be changes to workflow.
+[00:44:17 -> 00:44:19] There's going to be changes to tools.
+[00:44:19 -> 00:44:21] But I think ultimately we need to evaluate these things
+[00:44:21 -> 00:44:24] as tools, as things that are going to shape our work.
+[00:44:24 -> 00:44:26] And I think one of the things that I would say
+[00:44:26 -> 00:44:28] is that to prepare yourself for the future,
+[00:44:28 -> 00:44:31] it's often not learning the most cutting edge,
+[00:44:31 -> 00:44:34] most new, most recent tool that has the value,
+[00:44:34 -> 00:44:36] but learning things that are old,
+[00:44:36 -> 00:44:38] that are deep, that have stood the test of time
+[00:44:38 -> 00:44:40] to make a difference.
+[00:44:40 -> 00:44:41] So I'll give an example from my own sake.
+[00:44:41 -> 00:44:42] Now I'm not a professional programmer,
+[00:44:42 -> 00:44:44] I'm a writer, I teach,
+[00:44:44 -> 00:44:45] I read a lot about cognitive science.
+[00:44:45 -> 00:44:48] So I won't speak as someone who's in the industry.
+[00:44:48 -> 00:44:51] But when I was doing this MIT Challenge Project,
+[00:44:51 -> 00:44:54] which we opened the course, which was now in 2012,
+[00:44:54 -> 00:44:57] so does it like 14 years ago, 15 years ago, right?
+[00:44:57 -> 00:45:00] When I was doing it at the time, I was,
+[00:45:59 -> 00:46:29] 所以, learning AI is very important. It's certainly going to be a tool that's going to be used for your job. But if you're asking yourself, where should you make investments? Things that are unlikely to be obsolete a year or two later? I wouldn't actually be looking at the frontier. I would be looking back at what are the skills that have remained valuable for a very long period of time.
+[00:46:29 -> 00:46:40] On a lot of the audience, I think, it's really high chance that they probably work in tech, whether the technology or semiconductor or electronics manufacturing, that probably takes up 40% or 50% of the GDP in Taiwan.
+[00:46:40 -> 00:46:57] But, you know, there is a comeback, and there's a saying in Taiwan right now. It's probably, you know, everyone must learn those philosophical courses that probably, you know, 20 years ago, everyone skipped those classes, but they will become more fundamental and more important in terms of the current nowadays curriculum.
+[00:46:57 -> 00:47:07] Whether that's philosophy or history or, let's say, literature, it was kind of a fundamental thing that we used to skip, especially when we want to get something tangible and done.
+[00:47:07 -> 00:47:24] Well, it can be technical too. So, I want to be clear. I think that I've met a lot of people who work in tech, so I don't want to project too much. But the amount of people I've met in tech that are truly masters of every single deep part of their discipline are exceedingly few. Usually, you have some specialty, you have something that you do in your job.
+[00:47:24 -> 00:47:35] Because of the pace of change, the specialty is always changing, right? So, you kind of, it's basically, you can imagine it's like the surface area of the field, right? But the surface area is being held up by foundations that are deeper and don't change that often.
+[00:47:35 -> 00:47:49] So, the surface is always rippling, right? But what's underneath is often solved. So, you know, if you're talking about semiconductors and this kind of things, well, there's going to be some specific technique that people are using right now that some sort of process that they're working in, and then this is see your narrow specialty.
+[00:47:49 -> 00:48:00] You know nothing about it to be able to say what those things are. But basic ideas about physics, basic ideas about computation, basic ideas about these sorts of deeper principles.
+[00:48:00 -> 00:48:09] Again, there's this principle called the Lindy effect, which is basically how long something's persisted is a good guess of how long it'll persist into the future.
+[00:48:09 -> 00:48:19] The good way of looking at it is like have the people who've known this, have they gained benefit from having this knowledge, and if it's older than it's usually going to also persist, because it's deeper, it's more fundamental.
+[00:48:19 -> 00:48:34] So, you know, as I said, like the cutting edge and this kind of stuff, it's always good, it's always good to know about it. But if you're looking for things that are unlikely to change in a year or two, those are very often deep things that are not that new, but they're still hard, there's still things that, you know, most of us haven't mastered yet.
+[00:48:34 -> 00:48:57] That's really good to suggest as a reminder I'll say. So, yeah, thank you so much Scott. We basically cover so many golden nuggets. I think the conversation can definitely last another one hour or two if, you know, we're giving the time, but today about brain training and also deep focus for the very last questions that want to loop back to the timeline of this entire conversations, which is the harbor of your course.
+[00:48:57 -> 00:49:06] So, measuring focus makes your life freer. So, Scott really curious, like for you personally right here right now, how would you define a truly free life?
+[00:49:06 -> 00:49:23] I think this is something that we often don't ask ourselves enough, like we were talking about it before, but so often we're on a path where you've been given, this is the goal that you have to work for, this is the thing you have to achieve, these are the things you have to do, and we don't actually ask ourselves, well what do we really want in our life, what makes a life meaningful for you?
+[00:49:23 -> 00:49:35] So, I can't speak for other people, but I can say some of the things that are really important to me are like being able to have time with my kids, you know, being able to be productive at what I'm doing so that, you know, I don't have to be one of these people that's constantly on the road traveling.
+[00:49:35 -> 00:49:48] I don't have to be at the office late at night. This is a bit of an exception. We're in Taiwan right now. I'm on late at night tonight just making a special exception for you, but usually I'm at home at a reasonable time and I can, you know, have dinner with my family and do all that kind of stuff.
+[00:49:48 -> 00:49:59] Usually I am able to do these things because I've cultivated some of that focus, and certainly when you're in an entrepreneurial setting, there's a direct payoff because if you're more productive, you set your own hours, so you can just work less.
+[00:49:59 -> 00:50:07] But even in a professional setting, if you are a high performer, if you're someone who does a really good job at your work, you can use that to negotiate better positions.
+[00:50:07 -> 00:50:22] Like if you're someone who always gets your work done and you're a star player, then it's much easier for you to negotiate, you know, a better job position, better perks, better control of your time, then someone who, well, you know, we keep you around, but we're not really satisfied with the work you're doing.
+[00:50:22 -> 00:50:33] And so these things are related, productivity and freedom are definitely related, and focus and freedom are related too because if you have the ability to focus, then again, you basically get to make that decision about where your attention gets spent.
+[00:50:33 -> 00:50:49] So when we're talking about your leisure time, imagine that hypothetical scenario where you're thinking about your past week, and like how would you spend each minute of it if it was like you had the ability to just plan it however you want, what would you spend it on, and that not being the way people actually spend the minutes of their life is very frequent.
+[00:50:49 -> 00:51:02] And so cultivating this ability to focus is about like, okay, well, actually I would have this much time for exercise or I would have this much time for reading that hard book or doing that hobby or calling that old friend or doing that thing.
+[00:51:02 -> 00:51:10] If you're able to do that, then I think that's, that's very freeing because you're not just doing whatever you're doing because it's the easiest thing available to you.
+[00:51:10 -> 00:51:23] Well, that's really good sharing Scott. Thank you so much for putting yourself out there for us. And just curious like, you know, during your high quality leisure time, what kind of books or what kind of podcasts do you listen to on daily or weekly basis?
+[00:51:23 -> 00:51:33] Yeah, so while I read lots of books, lots of different books here, like I got, I was reading this right before this call star, this is Martha Newsbombs, the fragility of goodness, you can see it's nice.
+[00:51:33 -> 00:51:45] So that's that's a book about Greek philosophy, but I like lots of podcasts. I really like, these are in English. So, you know, anyone here is listening, I don't know how well it'll translate, but it'll be good practice for you if you're working in English too.
+[00:51:45 -> 00:51:52] But I really like Tyler Cowan's conversations with Tyler. He's an economist and he has a lot of illustrious guests on and they ask people about there.
+[00:51:52 -> 00:52:05] I have a number of other podcasts. I like, if you're in tech, I really like Dworkish Patel's podcast. He has a good one about a lot of stuff related to AI, a lot of these other things. And he's also a real auto-diad act who I appreciate.
+[00:52:05 -> 00:52:13] And then, of course, my co-author, Cal Newport Deep Questions, another great podcast. So, if you're listening to those ones, I think that you're not doing too bad.
+[00:52:13 -> 00:52:28] We'll definitely put all those links in the information box below. And Scott, thank you so much for your time today. And just curious, if giving you some more spare time, you know, I didn't take care of your beautiful kids and also being productive, what would you want to learn this year?
+[00:52:28 -> 00:52:34] I think we were talking about art in the beginning and that's sort of what I'm working on right now. So, I've been taking some painting courses, I've been working on that.
+[00:52:34 -> 00:52:43] So, that's been one thing I've been doing in my spare time. I find whenever the weather gets nicer, I have this idea of like going out in a nature and, you know, bringing a sketchbook and doing that. So, that's one thing I want to do.
+[00:52:43 -> 00:52:55] I've also been really getting into running recently. So, I ran a marathon last year, but I'd like to get a better time. So, I'd like to run a better marathon next year. So, maybe those are goals that are going to be on the horizon for the next few months.
+[00:52:55 -> 00:53:02] So, thank you so much for a lot of golden nuggets, Scott, you share with us today. And hopefully we'll be going to be inviting more Taiwanese audience into your course.
+[00:53:02 -> 00:53:14] And definitely we'll definitely look really forward to catching up with you again in a quarter or two down the road and see, you know, how 2026 turn out and what else of productivity gained that we can learn from in this modern AI world.
+[00:53:14 -> 00:53:15] Really appreciate it.
+[00:53:15 -> 00:53:16] Yes, thank you so much. It was great.
+[00:53:16 -> 00:53:17] Thank you so much.
+[00:53:25 -> 00:53:27] Thank you so much.

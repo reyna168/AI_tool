@@ -6,6 +6,8 @@ __pycache__/
 
 # Distribution / Packaging
 venv/
+venv312/
+
 
 # Unit Test
 .pytest_cache/

@@ -1,0 +1,6 @@
+﻿sector_name,total_stocks,analyzed_stocks,avg_score,avg_rsi,avg_macd,bullish_ma_pct,strong_stocks_count
+AI_Server_Supply,5,5,1.6,49.11,1.0847,40.0,2
+IC_Design,10,6,1.0,40.41,-28.0487,16.67,0
+Passive_Components,7,4,0.0,20.87,-61.9561,0.0,0
+Semiconductor_Materials,4,3,0.0,25.33,-17.7604,0.0,0
+Power_Components,4,3,0.0,27.52,-5.5523,0.0,0
