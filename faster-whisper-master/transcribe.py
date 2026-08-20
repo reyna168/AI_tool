@@ -240,23 +240,79 @@ def get_duration(file_path: str) -> float:
 
 
 def split_audio(input_file: str, chunk_minutes: int, output_dir: str):
-    """用 ffmpeg segment muxer 切割音訊（-c copy，不重新編碼，速度快、不吃記憶體）"""
+    """
+    用 FFmpeg 將長音訊切成多段。
+
+    注意：
+    1. 不再使用原始檔名當輸出 pattern，避免 Windows / Unicode / [] 檔名造成 glob 找不到。
+    2. 不使用 -c copy，改用 MP3 重新編碼，對 MP3 長音檔的切割相容性較高。
+    3. 固定輸出 chunk_000.mp3、chunk_001.mp3...，方便後續穩定尋找。
+    """
     os.makedirs(output_dir, exist_ok=True)
-    base, ext = os.path.splitext(os.path.basename(input_file))
-    pattern = os.path.join(output_dir, f"{base}_%03d{ext}")
+
+    # 清除這一次切割可能留下的舊分段，避免重跑時混入舊檔。
+    for old_chunk in glob.glob(os.path.join(output_dir, "chunk_*.mp3")):
+        try:
+            os.remove(old_chunk)
+        except OSError:
+            pass
+
     segment_time = chunk_minutes * 60
+    pattern = os.path.join(output_dir, "chunk_%03d.mp3")
 
     cmd = [
-        "ffmpeg", "-y", "-i", input_file,
-        "-f", "segment", "-segment_time", str(segment_time),
-        "-c", "copy", "-reset_timestamps", "1",
+        "ffmpeg", "-y",
+        "-i", input_file,
+        "-map", "0:a:0",
+        "-vn",
+        "-f", "segment",
+        "-segment_time", str(segment_time),
+        "-reset_timestamps", "1",
+        "-c:a", "libmp3lame",
+        "-b:a", "192k",
         pattern,
     ]
-    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
-    chunk_files = sorted(glob.glob(os.path.join(output_dir, f"{base}_*{ext}")))
+    print("正在使用 FFmpeg 切割音訊...")
+    print("FFmpeg 指令：")
+    print(" ".join(f'"{x}"' if " " in x else x for x in cmd))
+
+    result = subprocess.run(
+        cmd,
+        capture_output=True,
+        text=True,
+        encoding="utf-8",
+        errors="replace",
+    )
+
+    if result.returncode != 0:
+        print(f"ffmpeg 錯誤：\n{result.stderr}")
+        raise RuntimeError("切割失敗，請查看上方 ffmpeg 錯誤訊息。")
+
+    chunk_files = sorted(
+        glob.glob(os.path.join(output_dir, "chunk_*.mp3"))
+    )
+
     if not chunk_files:
-        raise RuntimeError("切割失敗，未產生任何分段檔案，請確認 ffmpeg 是否正常運作。")
+        print("⚠️ FFmpeg 回傳成功，但沒有找到分段檔。")
+        print(f"切割目錄：{os.path.abspath(output_dir)}")
+        if result.stdout:
+            print(f"ffmpeg stdout：\n{result.stdout}")
+        if result.stderr:
+            print(f"ffmpeg stderr：\n{result.stderr}")
+        raise RuntimeError(
+            "切割失敗，未產生任何分段檔案。"
+            "請確認輸入音訊可正常被 FFmpeg 解碼。"
+        )
+
+    print(f"切割完成，共 {len(chunk_files)} 個分段。")
+    for i, chunk in enumerate(chunk_files, 1):
+        try:
+            duration = get_duration(chunk)
+            print(f"  [{i}] {os.path.basename(chunk)} ({format_time_txt(duration)})")
+        except Exception:
+            print(f"  [{i}] {os.path.basename(chunk)}")
+
     return chunk_files
 
 
@@ -331,6 +387,7 @@ def transcribe_to_files(model, audio_file: str, base_name: str):
 
     if need_split:
         print(f"檔案長度超過 {SPLIT_THRESHOLD_MINUTES} 分鐘，將切割成每段 {CHUNK_MINUTES} 分鐘後逐段轉錄...")
+        print(f"切割暫存目錄: {os.path.abspath(chunk_dir)}")
         chunk_files = split_audio(audio_file, CHUNK_MINUTES, chunk_dir)
         print(f"已切割成 {len(chunk_files)} 段。")
     else:
