@@ -1,0 +1,5 @@
+requests>=2.31
+PyYAML>=6.0
+python-dotenv>=1.0
+tzdata>=2024.1      # Windows 需要，供 zoneinfo 使用
+yfinance>=0.2.40    # 選用：Yahoo chart API 失敗時的備援

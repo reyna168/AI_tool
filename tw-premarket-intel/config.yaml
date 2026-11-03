@@ -1,0 +1,47 @@
+timezone: Asia/Taipei
+schedule_time: "07:30"        # --schedule 模式的每日觸發時間
+window_days: 14               # 未來 N 天（新股 / 法說 / 除權息）
+yield_threshold: 5.0          # 現金殖利率高亮門檻 (%)
+watchlist: []                 # 例：["2330", "2317"]，自選股重訊會被優先保留
+db_path: data/intel.db
+report_dir: reports
+
+http:
+  min_interval: 1.0           # 同一網站兩次請求最小間隔（秒），實際為 min~max 隨機
+  max_interval: 2.0
+  retries: 3                  # 指數退避：2s、4s、8s
+  timeout: 20
+  ssl_verify: true            # 若 Python 3.13 對 TWSE 憑證報錯，可改 false 或升級 certifi
+
+# 台灣利率沒有穩定的免費 API，請依央行/櫃買公告手動維護，並更新 as_of
+tw_rates:
+  discount_rate: null         # 央行重貼現率 (%)，例：填入最新公告值
+  cgb_10y: null               # 台灣 10 年期公債殖利率 (%)
+  as_of: null
+
+vix:
+  green_below: 15
+  yellow_above: 25
+  red_above: 35
+
+cb:
+  premium_max: 5.0            # 溢價率低於此值 (%) 視為異常/低溢價
+  low_price: 100.0            # 防守型：債券價格 <= 此值
+  min_volume: 50              # 防守型：成交張數 >= 此值
+  maturity_days: 90           # 距到期日 <= N 天
+  put_days: 60                # 距賣回日 <= N 天
+  new_days: 14                # 近 N 天內新發行/掛牌
+  max_items: 10               # 每類最多列出幾檔
+  # 若自動探索抓錯來源，可手動指定：python main.py --discover 可轉債
+  # sources: [{site: tpex, path: /xxxxx}]
+  sources: []
+  # 欄位對照覆寫（官方欄位名稱改版時使用）
+  # field_map: {code: 債券代碼, conv_price: 轉換價格}
+  field_map: {}
+
+notices:
+  max_items: 30
+  drop_keywords: ["召開董事會", "董事會召開", "股東常會", "股東會", "更正", "頁數", "補充", "重編", "基準日"]
+  keep_keywords: ["處置", "注意", "停止買賣", "暫停", "違約", "跳票", "重整", "破產", "下市", "停工", "火災",
+                  "訴訟", "減資", "私募", "轉換公司債", "賣回", "贖回", "財務", "虧損", "裁罰", "假扣押",
+                  "解任", "辭任", "停券", "重大"]
