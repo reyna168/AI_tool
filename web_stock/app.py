@@ -1230,24 +1230,28 @@ class TaiwanMarketScanner:
 
 
 class Strategy268:
-    """268 操盤法：20MA、60MA 平行同向 + 長紅/長黑 K 突破雙均線 + KD 以 50 為多空分界。
+    """268 操盤法（兩線同心、順勢吃大波段）：不摸頭、不撈底，兩線合一才進場。
 
-    2 = 20 均線（控盤線）
-    6 = 60 均線（生命線）
-    8 = KD 以 50 為多空分界
+    2 = 20 均線（控盤線／布林中軸）
+    6 = 60 均線（生命線／多空線）
+    8 = KD 以 50 為多空分界（目標 50→80 做多、50→20 做空）
 
     做多條件（全部成立）：
-      1. 20MA 與 60MA 平行向上（兩條都向上，且斜率相近，不必靠在一起）
-      2. 長紅 K 收盤站上 20MA 與 60MA
-      3. KD 的 K 值站上 50
+      1. 兩線合一（手牽手）：20MA 與 60MA 靠近、且同向（皆向上）彎曲並行
+      2. 實體整根突破：K 棒「實體」整根站上 20MA 與 60MA（紅 K，開盤與收盤都在雙線之上）
+      3. KD 動能過 50：K 值 > 50
+      4. 由盤開始做：突破前處於布林縮口（盤整）區，剛要發動才卡位
     做空條件（反向）：
-      1. 20MA 與 60MA 平行向下
-      2. 長黑 K 收盤跌破 20MA 與 60MA
-      3. KD 的 K 值跌破 50
+      1. 兩線合一：20MA 與 60MA 靠近、且同向向下彎曲並行
+      2. 實體整根跌破：黑 K 實體整根跌破 20MA 與 60MA
+      3. KD 動能破 50：K 值 < 50
+      4. 由盤開始做：突破前處於布林縮口（盤整）區
     訊號以「條件剛由不成立轉為成立」的第一根 K 棒為準。
     """
 
-    BODY_PCT = 3.0   # 長紅／長黑：實體漲跌幅至少 3%
+    GAP_TOL = 3.0          # 兩線合一：20MA 與 60MA 價差佔 60MA 的最大百分比
+    SQUEEZE_RANK = 30      # 縮口：布林頻寬在近 120 日的百分位 ≤ 此值
+    SQUEEZE_LOOKBACK = 10  # 突破前 N 個交易日內曾出現縮口
 
     KD_PIVOT = 50
 
@@ -1274,11 +1278,13 @@ class Strategy268:
             return hist, market
         return pd.DataFrame(), ""
 
-    def compute(self, df, par_tol=1.0, slope_days=5):
+    def compute(self, df, par_tol=1.0, slope_days=5, gap_tol=None):
         """計算 268 指標與多空訊號欄位。
 
         par_tol：20MA 與 60MA「平行」的容許斜率差（單位：%／slope_days 日）。
+        gap_tol：20MA 與 60MA「合一」的容許價差（佔 60MA 的 %）。
         """
+        gap_tol = self.GAP_TOL if gap_tol is None else float(gap_tol)
         d = df.copy()
         d['ma20'] = d['close'].rolling(20).mean()
         d['ma60'] = d['close'].rolling(60).mean()
@@ -1297,28 +1303,34 @@ class Strategy268:
             lambda x: (x <= x[-1]).mean() * 100, raw=True
         )
 
-        # 條件 1：20MA 與 60MA 平行（同方向、斜率相近）
+        # 條件 1：兩線合一（手牽手）：靠在一起 + 同向彎曲 + 斜率相近
         d['gap_pct'] = (d['ma20'] - d['ma60']).abs() / d['ma60'].replace(0, np.nan) * 100
         d['slope20'] = d['ma20'].pct_change(slope_days) * 100
         d['slope60'] = d['ma60'].pct_change(slope_days) * 100
         d['slope_diff'] = (d['slope20'] - d['slope60']).abs()
-        near = d['slope_diff'] <= float(par_tol)
-        d['par_up'] = near & (d['slope20'] > 0) & (d['slope60'] > 0)
-        d['par_down'] = near & (d['slope20'] < 0) & (d['slope60'] < 0)
+        together = (d['gap_pct'] <= gap_tol) & (d['slope_diff'] <= float(par_tol))
+        d['par_up'] = together & (d['slope20'] > 0) & (d['slope60'] > 0)
+        d['par_down'] = together & (d['slope20'] < 0) & (d['slope60'] < 0)
 
-        # 條件 2：長紅 K 站上雙線／長黑 K 跌破雙線（以收盤價判斷）
+        # 條件 2：實體 K 棒整根站上／跌破雙線（開盤與收盤都在雙線同一側）
         d['body_pct'] = (d['close'] - d['open']) / d['open'].replace(0, np.nan) * 100
         ma_hi = d[['ma20', 'ma60']].max(axis=1)
         ma_lo = d[['ma20', 'ma60']].min(axis=1)
-        d['break_up'] = (d['body_pct'] >= self.BODY_PCT) & (d['close'] > ma_hi)
-        d['break_down'] = (d['body_pct'] <= -self.BODY_PCT) & (d['close'] < ma_lo)
+        body_lo = d[['open', 'close']].min(axis=1)
+        body_hi = d[['open', 'close']].max(axis=1)
+        d['break_up'] = (d['close'] > d['open']) & (body_lo > ma_hi)
+        d['break_down'] = (d['close'] < d['open']) & (body_hi < ma_lo)
 
         # 條件 3：KD 站上／跌破 50
         d['kd_up'] = d['K'] > self.KD_PIVOT
         d['kd_down'] = d['K'] < self.KD_PIVOT
 
-        d['long_ok'] = d['par_up'] & d['break_up'] & d['kd_up']
-        d['short_ok'] = d['par_down'] & d['break_down'] & d['kd_down']
+        # 條件 4：由盤開始做（突破前近 N 日曾處於布林縮口）
+        prior_min_rank = d['bb_rank'].shift(1).rolling(self.SQUEEZE_LOOKBACK, min_periods=1).min()
+        d['squeeze_ok'] = prior_min_rank <= self.SQUEEZE_RANK
+
+        d['long_ok'] = d['par_up'] & d['break_up'] & d['kd_up'] & d['squeeze_ok']
+        d['short_ok'] = d['par_down'] & d['break_down'] & d['kd_down'] & d['squeeze_ok']
         d['long_signal'] = d['long_ok'] & ~d['long_ok'].shift(1, fill_value=False)
         d['short_signal'] = d['short_ok'] & ~d['short_ok'].shift(1, fill_value=False)
         return d
@@ -1346,7 +1358,8 @@ class Strategy268:
                 "收盤價": round(float(d.at[ts, 'close']), 2),
                 "MA20": round(float(d.at[ts, 'ma20']), 2),
                 "MA60": round(float(d.at[ts, 'ma60']), 2),
-                "長紅/黑實體%": round(float(d.at[ts, 'body_pct']), 2),
+                "實體%": round(float(d.at[ts, 'body_pct']), 2),
+                "雙線間距%": round(float(d.at[ts, 'gap_pct']), 2),
                 "斜率差%": round(float(d.at[ts, 'slope_diff']), 2),
                 "K": round(float(d.at[ts, 'K']), 1),
                 "D": round(float(d.at[ts, 'D']), 1),
@@ -1362,7 +1375,7 @@ class Strategy268:
         p = d.tail(260)
         fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.05,
                             row_heights=[0.7, 0.3],
-                            subplot_titles=(f"{code} 268：K線／MA20／MA60", "KD（以 50 為多空分界）"))
+                            subplot_titles=(f"{code} 268：K線／MA20／MA60／布林", "KD（以 50 為多空分界）"))
         fig.add_trace(go.Candlestick(
             x=p.index, open=p['open'], high=p['high'], low=p['low'], close=p['close'], name='K線',
             increasing_line_color='red', increasing_fillcolor='red',
@@ -1371,6 +1384,11 @@ class Strategy268:
                                  line=dict(color='orange', width=1.5)), row=1, col=1)
         fig.add_trace(go.Scatter(x=p.index, y=p['ma60'], mode='lines', name='60MA（6）',
                                  line=dict(color='purple', width=1.5)), row=1, col=1)
+        # 布林通道（20MA ± 2 倍標準差），用來看縮口盤整
+        bb_half = p['bb_width'] * p['ma20'] / 200
+        for nm, series in (('布林上軌', p['ma20'] + bb_half), ('布林下軌', p['ma20'] - bb_half)):
+            fig.add_trace(go.Scatter(x=p.index, y=series, mode='lines', name=nm,
+                                     line=dict(color='gray', width=1, dash='dot')), row=1, col=1)
         longs, shorts = p[p['long_signal']], p[p['short_signal']]
         if not longs.empty:
             fig.add_trace(go.Scatter(x=longs.index, y=longs['low'] * 0.985, mode='markers', name='做多訊號',
@@ -1387,7 +1405,7 @@ class Strategy268:
         return fig
 
     def scan(self, market="上市＋上櫃", candidate_count=100, direction="做多＋做空",
-             recent_days=3, par_tol=1.0):
+             recent_days=3, par_tol=1.0, gap_tol=3.0):
         """全市場 268 選股：依成交金額取候選池，找出最近 N 個交易日內剛觸發訊號的股票。"""
         scanner = TaiwanMarketScanner()
         snapshot = scanner.get_market_snapshot(market)
@@ -1429,12 +1447,12 @@ class Strategy268:
                 if not all(c in hist.columns for c in need):
                     continue
                 hist = hist[need].dropna(subset=['open', 'high', 'low', 'close'])
-                if len(hist) < 65:
+                if len(hist) < 85:
                     continue
                 hist.index = pd.to_datetime(hist.index)
                 checked += 1
 
-                d = self.compute(hist, par_tol=par_tol)
+                d = self.compute(hist, par_tol=par_tol, gap_tol=gap_tol)
                 window = d.tail(recent_days)
                 last_close = float(d['close'].iloc[-1])
                 for label, flag, ok_col, sign, enabled in (
@@ -1461,8 +1479,9 @@ class Strategy268:
                         "訊號後損益%(依方向)": round((last_close / sig_close - 1) * 100 * sign, 2),
                         "MA20": round(float(d.at[ts, 'ma20']), 2),
                         "MA60": round(float(d.at[ts, 'ma60']), 2),
-                        "長紅/黑實體%": round(float(d.at[ts, 'body_pct']), 2),
-                "斜率差%": round(float(d.at[ts, 'slope_diff']), 2),
+                        "實體%": round(float(d.at[ts, 'body_pct']), 2),
+                        "雙線間距%": round(float(d.at[ts, 'gap_pct']), 2),
+                        "斜率差%": round(float(d.at[ts, 'slope_diff']), 2),
                         "K": round(float(d.at[ts, 'K']), 1),
                         "D": round(float(d.at[ts, 'D']), 1),
                         "縮口分位%": round(float(rank), 0) if pd.notna(rank) else np.nan,
@@ -1473,12 +1492,12 @@ class Strategy268:
                 print(f"{symbol} 268 計算失敗：{e}")
 
         if checked == 0:
-            return pd.DataFrame(), "沒有足夠的歷史資料可計算（需至少 65 根 K 棒）。"
+            return pd.DataFrame(), "沒有足夠的歷史資料可計算（需至少 85 根 K 棒）。"
         if not rows:
             return pd.DataFrame(), (
                 f"完成：全市場快照 {len(snapshot)} 檔 → 候選 {len(pool)} 檔 → 完成計算 {checked} 檔。\n\n"
                 f"最近 {recent_days} 個交易日內沒有股票觸發 268 {direction} 訊號；"
-                "可拉長「訊號回看天數」或放寬「兩線平行容許斜率差」。"
+                "可拉長「訊號回看天數」或放寬「兩線平行容許斜率差」「兩線合一容許間距」。"
             )
 
         out = pd.DataFrame(rows).sort_values(
@@ -1489,12 +1508,12 @@ class Strategy268:
         summary = (
             f"完成：全市場快照 {len(snapshot)} 檔 → 成交金額前 {len(pool)} 檔 → 完成計算 {checked} 檔。\n\n"
             f"最近 {recent_days} 個交易日內觸發訊號：做多 {n_long} 檔、做空 {n_short} 檔。"
-            "同日期內「縮口分位%」越低（越接近縮口盤整剛發動）排越前面。\n\n"
+            "所有訊號皆已要求突破前處於布林縮口；同日期內「縮口分位%」越低排越前面。\n\n"
             "訊號為規則化篩選，不保證獲利；「訊號後損益」以收盤價估算，未含手續費、滑價與停損。"
         )
         return out, summary
 
-    def query(self, ticker, period="2y", par_tol=1.0):
+    def query(self, ticker, period="2y", par_tol=1.0, gap_tol=3.0):
         """查詢單檔股票的 268 狀態與歷史訊號。回傳 (狀態文字, 圖, 訊號表)。"""
         code = str(ticker or "").strip().upper().replace('.TWO', '').replace('.TW', '')
         empty_fig = go.Figure()
@@ -1504,10 +1523,10 @@ class Strategy268:
         hist, market = self._download(code, period)
         if hist.empty:
             return f"無法下載 {code} 的行情（已嘗試上市與上櫃），請確認代號。", empty_fig, pd.DataFrame()
-        if len(hist) < 65:
-            return f"{code} 只有 {len(hist)} 根 K 棒，不足以計算 60MA 與斜率，請拉長資料區間。", empty_fig, pd.DataFrame()
+        if len(hist) < 85:
+            return f"{code} 只有 {len(hist)} 根 K 棒，不足以計算 60MA、斜率與布林縮口，請拉長資料區間。", empty_fig, pd.DataFrame()
 
-        d = self.compute(hist, par_tol=par_tol)
+        d = self.compute(hist, par_tol=par_tol, gap_tol=gap_tol)
         r = d.iloc[-1]
         mark = lambda b: "✅" if bool(b) else "❌"
         f = self._fmt
@@ -1544,13 +1563,15 @@ class Strategy268:
             f"### {code}（{market}）268 操盤法｜{d.index[-1].strftime('%Y-%m-%d')}\n\n"
             f"{verdict}\n\n"
             f"**收盤** {f(r['close'])}｜**20MA** {f(r['ma20'])}｜**60MA** {f(r['ma60'])}｜"
-            f"**今日實體** {f(r['body_pct'])}%（長紅/黑門檻 {self.BODY_PCT}%）｜**斜率** {slope_txt}（平行容許 ≤ {par_tol}%）\n\n"
+            f"**今日實體** {f(r['body_pct'])}%｜**雙線間距** {f(r['gap_pct'])}%（合一容許 ≤ {gap_tol}%）｜"
+            f"**斜率** {slope_txt}（平行容許 ≤ {par_tol}%）\n\n"
             f"**KD** K {f(r['K'], 1)}｜D {f(r['D'], 1)}｜**布林頻寬分位** {squeeze_txt}\n\n"
             "| 進場條件 | 做多 | 做空 |\n|---|:---:|:---:|\n"
-            f"| 1. 20MA／60MA 平行同向 | {mark(r['par_up'])} | {mark(r['par_down'])} |\n"
-            f"| 2. 長紅K站上／長黑K跌破雙線 | {mark(r['break_up'])} | {mark(r['break_down'])} |\n"
+            f"| 1. 兩線合一：20MA／60MA 靠近且同向 | {mark(r['par_up'])} | {mark(r['par_down'])} |\n"
+            f"| 2. 實體K整根站上／跌破雙線 | {mark(r['break_up'])} | {mark(r['break_down'])} |\n"
             f"| 3. KD 站上／跌破 50（K > 50／K < 50） | {mark(r['kd_up'])} | {mark(r['kd_down'])} |\n"
-            f"| **三項全成立** | {mark(r['long_ok'])} | {mark(r['short_ok'])} |\n\n"
+            f"| 4. 由盤開始做：突破前布林縮口 | {mark(r['squeeze_ok'])} | {mark(r['squeeze_ok'])} |\n"
+            f"| **四項全成立** | {mark(r['long_ok'])} | {mark(r['short_ok'])} |\n\n"
             f"{last_txt}\n\n"
             "> ⚠️ 訊號為規則化篩選，不保證獲利。「後5日／後20日損益」是以訊號日收盤價估算，"
             "未含手續費、滑價與停損；做空者已將損益方向反轉。請自行搭配停損與部位控管。"
@@ -1717,12 +1738,13 @@ def create_gradio_interface(analyzer: StockAnalyzer):
             with gr.TabItem("268"):
                 strategy268 = Strategy268()
                 gr.Markdown(
-                    "### 268 操盤法｜全市場選股（雙均線平行、長紅K突破、KD過50）\n"
+                    "### 268 操盤法｜全市場選股（兩線合一、實體整根突破、KD過50、由盤開始做）\n"
                     "**2** = 20MA（控盤線）｜**6** = 60MA（生命線）｜**8** = KD 以 50 為多空分界。\n\n"
-                    "**做多：** ① 20MA 與 60MA 平行向上 ② 長紅 K 站上 20MA／60MA ③ K 值站上 50。\n\n"
-                    "**做空：** ① 20MA 與 60MA 平行向下 ② 長黑 K 跌破 20MA／60MA ③ K 值跌破 50。\n\n"
+                    "**做多：** ① 兩線合一：20MA 與 60MA 靠近並同向向上 ② 實體 K 棒整根站上 20MA／60MA "
+                    "③ K 值 > 50 ④ 由盤開始做：突破前布林縮口（盤整剛發動）。\n\n"
+                    "**做空：** ① 兩線合一並同向向下 ② 實體 K 棒整根跌破雙線 ③ K 值 < 50 ④ 突破前布林縮口。\n\n"
                     "掃描方式：先抓上市＋上櫃最新快照，依成交金額取候選池，再逐檔計算，"
-                    "列出『最近幾個交易日內剛觸發訊號』的股票。原則：雙均線同向平行才進場，不摸頭、不撈底；"
+                    "列出『最近幾個交易日內剛觸發訊號』的股票。原則：不摸頭、不撈底，兩線合一才進場；"
                     "縮口分位越低，代表越接近盤整區剛發動。"
                 )
                 with gr.Row():
@@ -1742,12 +1764,15 @@ def create_gradio_interface(analyzer: StockAnalyzer):
                     s268_tol = gr.Slider(
                         label="兩線平行容許斜率差 (%/5日)", minimum=0.2, maximum=3, value=1.0, step=0.1
                     )
+                    s268_gap = gr.Slider(
+                        label="兩線合一容許間距 (MA20/MA60 價差 %)", minimum=0.5, maximum=8, value=3.0, step=0.5
+                    )
                     s268_scan_btn = gr.Button("🔎 開始 268 全市場選股", variant="primary")
                 s268_scan_status = gr.Markdown()
                 s268_scan_output = gr.DataFrame(label="🏆 268 訊號股票", interactive=False, wrap=True)
                 s268_scan_btn.click(
                     strategy268.scan,
-                    inputs=[s268_market, s268_count, s268_direction, s268_recent, s268_tol],
+                    inputs=[s268_market, s268_count, s268_direction, s268_recent, s268_tol, s268_gap],
                     outputs=[s268_scan_output, s268_scan_status],
                     concurrency_limit=1
                 )
@@ -1764,7 +1789,7 @@ def create_gradio_interface(analyzer: StockAnalyzer):
                     s268_table = gr.DataFrame(label="📋 該股歷史 268 訊號（最近 30 筆）", interactive=False, wrap=True)
                     s268_btn.click(
                         strategy268.query,
-                        inputs=[s268_ticker, s268_period, s268_tol],
+                        inputs=[s268_ticker, s268_period, s268_tol, s268_gap],
                         outputs=[s268_status, s268_plot, s268_table],
                         concurrency_limit=1
                     )
